@@ -7,7 +7,6 @@ export default function Home() {
     <main>
       {/* Hero */}
       <section className="relative min-h-screen flex items-center overflow-hidden pt-16">
-        {/* Decorative blobs */}
         <div className="absolute right-0 top-1/4 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none"
           style={{ background: 'radial-gradient(circle, #D4919A, #A89BC4)' }} />
         <div className="absolute right-24 bottom-1/4 w-64 h-64 rounded-full opacity-15 blur-2xl pointer-events-none"
@@ -19,7 +18,7 @@ export default function Home() {
 
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.7 }}
             className="font-display text-[clamp(52px,8vw,120px)] leading-[1.0] text-ink mb-8 max-w-3xl">
-            You don&apos;t need<br />
+            You don't need<br />
             <span className="italic text-rose">another routine.</span><br />
             You need a ritual.
           </motion.h1>
@@ -28,18 +27,18 @@ export default function Home() {
             className="h-px bg-amber w-24 mb-8 origin-left" />
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}
-            className="font-serif italic text-xl text-ink/60 max-w-lg mb-4">
-            Three tools. One framework. Built on the personal philosophy of Elle Porcher.
+            className="font-serif italic text-xl text-ink-muted max-w-lg mb-4">
+            A platform of software experiments — tools built for real problems, deployed and running.
           </motion.p>
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}
-            className="font-sans text-ink/60 max-w-lg mb-10">
-            A lifestyle platform that makes your personal systems interactive, personalized, and intelligent — where intelligence earns its place.
+            className="font-sans text-ink-muted max-w-lg mb-10">
+            Three lifestyle apps sharing one backend. A workout pairing tool rebuilt across three platforms. A personal intelligence system built to prove an enterprise architecture.
           </motion.p>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.3 }}
             className="flex flex-wrap gap-3">
-            {['✦ Ritualwear', '✦ Glow Up', '✦ Ritualwhere?'].map(chip => (
+            {['✦ Ritualwear', '✦ Glow Up', '✦ Ritualwhere?', '✦ Doubles', "✦ m'atelier"].map(chip => (
               <span key={chip} className="font-mono text-xs text-ink bg-cream-alt border border-ink/15 px-4 py-2 rounded-full">{chip}</span>
             ))}
           </motion.div>
@@ -48,24 +47,41 @@ export default function Home() {
 
       <Marquee />
 
-      {/* Quick links */}
+      {/* Experiment grid */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { to: '/platform', label: 'The Platform', desc: 'One database. Three tools.' },
-            { to: '/doubles', label: 'Doubles', desc: 'Three rewrites, one function.' },
-            { to: '/matelier', label: "m'atelier", desc: 'Personal scale intelligence.' },
-            { to: '/apps', label: 'The Apps', desc: 'Ritualwear · Glow Up · Ritualwhere?' },
-          ].map((item, i) => (
-            <motion.div key={item.to} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.1 }}>
-              <Link to={item.to}
-                className="block bg-cream-alt rounded-2xl p-6 lift warm-shadow border border-ink/[0.08] group">
-                <h3 className="font-display text-lg text-ink mb-2 group-hover:text-rose transition-colors">{item.label}</h3>
-                <p className="font-sans text-xs text-ink/60">{item.desc}</p>
-              </Link>
-            </motion.div>
-          ))}
+        <p className="font-mono text-xs text-amber tracking-[0.25em] mb-10">the experiments</p>
+        <div className="grid md:grid-cols-3 gap-6 mb-6">
+          {/* The Platform — full width top */}
+          <Link to="/platform" className="md:col-span-3 block bg-cream-dark rounded-3xl p-10 group lift warm-shadow">
+            <p className="font-mono text-xs text-amber tracking-[0.2em] mb-3">the platform</p>
+            <h2 className="font-display text-4xl mb-3 group-hover:text-rose transition-colors" style={{ color: '#FAF7F2' }}>
+              Ritualwear · Glow Up · Ritualwhere?
+            </h2>
+            <p className="font-serif italic text-lg mb-1" style={{ color: '#C8BFB0' }}>
+              Three lifestyle tools. One shared database. Built on Elle Porcher's personal frameworks.
+            </p>
+            <p className="font-mono text-xs text-amber mt-4">Explore the platform →</p>
+          </Link>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <Link to="/doubles"
+            className="block bg-cream-alt rounded-3xl p-8 lift warm-shadow border border-ink/8 group">
+            <p className="font-mono text-xs text-rose tracking-[0.2em] mb-3">experiment no. 01</p>
+            <h3 className="font-display text-3xl text-ink mb-3 group-hover:text-rose transition-colors">EQX Doubles Finder</h3>
+            <p className="font-sans text-sm text-ink-muted leading-relaxed mb-4">
+              The same core algorithm running across three complete platform rewrites — browser SPA, Python server, and native iOS. find_doubles() written once. Running everywhere.
+            </p>
+            <p className="font-mono text-xs text-rose">View experiment →</p>
+          </Link>
+          <Link to="/matelier"
+            className="block bg-cream-alt rounded-3xl p-8 lift warm-shadow border border-ink/8 group">
+            <p className="font-mono text-xs text-amber tracking-[0.2em] mb-3">experiment no. 02</p>
+            <h3 className="font-display italic text-3xl text-ink mb-3 group-hover:text-amber transition-colors">m'atelier</h3>
+            <p className="font-sans text-sm text-ink-muted leading-relaxed mb-4">
+              Enterprise team intelligence scaled to personal size. The proof of concept that validated the architecture for a 100-person production system.
+            </p>
+            <p className="font-mono text-xs text-amber">View experiment →</p>
+          </Link>
         </div>
       </section>
     </main>

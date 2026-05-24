@@ -2,49 +2,114 @@ import { motion } from 'framer-motion'
 
 export default function Matelier() {
   return (
-    <main className="pt-32 pb-24 px-6 max-w-6xl mx-auto">
-      <div className="md:flex gap-16 items-start">
-        {/* Vertical label */}
-        <div className="hidden md:flex flex-col items-center pt-4">
-          <p className="font-mono text-xs text-ink/40 tracking-[0.3em] uppercase"
-            style={{ writingMode: 'vertical-lr', transform: 'rotate(180deg)' }}>studio</p>
-        </div>
+    <main className="pt-32 pb-24">
 
-        <div className="flex-1">
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-            className="font-mono text-xs text-amber tracking-[0.25em] mb-4 md:hidden">studio</motion.p>
-          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-            className="font-display italic text-[clamp(40px,6vw,80px)] text-ink mb-4">m&apos;atelier</motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }}
-            className="font-serif italic text-xl text-ink/60 mb-12">Enterprise team intelligence. Personal scale.</motion.p>
+      {/* Hero */}
+      <div className="px-6 md:px-16 max-w-6xl mx-auto mb-24">
+        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+          className="font-mono text-xs text-amber tracking-[0.25em] mb-4">software experiment no. 02</motion.p>
+        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
+          className="font-display italic text-[clamp(48px,7vw,100px)] leading-none text-ink mb-6">
+          m'atelier
+        </motion.h1>
+        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
+          className="font-serif italic text-xl text-ink-muted max-w-xl">
+          Enterprise team intelligence. Scaled down to the size of a life.
+        </motion.p>
+      </div>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
+      {/* The concept */}
+      <div className="bg-cream-alt py-20 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-16">
             <div>
-              <p className="font-sans text-ink leading-relaxed mb-4">
-                What does a 100-person team management system look like when the team is your household? m&apos;atelier is the proof of concept that answered that question — and in doing so, validated the entire backend architecture that later ran in production.
+              <p className="font-mono text-xs text-amber tracking-[0.25em] mb-4">the question</p>
+              <p className="font-display italic text-2xl text-ink mb-6 leading-tight">
+                What does a 100-person team management system look like when the team is just you?
               </p>
-              <p className="font-sans text-ink/60 leading-relaxed">
-                Supabase: PostgreSQL + REST API + Row Level Security, zero infrastructure to manage. The schema designed from scratch. The fetch calls in the frontend mapped almost 1:1 to what the FastAPI layer would later do in production.
+              <p className="font-sans text-ink-muted leading-relaxed">
+                m'atelier applies the same architecture as the enterprise Skills Hub — project tracking, skills inventory, knowledge visualization — but scaled to personal projects, household logistics, and creative work.
               </p>
             </div>
             <div>
-              <div className="bg-cream-alt rounded-2xl p-6 font-mono text-sm warm-shadow">
-                <p className="text-rose font-semibold mb-2">team_members</p>
-                <p className="text-ink/60 pl-4 text-xs leading-relaxed">work_skills[]<br/>non_work[]<br/>hobbies[]<br/>private_note</p>
-                <p className="text-sage font-semibold mt-4 mb-2">projects</p>
-                <p className="text-ink/60 pl-4 text-xs leading-relaxed">task_1/2/3<br/>volunteer_need<br/>contact_id FK</p>
-                <p className="text-lavender font-semibold mt-4 mb-2">knowledge_nodes</p>
-                <p className="text-ink/60 pl-4 text-xs leading-relaxed">category, weight (1-5)</p>
-              </div>
+              <p className="font-mono text-xs text-amber tracking-[0.25em] mb-4">what's inside</p>
+              <ul className="space-y-3">
+                {[
+                  'Project tracking with task breakdown and collaborator links',
+                  'Skills and knowledge inventory with a weighted 1–5 scale',
+                  'D3 force graph — Web Dev, Design, Finance, AI, Strategy and more — connected by semantic overlap',
+                  'Labels that appear progressively as you zoom in',
+                  'Real persistence via Supabase — reads, writes, Row Level Security',
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-3 font-sans text-sm text-ink-muted">
+                    <span className="text-amber mt-0.5 shrink-0">✦</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-
-          <a href="https://thevillanelle.github.io/studio" target="_blank" rel="noopener noreferrer"
-            className="inline-block font-mono text-sm text-rose border border-rose px-6 py-3 rounded-full hover:bg-rose hover:text-cream transition-colors">
-            View Studio →
-          </a>
         </div>
       </div>
+
+      {/* The knowledge graph feature */}
+      <div className="py-20 px-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
+            <p className="font-mono text-xs text-amber tracking-[0.25em] mb-4">the mind map</p>
+            <h2 className="font-display text-3xl text-ink mb-4">A knowledge graph that grows with you</h2>
+            <p className="font-sans text-ink-muted leading-relaxed mb-4">
+              Knowledge nodes span Web Dev, Data Viz, Infrastructure, AI Tools, Design, Strategy, Security, Finance, and Blockchain. Nodes are linked by hardcoded semantic relationships layered with auto-generated connections derived from keyword overlap.
+            </p>
+            <p className="font-sans text-ink-muted leading-relaxed">
+              Category tags appear at zoom &gt; 0.5. Full labels at &gt; 1.1. Description snippets at &gt; 3. Three separate SVG text layers, managed independently.
+            </p>
+          </motion.div>
+
+          {/* Visual schema */}
+          <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}
+            className="bg-cream-dark rounded-3xl p-8 font-mono text-sm" style={{ color: '#FAF7F2' }}>
+            <p className="text-amber text-xs tracking-[0.2em] mb-4">SCHEMA</p>
+            <div className="space-y-4 text-xs leading-relaxed">
+              <div>
+                <p className="text-rose font-semibold mb-1">team_members</p>
+                <p className="text-cream/50 pl-3">work_skills[] · non_work[] · hobbies[] · private_note</p>
+              </div>
+              <div>
+                <p className="text-sage font-semibold mb-1">projects</p>
+                <p className="text-cream/50 pl-3">task_1/2/3 · volunteer_need · contact_id FK</p>
+              </div>
+              <div>
+                <p className="text-lavender font-semibold mb-1">knowledge_nodes</p>
+                <p className="text-cream/50 pl-3">category · weight (1–5 foundational scale)</p>
+              </div>
+              <div>
+                <p className="text-amber font-semibold mb-1">member_knowledge</p>
+                <p className="text-cream/50 pl-3">junction table — person × node</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Why it matters */}
+      <div className="bg-cream-alt py-16 px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="font-serif italic text-xl text-ink-muted mb-6">
+            m'atelier was the proof of concept that validated the backend approach for the production system serving 100 people. The fetch calls in the frontend mapped almost 1:1 to what the FastAPI layer would later do in production.
+          </p>
+          <p className="font-mono text-xs text-amber tracking-[0.2em]">Small scale. Real architecture.</p>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="py-16 px-6 max-w-6xl mx-auto">
+        <a href="https://thevillanelle.github.io/studio" target="_blank" rel="noopener noreferrer"
+          className="inline-block font-mono text-sm text-rose border border-rose px-6 py-3 rounded-full hover:bg-rose hover:text-cream transition-colors">
+          Open m'atelier →
+        </a>
+      </div>
+
     </main>
   )
 }
