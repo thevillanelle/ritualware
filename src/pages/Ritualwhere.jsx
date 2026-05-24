@@ -4,11 +4,10 @@ export default function Ritualwhere() {
   return (
     <main style={{ background: '#F5F3FA', minHeight: '100vh' }}>
 
-      <section className="relative flex items-center overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24"
+      <section className="relative flex items-center overflow-hidden pt-24 pb-20 md:pt-36 md:pb-28"
         style={{ background: 'linear-gradient(160deg, #F5F3FA 0%, #EAE5F5 60%, #D5CCE8 100%)' }}>
         <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full opacity-20 blur-3xl pointer-events-none"
           style={{ background: 'radial-gradient(circle, #A89BC4, #C0B5D8)' }} />
-
         <div className="relative z-10 px-6 md:px-16 max-w-5xl mx-auto w-full">
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
             className="font-mono text-sm tracking-[0.3em] mb-5" style={{ color: '#6B5A8A' }}>ritualwhere?</motion.p>
@@ -18,7 +17,7 @@ export default function Ritualwhere() {
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
             className="font-serif italic text-2xl max-w-lg mb-3" style={{ color: '#4A3862' }}>
-            A city guide you can actually use.
+            A city guide built for how you actually live.
           </motion.p>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}
             className="font-mono text-sm mb-8" style={{ color: '#8A78A8' }}>Available for New York · Los Angeles</motion.p>
@@ -31,7 +30,8 @@ export default function Ritualwhere() {
         </div>
       </section>
 
-      <section className="py-20 px-6 md:px-16 max-w-5xl mx-auto">
+      {/* Three tools */}
+      <section className="py-24 px-6 md:px-16 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
@@ -55,8 +55,8 @@ export default function Ritualwhere() {
           ].map((tool, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.12 }}
-              className="rounded-3xl p-7" style={{ background: '#EAE5F5', border: '1px solid rgba(168,155,196,0.25)' }}>
-              <p className="font-mono text-sm tracking-[0.15em] mb-2" style={{ color: '#8A78A8' }}>{tool.label}</p>
+              className="rounded-3xl p-8" style={{ background: '#EAE5F5', border: '1px solid rgba(168,155,196,0.25)' }}>
+              <p className="font-mono text-sm tracking-[0.15em] mb-3" style={{ color: '#8A78A8' }}>{tool.label}</p>
               <h3 className="font-display text-2xl mb-4" style={{ color: '#2A1F3D' }}>{tool.title}</h3>
               <p className="font-sans text-base leading-relaxed mb-4" style={{ color: '#4A3862' }}>{tool.body}</p>
               {tool.note && <p className="font-serif italic text-base" style={{ color: '#8A78A8' }}>{tool.note}</p>}
@@ -65,22 +65,23 @@ export default function Ritualwhere() {
         </div>
       </section>
 
-      <section className="py-20 px-6" style={{ background: '#2A1F3D' }}>
+      {/* The quiz */}
+      <section className="py-24 px-6" style={{ background: '#2A1F3D' }}>
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-4xl mb-6" style={{ color: '#F5F3FA' }}>
-            Scored against how you actually live.
+            Your neighborhood, matched to your life.
           </h2>
-          <p className="font-sans text-xl leading-relaxed mb-12 max-w-2xl" style={{ color: '#C0B5D8' }}>
-            Not average commute times. Not crowd-sourced ratings. The quiz weighs what matters to you — your routines, your priorities, your energy — and scores each neighborhood accordingly.
+          <p className="font-sans text-xl leading-relaxed mb-16 max-w-2xl" style={{ color: '#C0B5D8' }}>
+            The quiz asks about your routines, your energy, your priorities. The result is a neighborhood score that reflects how you actually want to live — not how everyone else rates a place.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="font-display text-xl mb-3" style={{ color: '#A89BC4' }}>Mathematical by default</h3>
-              <p className="font-sans text-base leading-relaxed" style={{ color: '#8A78A8' }}>The quiz scores fast and reliably — no API dependency, no wait time. Your neighborhood match is instant.</p>
+            <div className="rounded-2xl p-8" style={{ background: 'rgba(168,155,196,0.12)' }}>
+              <h3 className="font-display text-xl mb-3" style={{ color: '#A89BC4' }}>Instant result</h3>
+              <p className="font-sans text-base leading-relaxed" style={{ color: '#8A78A8' }}>Your neighborhood match is immediate. No waiting, no loading screen. Just your answers and your city.</p>
             </div>
-            <div>
-              <h3 className="font-display text-xl mb-3" style={{ color: '#A89BC4' }}>Narrative on demand</h3>
-              <p className="font-sans text-base leading-relaxed" style={{ color: '#8A78A8' }}>Toggle on AI and it writes a personal story about your life in that neighborhood. The math tells you where you'd fit. The narrative tells you what it feels like.</p>
+            <div className="rounded-2xl p-8" style={{ background: 'rgba(168,155,196,0.12)' }}>
+              <h3 className="font-display text-xl mb-3" style={{ color: '#A89BC4' }}>AI that earns its place</h3>
+              <p className="font-sans text-base leading-relaxed" style={{ color: '#8A78A8' }}>Toggle on AI and it writes a personal story about your life in that neighborhood — what your mornings look like, where you'd work, how the city feels. The score tells you where you fit. The narrative tells you what it feels like.</p>
             </div>
           </div>
         </div>
