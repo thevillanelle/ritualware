@@ -71,23 +71,20 @@ export default function Doubles() {
 
       {/* Three platforms */}
       <div className="py-20 px-6 max-w-6xl mx-auto">
-        <p className="font-mono text-xs text-amber tracking-[0.25em] mb-10">three platforms</p>
+        <p className="font-mono text-xs text-amber tracking-[0.25em] mb-10">available on</p>
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              num: '01', title: 'Web App', accent: '#D4919A',
-              stack: 'HTML · JavaScript · PLpgSQL · Supabase',
-              desc: 'Browser-based SPA. Supabase backend. GitHub Actions pulls fresh schedules from public PDFs every six hours.',
+              num: '01', title: 'Web', accent: '#D4919A',
+              desc: 'Open it in any browser. Search by class type, location, and time window. Your results and transit info load instantly.',
             },
             {
-              num: '02', title: 'Python Server', accent: '#8FA688',
-              stack: 'Python · Flask · Jinja2 · Railway',
-              desc: 'Flask server in the middle. Credentials off the client. Server-side rendering. Deployable to Railway in one command.',
+              num: '02', title: 'Web — Optimized', accent: '#8FA688',
+              desc: 'A faster, cleaner version of the web app. Smarter rendering, same results.',
             },
             {
-              num: '03', title: 'iOS App', accent: '#A89BC4',
-              stack: 'Swift · SwiftUI · Xcode · async/await',
-              desc: 'Native iPhone app. Typed Swift structs, reactive state with @Published, async/await service layer. Runs in the iOS Simulator.',
+              num: '03', title: 'iOS', accent: '#A89BC4',
+              desc: 'Native iPhone app. Search, browse pairings, and get subway directions — all from your phone.',
             },
           ].map((p, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
@@ -96,8 +93,7 @@ export default function Doubles() {
               style={{ borderTopColor: p.accent }}>
               <span className="font-display text-5xl block mb-3" style={{ color: p.accent, opacity: 0.3 }}>{p.num}</span>
               <h3 className="font-display text-2xl text-ink mb-2">{p.title}</h3>
-              <p className="font-sans text-sm text-ink-muted leading-relaxed mb-4">{p.desc}</p>
-              <p className="font-mono text-xs text-ink-muted/70">{p.stack}</p>
+              <p className="font-sans text-sm text-ink-muted leading-relaxed">{p.desc}</p>
             </motion.div>
           ))}
         </div>

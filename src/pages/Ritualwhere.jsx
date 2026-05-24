@@ -142,7 +142,6 @@ export default function Ritualwhere() {
           style={{ background: '#A89BC4', color: '#F5F3FA' }}>
           Open Ritualwhere? →
         </a>
-        <p className="font-mono text-xs mt-6" style={{ color: '#6B5A8A' }}>React 18 · Vite · Leaflet.js · Supabase · Gemini 2.5 Flash</p>
       </section>
 
     </main>

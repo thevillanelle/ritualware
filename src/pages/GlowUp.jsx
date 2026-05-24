@@ -104,7 +104,6 @@ export default function GlowUp() {
           style={{ background: '#8FA688', color: '#F4F7F4' }}>
           Open Glow Up →
         </a>
-        <p className="font-mono text-xs mt-6" style={{ color: '#4A6B45' }}>React 18 · Vite · Gemini 2.5 Flash · Supabase · Tailwind CSS</p>
       </section>
 
     </main>

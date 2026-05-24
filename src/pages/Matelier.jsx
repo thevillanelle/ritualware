@@ -39,7 +39,7 @@ export default function Matelier() {
                   'Skills and knowledge inventory with a weighted 1–5 scale',
                   'D3 force graph — Web Dev, Design, Finance, AI, Strategy and more — connected by semantic overlap',
                   'Labels that appear progressively as you zoom in',
-                  'Real persistence via Supabase — reads, writes, Row Level Security',
+                  'Real persistence — your data syncs across devices, survives a refresh, updates in real time',
                 ].map((item, i) => (
                   <li key={i} className="flex gap-3 font-sans text-sm text-ink-muted">
                     <span className="text-amber mt-0.5 shrink-0">✦</span>
