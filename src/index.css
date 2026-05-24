@@ -3,55 +3,32 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ── LIGHT MODE (default — warm cream) ── */
 :root {
-  --bg: #FAF7F2;
-  --bg-alt: #F0EBE3;
-  --bg-dark: #1C1410;
-  --ink: #2C2016;
-  --ink-muted: #7A6B5A;
-  --rose: #D4919A;
-  --amber: #C4956A;
-  --sage: #8FA688;
-  --lavender: #A89BC4;
-  --gold: #C8A86B;
+  --bg: #FAF7F2; --bg-alt: #F0EBE3; --bg-dark: #1C1410;
+  --ink: #2C2016; --ink-muted: #7A6B5A;
+  --rose: #D4919A; --amber: #C4956A; --sage: #8FA688; --lavender: #A89BC4; --gold: #C8A86B;
   color-scheme: light;
 }
-
-/* ── DARK MODE ── */
 :root.dark {
-  --bg: #1C1410;
-  --bg-alt: #241A14;
-  --bg-dark: #FAF7F2;
-  --ink: #E8DDD0;
-  --ink-muted: #9A8B7A;
-  --rose: #D4919A;
-  --amber: #C4956A;
-  --sage: #8FA688;
-  --lavender: #A89BC4;
-  --gold: #C8A86B;
+  --bg: #1C1410; --bg-alt: #241A14; --bg-dark: #FAF7F2;
+  --ink: #E8DDD0; --ink-muted: #9A8B7A;
+  --rose: #D4919A; --amber: #C4956A; --sage: #8FA688; --lavender: #A89BC4; --gold: #C8A86B;
   color-scheme: dark;
 }
 
 @layer base {
-  html { scroll-behavior: smooth; font-size: 18px; }
+  html { scroll-behavior: smooth; font-size: 20px; }
   body {
-    background-color: var(--bg);
-    color: var(--ink);
+    background-color: var(--bg); color: var(--ink);
     font-family: 'DM Sans', sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
     -webkit-font-smoothing: antialiased;
   }
 }
-
 @layer utilities {
   .warm-shadow { box-shadow: 0 8px 40px rgba(196,149,106,0.15); }
   .lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-  .lift:hover { transform: translateY(-6px); }
+  .lift:hover { transform: translateY(-4px); }
 }
-
-@keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee-track { animation: marquee 20s linear infinite; }

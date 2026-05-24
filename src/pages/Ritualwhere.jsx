@@ -1,144 +1,97 @@
 import { motion } from 'framer-motion'
 
-const neighborhoods = [
-  { name: 'West Village', notes: 'Cobblestone charm, boutique density, Equinox proximity' },
-  { name: 'Upper East Side', notes: 'Museum mile, old money quiet, Skin Laundry access' },
-  { name: 'Nolita', notes: 'Editorial aesthetic, walk-everywhere density, café culture' },
-  { name: 'Tribeca', notes: 'Converted lofts, low foot traffic, serious coffee' },
-  { name: 'Williamsburg', notes: 'Creative density, longer commute tolerance required' },
-  { name: 'Midtown East', notes: 'Efficient commute, proximity to professional services' },
-]
-
 export default function Ritualwhere() {
   return (
     <main style={{ background: '#F5F3FA', minHeight: '100vh' }}>
 
-      {/* Hero — lavender world */}
-      <section className="relative min-h-screen flex items-end overflow-hidden pt-16 pb-20"
+      <section className="relative flex items-center overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24"
         style={{ background: 'linear-gradient(160deg, #F5F3FA 0%, #EAE5F5 60%, #D5CCE8 100%)' }}>
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-25 blur-3xl pointer-events-none"
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full opacity-20 blur-3xl pointer-events-none"
           style={{ background: 'radial-gradient(circle, #A89BC4, #C0B5D8)' }} />
-        <div className="absolute bottom-1/4 left-1/3 w-[250px] h-[250px] rounded-full opacity-20 blur-2xl pointer-events-none"
-          style={{ background: 'radial-gradient(circle, #C4956A, #A89BC4)' }} />
 
-        <div className="relative z-10 px-6 md:px-16 max-w-6xl mx-auto w-full">
+        <div className="relative z-10 px-6 md:px-16 max-w-5xl mx-auto w-full">
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-            className="font-mono text-xs tracking-[0.3em] mb-6" style={{ color: '#6B5A8A' }}>ritualwhere?</motion.p>
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8 }}
-            className="font-display text-[clamp(64px,10vw,140px)] leading-none mb-6" style={{ color: '#2A1F3D' }}>
+            className="font-mono text-sm tracking-[0.3em] mb-5" style={{ color: '#6B5A8A' }}>ritualwhere?</motion.p>
+          <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.7 }}
+            className="font-display leading-none mb-5" style={{ fontSize: 'clamp(56px,9vw,120px)', color: '#2A1F3D' }}>
             Where do<br /><span className="italic">I go?</span>
           </motion.h1>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}
-            className="font-serif italic text-2xl max-w-lg mb-8" style={{ color: '#4A3862' }}>
-            NYC life strategy built directly from Elle's Guide to Thriving in New York City.
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
+            className="font-serif italic text-2xl max-w-lg mb-3" style={{ color: '#4A3862' }}>
+            A city guide you can actually use.
           </motion.p>
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}
+            className="font-mono text-sm mb-8" style={{ color: '#8A78A8' }}>Available for New York · Los Angeles</motion.p>
           <motion.a href="https://ritualwhere.vercel.app" target="_blank" rel="noopener noreferrer"
-            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.8 }}
-            className="inline-block font-mono text-sm px-8 py-4 rounded-full transition-all hover:opacity-90"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}
+            className="inline-block font-mono text-base px-8 py-4 rounded-full transition-all hover:opacity-90"
             style={{ background: '#A89BC4', color: '#F5F3FA' }}>
             Open Ritualwhere? →
           </motion.a>
         </div>
       </section>
 
-      {/* Three tools */}
-      <section className="py-24 px-6 md:px-16 max-w-6xl mx-auto">
-        <p className="font-mono text-xs tracking-[0.25em] mb-12" style={{ color: '#6B5A8A' }}>three tools inside</p>
-        <div className="grid md:grid-cols-3 gap-8">
+      <section className="py-20 px-6 md:px-16 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6">
           {[
             {
+              label: '14 questions',
               title: 'Neighborhood Quiz',
-              questions: '14 questions',
-              desc: 'Scores neighborhoods against your actual criteria — commute tolerance, proximity to Equinox, SEV, and Skin Laundry, aesthetic match, and Elle\'s explicit neighborhood recommendations. Mathematical scoring by default.',
+              body: 'Answer 14 questions about how you actually live — your commute, your routines, your energy, your aesthetic. The quiz scores neighborhoods against your real criteria, not generic livability rankings.',
               note: 'Toggle on AI and it writes a personal narrative about your life in that neighborhood.',
             },
             {
+              label: 'goal-based matching',
               title: 'Third Space Finder',
-              questions: 'goal-based matching',
-              desc: 'Matches venues to personal goals — focus work, social connection, creative energy, movement, rest. Not a Yelp pull. Venues drawn directly from Elle\'s guide, categorized by what they\'re actually for.',
-              note: '26 curated venues. Her direct recommendations.',
+              body: 'Tell it what you need — a place to focus, a place to connect, somewhere to move, somewhere to rest. It matches you to venues that actually fit.',
+              note: '26 curated venues. Every recommendation is real.',
             },
             {
+              label: '26 venues',
               title: 'The Map',
-              questions: '26 venues · Leaflet.js',
-              desc: 'An interactive map of all 26 venues from the guide — labeled, categorized, and filterable by type. Each venue is tagged to its third space function and linked to its entry in the guide.',
-              note: 'Built on Leaflet.js with custom markers. Every pin is a real recommendation.',
+              body: 'An interactive map of all 26 venues — labeled, categorized, and filterable by type. Every pin is a real recommendation you can click to explore.',
+              note: null,
             },
           ].map((tool, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.12 }}
               className="rounded-3xl p-7" style={{ background: '#EAE5F5', border: '1px solid rgba(168,155,196,0.25)' }}>
-              <p className="font-mono text-xs tracking-[0.15em] mb-2" style={{ color: '#8A78A8' }}>{tool.questions}</p>
+              <p className="font-mono text-sm tracking-[0.15em] mb-2" style={{ color: '#8A78A8' }}>{tool.label}</p>
               <h3 className="font-display text-2xl mb-4" style={{ color: '#2A1F3D' }}>{tool.title}</h3>
-              <p className="font-sans text-sm leading-relaxed mb-4" style={{ color: '#4A3862' }}>{tool.desc}</p>
-              <p className="font-serif italic text-sm" style={{ color: '#8A78A8' }}>{tool.note}</p>
+              <p className="font-sans text-base leading-relaxed mb-4" style={{ color: '#4A3862' }}>{tool.body}</p>
+              {tool.note && <p className="font-serif italic text-base" style={{ color: '#8A78A8' }}>{tool.note}</p>}
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* The guide */}
       <section className="py-20 px-6" style={{ background: '#2A1F3D' }}>
-        <div className="max-w-5xl mx-auto">
-          <p className="font-mono text-xs tracking-[0.25em] mb-6" style={{ color: '#A89BC4' }}>from the guide</p>
+        <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-4xl mb-6" style={{ color: '#F5F3FA' }}>
-            The neighborhood scoring model uses Elle's specific criteria.
+            Scored against how you actually live.
           </h2>
-          <p className="font-sans leading-relaxed mb-12 max-w-2xl" style={{ color: '#C0B5D8' }}>
-            Not generic livability scores. Not aggregated review data. Commute tolerance, proximity to specific wellness infrastructure (Equinox, SEV, Skin Laundry), aesthetic match, and the neighborhoods she explicitly names — scored against your answers to 14 questions.
+          <p className="font-sans text-xl leading-relaxed mb-12 max-w-2xl" style={{ color: '#C0B5D8' }}>
+            Not average commute times. Not crowd-sourced ratings. The quiz weighs what matters to you — your routines, your priorities, your energy — and scores each neighborhood accordingly.
           </p>
-          <div className="grid md:grid-cols-3 gap-4">
-            {neighborhoods.map((n, i) => (
-              <motion.div key={i} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }}
-                viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-                className="rounded-2xl p-5" style={{ background: 'rgba(168,155,196,0.12)' }}>
-                <h4 className="font-display text-lg mb-2" style={{ color: '#D5CCE8' }}>{n.name}</h4>
-                <p className="font-sans text-xs leading-relaxed" style={{ color: '#8A78A8' }}>{n.notes}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* AI philosophy */}
-      <section className="py-20 px-6 max-w-4xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="font-mono text-xs tracking-[0.25em] mb-4" style={{ color: '#6B5A8A' }}>on intelligence</p>
-            <h2 className="font-display text-3xl mb-4" style={{ color: '#2A1F3D' }}>Mathematical by default. Narrative on demand.</h2>
-            <p className="font-sans leading-relaxed" style={{ color: '#4A3862' }}>
-              The neighborhood quiz scores mathematically — fast, reliable, no API dependency. Toggle on AI and it writes a personal narrative about your life in that neighborhood. Not every feature needs intelligence. The question for each feature was: does AI make this better, or does it just make it more expensive to run?
-            </p>
-          </div>
-          <div className="rounded-3xl p-8" style={{ background: '#EAE5F5' }}>
-            <p className="font-mono text-xs tracking-[0.2em] mb-6" style={{ color: '#6B5A8A' }}>SCORING MODEL</p>
-            <div className="space-y-3">
-              {[
-                { factor: 'Commute tolerance', weight: 'High' },
-                { factor: 'Equinox proximity', weight: 'High' },
-                { factor: 'SEV + Skin Laundry', weight: 'Medium' },
-                { factor: 'Aesthetic match', weight: 'Medium' },
-                { factor: 'Named in guide', weight: 'Qualifier' },
-                { factor: 'AI narrative', weight: 'Optional' },
-              ].map(row => (
-                <div key={row.factor} className="flex justify-between text-sm border-b pb-2"
-                  style={{ borderColor: 'rgba(168,155,196,0.3)' }}>
-                  <span className="font-sans" style={{ color: '#2A1F3D' }}>{row.factor}</span>
-                  <span className="font-mono text-xs" style={{ color: '#8A78A8' }}>{row.weight}</span>
-                </div>
-              ))}
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="font-display text-xl mb-3" style={{ color: '#A89BC4' }}>Mathematical by default</h3>
+              <p className="font-sans text-base leading-relaxed" style={{ color: '#8A78A8' }}>The quiz scores fast and reliably — no API dependency, no wait time. Your neighborhood match is instant.</p>
+            </div>
+            <div>
+              <h3 className="font-display text-xl mb-3" style={{ color: '#A89BC4' }}>Narrative on demand</h3>
+              <p className="font-sans text-base leading-relaxed" style={{ color: '#8A78A8' }}>Toggle on AI and it writes a personal story about your life in that neighborhood. The math tells you where you'd fit. The narrative tells you what it feels like.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
       <section className="py-20 px-6 text-center" style={{ background: '#F5F3FA' }}>
-        <p className="font-serif italic text-xl mb-8" style={{ color: '#4A3862' }}>
-          14 questions. 26 venues. One map of how to actually live in New York.
+        <p className="font-serif italic text-2xl mb-8" style={{ color: '#4A3862' }}>
+          14 questions. 26 venues. Your city, mapped to how you actually live.
         </p>
         <a href="https://ritualwhere.vercel.app" target="_blank" rel="noopener noreferrer"
-          className="inline-block font-mono text-sm px-10 py-4 rounded-full transition-all hover:opacity-90"
+          className="inline-block font-mono text-base px-10 py-4 rounded-full transition-all hover:opacity-90"
           style={{ background: '#A89BC4', color: '#F5F3FA' }}>
           Open Ritualwhere? →
         </a>
