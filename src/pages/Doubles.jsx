@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export default function Doubles() {
   return (
-    <main className="pt-32 pb-24">
+    <main className="pt-36 pb-28">
 
       {/* Hero */}
       <div className="px-6 md:px-16 max-w-5xl mx-auto mb-28">
@@ -20,7 +20,7 @@ export default function Doubles() {
       </div>
 
       {/* What it does */}
-      <div className="bg-cream-alt py-20 px-6">
+      <div className="bg-cream-alt py-32 px-6">
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-mono text-sm text-amber tracking-[0.25em] mb-5">the problem</p>
@@ -52,7 +52,7 @@ export default function Doubles() {
       </div>
 
       {/* The signature aesthetic — black + lime green */}
-      <div className="py-24 px-6" style={{ background: 'linear-gradient(180deg, #0A0A0A 0%, #050505 100%)' }}>
+      <div className="py-36 px-6" style={{ background: 'linear-gradient(180deg, #0A0A0A 0%, #050505 100%)' }}>
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="font-serif italic text-2xl leading-relaxed" style={{ color: '#c8f23a' }}>
             Find your doubles.

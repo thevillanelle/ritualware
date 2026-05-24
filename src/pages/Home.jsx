@@ -27,7 +27,7 @@ export default function Home() {
           </motion.h1>
 
           <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.7, duration: 0.4 }}
-            className="h-px w-16 mb-10 origin-left" style={{ background: 'var(--amber)' }}/>
+            className="h-px w-16 mb-14 origin-left" style={{ background: 'var(--amber)' }}/>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}
             className="flex flex-wrap gap-3">
@@ -43,7 +43,7 @@ export default function Home() {
 
       <Marquee />
 
-      <section className="py-20 px-6 max-w-6xl mx-auto">
+      <section className="py-32 px-6 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-5 mb-5">
           <Link to="/platform" className="md:col-span-3 block bg-cream-dark rounded-3xl p-10 group lift warm-shadow">
             <p className="font-mono text-xs text-amber tracking-[0.2em] mb-3">the platform</p>

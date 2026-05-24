@@ -20,7 +20,7 @@ export default function GlowUp() {
   return (
     <main style={{ background: '#F4F7F4', minHeight: '100vh' }}>
 
-      <section className="relative flex items-center overflow-hidden pt-24 pb-20 md:pt-36 md:pb-28"
+      <section className="relative flex items-center overflow-hidden pt-32 pb-24 md:pt-44 md:pb-36"
         style={{ background: 'linear-gradient(160deg, #F4F7F4 0%, #E2EDE0 60%, #C8D9C4 100%)' }}>
         <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full opacity-25 blur-3xl pointer-events-none"
           style={{ background: 'radial-gradient(circle, #8FA688, #A8BCAB)' }} />
@@ -45,7 +45,7 @@ export default function GlowUp() {
       </section>
 
       {/* What it is */}
-      <section className="py-24 px-6 md:px-16 max-w-5xl mx-auto">
+      <section className="py-36 px-6 md:px-16 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color: '#4A6B45' }}>what glow up does</p>
@@ -92,8 +92,8 @@ export default function GlowUp() {
       </section>
 
       {/* 12 categories */}
-      <section className="py-24 px-6 md:px-16 max-w-5xl mx-auto border-t border-sage/20">
-        <p className="font-mono text-sm tracking-[0.25em] mb-10" style={{ color: '#4A6B45' }}>12 areas covered</p>
+      <section className="py-36 px-6 md:px-16 max-w-5xl mx-auto border-t border-sage/20">
+        <p className="font-mono text-sm tracking-[0.25em] mb-14" style={{ color: '#4A6B45' }}>12 areas covered</p>
         <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {categories.map(cat => (
             <div key={cat.name} className="rounded-2xl p-5 flex flex-col items-center text-center gap-2"
@@ -106,7 +106,7 @@ export default function GlowUp() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-24 px-6" style={{ background: '#1A2D18' }}>
+      <section className="py-36 px-6" style={{ background: '#1A2D18' }}>
         <div className="max-w-3xl mx-auto">
           <p className="font-serif italic text-2xl leading-tight pl-8 border-l-2" style={{ color: '#F4F7F4', borderColor: '#8FA688' }}>
             The result isn't a number. It's a plan. Something you can actually use tomorrow morning.
@@ -124,7 +124,7 @@ export default function GlowUp() {
         </div>
       </section>
 
-      <section className="py-20 px-6 text-center" style={{ background: '#F4F7F4' }}>
+      <section className="py-32 px-6 text-center" style={{ background: '#F4F7F4' }}>
         <p className="font-serif italic text-2xl mb-8" style={{ color: '#3A5538' }}>
           One honest look at where you are.
         </p>

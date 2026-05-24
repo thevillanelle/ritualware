@@ -17,7 +17,7 @@ export default function Ritualwhere() {
   return (
     <main style={{ background: '#F5F3FA', minHeight: '100vh' }}>
 
-      <section className="relative flex items-center overflow-hidden pt-24 pb-20 md:pt-36 md:pb-28"
+      <section className="relative flex items-center overflow-hidden pt-32 pb-24 md:pt-44 md:pb-36"
         style={{ background: 'linear-gradient(160deg, #F5F3FA 0%, #EAE5F5 60%, #D5CCE8 100%)' }}>
         <div className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full opacity-20 blur-3xl pointer-events-none"
           style={{ background: 'radial-gradient(circle, #A89BC4, #C0B5D8)' }} />
@@ -44,7 +44,7 @@ export default function Ritualwhere() {
       </section>
 
       {/* Three tools */}
-      <section className="py-24 px-6 md:px-16 max-w-5xl mx-auto">
+      <section className="py-36 px-6 md:px-16 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {[
             { label: 'neighborhood quiz', title: 'Neighborhood Quiz', body: 'Answer questions about how you actually live — your commute, your routines, your energy, your aesthetic. The quiz scores neighborhoods against your real criteria, not generic livability rankings.', note: 'Toggle on AI and it writes a personal narrative about your life in that neighborhood.' },
@@ -64,14 +64,14 @@ export default function Ritualwhere() {
       </section>
 
       {/* Example neighborhood results */}
-      <section className="py-24 px-6" style={{ background: '#2A1F3D' }}>
+      <section className="py-36 px-6" style={{ background: '#2A1F3D' }}>
         <div className="max-w-5xl mx-auto">
           <p className="font-mono text-sm tracking-[0.25em] mb-4" style={{ color: '#A89BC4' }}>example quiz result</p>
           <h2 className="font-display text-4xl mb-4" style={{ color: '#F5F3FA' }}>Your top neighborhoods, ranked.</h2>
-          <p className="font-sans text-xl leading-relaxed mb-12 max-w-2xl" style={{ color: '#C0B5D8' }}>
+          <p className="font-sans text-xl leading-relaxed mb-16 max-w-2xl" style={{ color: '#C0B5D8' }}>
             The quiz gives you a ranked list with a score and a reason — not just "you'd like it here" but why it fits your specific answers.
           </p>
-          <div className="space-y-5 mb-12">
+          <div className="space-y-5 mb-16">
             {exampleNeighborhoods.map((n, i) => (
               <motion.div key={i} initial={{ opacity: 0, x: -16 }} whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }} transition={{ delay: i * 0.1 }}
@@ -106,10 +106,10 @@ export default function Ritualwhere() {
       </section>
 
       {/* Third Space Finder expanded */}
-      <section className="py-24 px-6 md:px-16 max-w-5xl mx-auto">
+      <section className="py-36 px-6 md:px-16 max-w-5xl mx-auto">
         <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color: '#6B5A8A' }}>third space finder</p>
         <h2 className="font-display text-4xl text-ink mb-6">A place for every kind of need.</h2>
-        <p className="font-sans text-xl text-ink-muted leading-relaxed mb-12 max-w-2xl">
+        <p className="font-sans text-xl text-ink-muted leading-relaxed mb-16 max-w-2xl">
           Your "third space" is the place between home and work — where you recharge, connect, focus, or move. The finder matches you to real venues based on what you actually need from a place.
         </p>
         <div className="grid md:grid-cols-2 gap-5">
@@ -130,12 +130,12 @@ export default function Ritualwhere() {
       </section>
 
       {/* The quiz detail */}
-      <section className="py-24 px-6" style={{ background: '#2A1F3D' }}>
+      <section className="py-36 px-6" style={{ background: '#2A1F3D' }}>
         <div className="max-w-4xl mx-auto">
           <h2 className="font-display text-4xl mb-6" style={{ color: '#F5F3FA' }}>
             Scored against how you actually live.
           </h2>
-          <p className="font-sans text-xl leading-relaxed mb-12 max-w-2xl" style={{ color: '#C0B5D8' }}>
+          <p className="font-sans text-xl leading-relaxed mb-16 max-w-2xl" style={{ color: '#C0B5D8' }}>
             Not average commute times or crowd-sourced star ratings. The quiz weighs your specific priorities: your wellness routines, your aesthetic preferences, your energy for commuting, your need for certain kinds of proximity.
           </p>
           <div className="grid md:grid-cols-2 gap-8">
@@ -151,7 +151,7 @@ export default function Ritualwhere() {
         </div>
       </section>
 
-      <section className="py-20 px-6 text-center" style={{ background: '#F5F3FA' }}>
+      <section className="py-32 px-6 text-center" style={{ background: '#F5F3FA' }}>
         <p className="font-serif italic text-2xl mb-8" style={{ color: '#4A3862' }}>
           Your city, mapped to how you actually live.
         </p>

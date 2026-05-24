@@ -30,7 +30,7 @@ const apps = [
 
 export default function Platform() {
   return (
-    <main className="pt-32 pb-24">
+    <main className="pt-36 pb-28">
 
       {/* Hero */}
       <div className="px-6 md:px-16 max-w-5xl mx-auto mb-24">
@@ -86,7 +86,7 @@ export default function Platform() {
           <h2 className="font-display italic text-[clamp(32px,4vw,56px)] leading-tight mb-6" style={{ color: '#FAF7F2' }}>
             Log in once.<br />Every tool knows you.
           </h2>
-          <p className="font-sans text-lg leading-relaxed max-w-xl mx-auto mb-10" style={{ color: '#C8BFB0' }}>
+          <p className="font-sans text-lg leading-relaxed max-w-xl mx-auto mb-14" style={{ color: '#C8BFB0' }}>
             Your style rules, your beauty audit, your neighborhood profile — in one place. What you tell Ritualwear informs what Glow Up sees. What Ritualwhere learns about how you move through the city connects back to everything else.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

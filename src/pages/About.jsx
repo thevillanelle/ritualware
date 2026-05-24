@@ -17,11 +17,11 @@ export default function About() {
           className="font-mono text-sm text-amber tracking-[0.25em] mb-8">ritualware</motion.p>
 
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-          className="font-display italic leading-tight mb-12" style={{ fontSize: 'clamp(40px,6vw,72px)', color: '#FAF7F2' }}>
+          className="font-display italic leading-tight mb-16" style={{ fontSize: 'clamp(40px,6vw,72px)', color: '#FAF7F2' }}>
           Five tools.<br />Five questions.
         </motion.h1>
 
-        <div className="space-y-8 mb-20">
+        <div className="space-y-10 mb-28">
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
             Ritualware is built around a simple premise: how you show up in the world — what you wear, how you look, where you go, what you're working toward — isn't random. It's a system. And systems can be designed intentionally.
@@ -32,8 +32,8 @@ export default function About() {
           </motion.p>
         </div>
 
-        <div className="border-t border-amber/20 pt-16 mb-20">
-          <p className="font-mono text-sm text-amber tracking-[0.25em] mb-10">the full suite</p>
+        <div className="border-t border-amber/20 pt-20 mb-20">
+          <p className="font-mono text-sm text-amber tracking-[0.25em] mb-14">the full suite</p>
           <div className="space-y-5">
             {allApps.map((app, i) => (
               <motion.a key={i} href={app.href} target="_blank" rel="noopener noreferrer"
@@ -51,8 +51,8 @@ export default function About() {
           </div>
         </div>
 
-        <div className="border-t border-amber/20 pt-16">
-          <p className="font-mono text-sm text-amber tracking-[0.25em] mb-10">the vibe</p>
+        <div className="border-t border-amber/20 pt-20">
+          <p className="font-mono text-sm text-amber tracking-[0.25em] mb-14">the vibe</p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { label: 'Intentional', body: 'Nothing here is accidental. Every question, every category, every recommendation is there for a reason.' },

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export default function Matelier() {
   return (
-    <main className="pt-32 pb-24">
+    <main className="pt-36 pb-28">
 
       <div className="px-6 md:px-16 max-w-5xl mx-auto mb-28">
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
@@ -19,7 +19,7 @@ export default function Matelier() {
       </div>
 
       {/* Lead with the star feature */}
-      <div className="py-24 px-6 md:px-16" style={{ background: 'var(--bg-dark)' }}>
+      <div className="py-36 px-6 md:px-16" style={{ background: 'var(--bg-dark)' }}>
         <div className="max-w-4xl mx-auto">
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-mono text-sm text-amber tracking-[0.25em] mb-5">the knowledge map</motion.p>
@@ -52,8 +52,8 @@ export default function Matelier() {
       </div>
 
       {/* What else is in it */}
-      <div className="py-24 px-6 md:px-16 max-w-4xl mx-auto">
-        <p className="font-mono text-sm text-amber tracking-[0.25em] mb-12">what's inside</p>
+      <div className="py-36 px-6 md:px-16 max-w-4xl mx-auto">
+        <p className="font-mono text-sm text-amber tracking-[0.25em] mb-16">what's inside</p>
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-cream-alt rounded-3xl p-8">
             <h3 className="font-display text-2xl text-ink mb-4">Project Tracking</h3>
@@ -82,7 +82,7 @@ export default function Matelier() {
         </div>
       </div>
 
-      <div className="py-16 px-6 text-center bg-cream-alt">
+      <div className="py-28 px-6 text-center bg-cream-alt">
         <p className="font-serif italic text-2xl text-ink-muted mb-8">
           Your studio. Your work. Your map.
         </p>

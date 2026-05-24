@@ -29,7 +29,7 @@ const apps = [
 
 export default function Apps() {
   return (
-    <main className="pt-32 pb-24 px-6 max-w-6xl mx-auto">
+    <main className="pt-36 pb-28 px-6 max-w-6xl mx-auto">
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
         className="font-mono text-xs text-amber tracking-[0.25em] mb-4">the apps</motion.p>
       <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
