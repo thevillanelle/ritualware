@@ -5,7 +5,9 @@ import Home from './pages/Home'
 import Platform from './pages/Platform'
 import Doubles from './pages/Doubles'
 import Matelier from './pages/Matelier'
-import Apps from './pages/Apps'
+import Ritualwear from './pages/Ritualwear'
+import GlowUp from './pages/GlowUp'
+import Ritualwhere from './pages/Ritualwhere'
 import About from './pages/About'
 
 export default function App() {
@@ -17,7 +19,9 @@ export default function App() {
         <Route path="/platform" element={<Platform />} />
         <Route path="/doubles" element={<Doubles />} />
         <Route path="/matelier" element={<Matelier />} />
-        <Route path="/apps" element={<Apps />} />
+        <Route path="/ritualwear" element={<Ritualwear />} />
+        <Route path="/glowup" element={<GlowUp />} />
+        <Route path="/ritualwhere" element={<Ritualwhere />} />
         <Route path="/about" element={<About />} />
       </Routes>
       <Footer />

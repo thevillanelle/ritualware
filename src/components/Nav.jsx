@@ -4,9 +4,11 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 const links = [
   { to: '/platform', label: 'Platform' },
+  { to: '/ritualwear', label: 'Ritualwear' },
+  { to: '/glowup', label: 'Glow Up' },
+  { to: '/ritualwhere', label: 'Ritualwhere?' },
   { to: '/doubles', label: 'Doubles' },
   { to: '/matelier', label: "m'atelier" },
-  { to: '/apps', label: 'Apps' },
   { to: '/about', label: 'About' },
 ]
 
@@ -15,18 +17,18 @@ export default function Nav() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-ink/10"
       style={{ background: 'rgba(250,247,242,0.92)', backdropFilter: 'blur(12px)' }}>
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link to="/" className="font-display italic text-2xl text-ink">Ritualware</Link>
-        <div className="hidden md:flex gap-8 items-center">
+        <div className="hidden md:flex gap-6 items-center">
           {links.map(l => (
             <NavLink key={l.to} to={l.to}
               className={({ isActive }) =>
-                `font-sans text-sm transition-colors pb-0.5 border-b ${isActive ? 'text-rose border-rose' : 'text-ink/60 border-transparent hover:text-ink'}`}>
+                `font-sans text-sm transition-colors pb-0.5 border-b ${isActive ? 'text-rose border-rose' : 'text-ink-muted border-transparent hover:text-ink'}`}>
               {l.label}
             </NavLink>
           ))}
         </div>
-        <button className="md:hidden p-2" onClick={() => setOpen(!open)}>
+        <button className="md:hidden" onClick={() => setOpen(!open)}>
           <div className={`w-5 h-px bg-ink mb-1.5 transition-all ${open ? 'rotate-45 translate-y-1.5' : ''}`}/>
           <div className={`w-5 h-px bg-ink mb-1.5 transition-all ${open ? 'opacity-0' : ''}`}/>
           <div className={`w-5 h-px bg-ink transition-all ${open ? '-rotate-45 -translate-y-1.5' : ''}`}/>
@@ -38,7 +40,7 @@ export default function Nav() {
             className="md:hidden overflow-hidden border-t border-ink/10 bg-cream">
             {links.map(l => (
               <NavLink key={l.to} to={l.to} onClick={() => setOpen(false)}
-                className="block px-6 py-4 font-sans text-sm text-ink/60 hover:text-rose border-b border-ink/10">
+                className="block px-6 py-4 font-sans text-sm text-ink-muted hover:text-rose border-b border-ink/10">
                 {l.label}
               </NavLink>
             ))}

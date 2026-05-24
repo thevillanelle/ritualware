@@ -28,12 +28,12 @@ export default function Home() {
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}
             className="font-serif italic text-xl text-ink-muted max-w-lg mb-4">
-            A platform of software experiments — tools built for real problems, deployed and running.
+            A suite of applications built around real personal frameworks — deployed, running, and in use.
           </motion.p>
 
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }}
             className="font-sans text-ink-muted max-w-lg mb-10">
-            Three lifestyle apps sharing one backend. A workout pairing tool rebuilt across three platforms. A personal intelligence system built to prove an enterprise architecture.
+            Three lifestyle tools sharing one backend. A workout pairing app rebuilt across three platforms. A personal intelligence system that scales enterprise architecture to household size.
           </motion.p>
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.3 }}
@@ -66,7 +66,7 @@ export default function Home() {
         <div className="grid md:grid-cols-2 gap-6">
           <Link to="/doubles"
             className="block bg-cream-alt rounded-3xl p-8 lift warm-shadow border border-ink/8 group">
-            <p className="font-mono text-xs text-rose tracking-[0.2em] mb-3">experiment no. 01</p>
+            <p className="font-mono text-xs text-rose tracking-[0.2em] mb-3">doubles</p>
             <h3 className="font-display text-3xl text-ink mb-3 group-hover:text-rose transition-colors">EQX Doubles Finder</h3>
             <p className="font-sans text-sm text-ink-muted leading-relaxed mb-4">
               The same core algorithm running across three complete platform rewrites — browser SPA, Python server, and native iOS. find_doubles() written once. Running everywhere.
@@ -75,7 +75,7 @@ export default function Home() {
           </Link>
           <Link to="/matelier"
             className="block bg-cream-alt rounded-3xl p-8 lift warm-shadow border border-ink/8 group">
-            <p className="font-mono text-xs text-amber tracking-[0.2em] mb-3">experiment no. 02</p>
+            <p className="font-mono text-xs text-amber tracking-[0.2em] mb-3">m'atelier</p>
             <h3 className="font-display italic text-3xl text-ink mb-3 group-hover:text-amber transition-colors">m'atelier</h3>
             <p className="font-sans text-sm text-ink-muted leading-relaxed mb-4">
               Enterprise team intelligence scaled to personal size. The proof of concept that validated the architecture for a 100-person production system.
