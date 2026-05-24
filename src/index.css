@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,600&family=DM+Sans:wght@400;500&family=Courier+Prime&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { background-color: #FAF7F2; color: #2C2016; font-family: 'DM Sans', sans-serif; }
+}
+
+@layer utilities {
+  .warm-shadow { box-shadow: 0 8px 40px rgba(196,149,106,0.15); }
+  .rose-glow:hover { box-shadow: 0 12px 50px rgba(212,145,154,0.25); }
+  .sage-glow:hover { box-shadow: 0 12px 50px rgba(143,166,136,0.25); }
+  .lavender-glow:hover { box-shadow: 0 12px 50px rgba(168,155,196,0.25); }
+  .lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .lift:hover { transform: translateY(-6px); }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 20s linear infinite; }
