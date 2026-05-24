@@ -35,21 +35,21 @@ export default function Ritualwhere() {
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
-              label: '14 questions',
+              label: 'neighborhood quiz',
               title: 'Neighborhood Quiz',
-              body: 'Answer 14 questions about how you actually live — your commute, your routines, your energy, your aesthetic. The quiz scores neighborhoods against your real criteria, not generic livability rankings.',
+              body: 'Answer questions about how you actually live — your commute, your routines, your energy, your aesthetic. The quiz scores neighborhoods against your real criteria, not generic livability rankings.',
               note: 'Toggle on AI and it writes a personal narrative about your life in that neighborhood.',
             },
             {
-              label: 'goal-based matching',
+              label: 'third space finder',
               title: 'Third Space Finder',
               body: 'Tell it what you need — a place to focus, a place to connect, somewhere to move, somewhere to rest. It matches you to venues that actually fit.',
-              note: '26 curated venues. Every recommendation is real.',
+              note: 'Curated recommendations. Every venue is real.',
             },
             {
-              label: '26 venues',
+              label: 'the map',
               title: 'The Map',
-              body: 'An interactive map of all 26 venues — labeled, categorized, and filterable by type. Every pin is a real recommendation you can click to explore.',
+              body: 'An interactive map of curated venues — labeled, categorized, and filterable by type. Every pin is a real recommendation you can click to explore.',
               note: null,
             },
           ].map((tool, i) => (
@@ -88,7 +88,7 @@ export default function Ritualwhere() {
 
       <section className="py-20 px-6 text-center" style={{ background: '#F5F3FA' }}>
         <p className="font-serif italic text-2xl mb-8" style={{ color: '#4A3862' }}>
-          14 questions. 26 venues. Your city, mapped to how you actually live.
+          Your city, mapped to how you actually live.
         </p>
         <a href="https://ritualwhere.vercel.app" target="_blank" rel="noopener noreferrer"
           className="inline-block font-mono text-base px-10 py-4 rounded-full transition-all hover:opacity-90"

@@ -33,12 +33,12 @@ export default function Ritualwear() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-mono text-sm tracking-[0.25em] mb-4" style={{ color: '#B87880' }}>the style bible</p>
-            <h2 className="font-display text-4xl mb-6" style={{ color: '#3D1A1F' }}>32 questions. Your actual rules.</h2>
+            <h2 className="font-display text-4xl mb-6" style={{ color: '#3D1A1F' }}>Deep questions. Your actual rules.</h2>
             <p className="font-sans text-lg leading-relaxed mb-4" style={{ color: '#5C2F35' }}>
-              Answer 32 questions about your Kibbe type, color season, fabric preferences, and personal style philosophy. Your answers shape what you're asked next.
+              The Style Bible is an intake process, not a quiz. It captures your Kibbe body type, color season, fabric preferences, and personal style philosophy — and your answers shape what you're asked next.
             </p>
             <p className="font-sans text-lg leading-relaxed" style={{ color: '#7A5055' }}>
-              The questions are drawn from a specific style philosophy — not generic advice. Applied to your specific profile.
+              The questions are drawn from a specific style philosophy. Not generic. Not borrowed from someone else's framework. Applied to your specific profile.
             </p>
           </div>
           <div className="rounded-3xl p-8" style={{ background: '#F0D8DC' }}>

@@ -42,12 +42,12 @@ export default function GlowUp() {
         <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-mono text-sm tracking-[0.25em] mb-4" style={{ color: '#4A6B45' }}>the audit</p>
-            <h2 className="font-display text-4xl mb-6" style={{ color: '#1A2D18' }}>42 questions. 12 categories. One honest assessment.</h2>
+            <h2 className="font-display text-4xl mb-6" style={{ color: '#1A2D18' }}>A real audit. Your whole picture.</h2>
             <p className="font-sans text-lg leading-relaxed mb-4" style={{ color: '#2C4428' }}>
-              A beauty and lifestyle audit built around a real hierarchy. 42 questions across 12 categories — scored independently, weighted against the whole picture.
+              A beauty and lifestyle audit built around a real hierarchy. Questions cover skin, sleep, nutrition, fitness, hair, makeup, body, teeth, fragrance, professional services, fashion, and mindset — scored independently, weighted against the whole.
             </p>
             <p className="font-sans text-lg leading-relaxed" style={{ color: '#4A6B45' }}>
-              The app should feel like it knows you. That doesn't happen at 10 questions.
+              The app should feel like it knows you. That doesn't happen if it goes shallow.
             </p>
             <div className="rounded-2xl p-6 mt-6" style={{ background: '#E2EDE0' }}>
               <p className="font-mono text-sm tracking-[0.2em] mb-4" style={{ color: '#4A6B45' }}>what you get</p>
@@ -95,7 +95,7 @@ export default function GlowUp() {
 
       <section className="py-20 px-6 text-center" style={{ background: '#F4F7F4' }}>
         <p className="font-serif italic text-2xl mb-8" style={{ color: '#3A5538' }}>
-          42 questions. One honest assessment.
+          One honest assessment.
         </p>
         <a href="https://glowup.vercel.app" target="_blank" rel="noopener noreferrer"
           className="inline-block font-mono text-base px-10 py-4 rounded-full transition-all hover:opacity-90"
