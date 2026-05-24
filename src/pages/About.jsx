@@ -4,7 +4,7 @@ const allApps = [
   { question: 'What do I wear?', name: 'Ritualwear', href: 'https://vile-style-oracle.vercel.app', color: '#D4919A', to: '/ritualwear' },
   { question: 'How do I look?', name: 'Glow Up', href: 'https://glow-up-ten-teal.vercel.app', color: '#8FA688', to: '/glowup' },
   { question: 'Where do I go?', name: 'Ritualwhere?', href: 'https://ritualwhere.vercel.app', color: '#A89BC4', to: '/ritualwhere' },
-  { question: 'Where can I work out?', name: 'Doubles', href: 'https://github.com/thevillanelle/eqx-doubles', color: '#D4919A', to: '/doubles' },
+  { question: 'Where can I work out?', name: 'Doubles', href: 'https://thevillanelle.github.io/eqx-doubles/index.html', color: '#D4919A', to: '/doubles' },
   { question: "What am I building?", name: "m'atelier", href: 'https://thevillanelle.github.io/studio', color: '#C8A86B', to: '/matelier' },
 ]
 

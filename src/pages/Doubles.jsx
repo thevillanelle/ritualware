@@ -79,12 +79,12 @@ export default function Doubles() {
         </div>
 
         <div className="mt-12 flex flex-wrap justify-center gap-4">
-          <a href="https://github.com/thevillanelle/eqx-doubles" target="_blank" rel="noopener noreferrer"
+          <a href="https://thevillanelle.github.io/eqx-doubles/index.html" target="_blank" rel="noopener noreferrer"
             className="inline-block font-mono text-sm px-6 py-3 rounded-full transition-all"
             style={{ border: '1px solid rgba(200,242,58,0.4)', color: '#c8f23a' }}>
             Web App →
           </a>
-          <a href="https://github.com/thevillanelle/eqx-doubles-python" target="_blank" rel="noopener noreferrer"
+          <a href="https://web-production-31654.up.railway.app" target="_blank" rel="noopener noreferrer"
             className="inline-block font-mono text-sm px-6 py-3 rounded-full transition-all"
             style={{ border: '1px solid rgba(200,242,58,0.2)', color: '#888' }}>
             Python Server →
