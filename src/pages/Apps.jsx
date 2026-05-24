@@ -15,7 +15,7 @@ const apps = [
     accentHex: '#8FA688',
     body: 'A beauty and lifestyle audit that covers your whole picture — skin, sleep, nutrition, fitness, hair, makeup, body, teeth, fragrance, services, fashion, and mindset. You get a real scorecard: section verdicts, quick wins for this week, a month-one plan, and the non-negotiables that don\'t move.',
     note: 'The app should feel like it knows you. That doesn\'t happen at ten questions.',
-    href: 'https://glowup.vercel.app',
+    href: 'https://glow-jdebrhgz1-thevillanelles-projects.vercel.app',
   },
   {
     question: 'Where do I go?',
