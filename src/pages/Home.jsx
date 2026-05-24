@@ -69,7 +69,7 @@ export default function Home() {
             <p className="font-mono text-xs text-rose tracking-[0.2em] mb-3">doubles</p>
             <h3 className="font-display text-3xl text-ink mb-3 group-hover:text-rose transition-colors">EQX Doubles Finder</h3>
             <p className="font-sans text-sm text-ink-muted leading-relaxed mb-4">
-              The same core algorithm running across three complete platform rewrites — browser SPA, Python server, and native iOS. find_doubles() written once. Running everywhere.
+              Find two classes that actually work together — matched by type, timed for real travel, across all 36 NYC Equinox locations. Plus amenities, subway lines, and tomorrow's pairings waiting when you open it.
             </p>
             <p className="font-mono text-xs text-rose">View Doubles →</p>
           </Link>
@@ -78,7 +78,7 @@ export default function Home() {
             <p className="font-mono text-xs text-amber tracking-[0.2em] mb-3">m'atelier</p>
             <h3 className="font-display italic text-3xl text-ink mb-3 group-hover:text-amber transition-colors">m'atelier</h3>
             <p className="font-sans text-sm text-ink-muted leading-relaxed mb-4">
-              Enterprise team intelligence scaled to personal size. The proof of concept that validated the architecture for a 100-person production system.
+              Your personal studio. Track what you're working on, what you know, and where you want to go — with a knowledge map that grows as you do.
             </p>
             <p className="font-mono text-xs text-amber">View m'atelier →</p>
           </Link>

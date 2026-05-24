@@ -14,7 +14,7 @@ export default function Doubles() {
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
           className="font-serif italic text-xl text-ink-muted max-w-xl">
-          Two classes. One city. Every combination that actually works — surfaced instantly.
+          Two classes. Real travel time. Every combination that actually works — across all 36 NYC Equinox locations.
         </motion.p>
       </div>
 

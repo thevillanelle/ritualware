@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
+import ThemeToggle, { useTheme } from './ThemeToggle'
 
 const links = [
   { to: '/platform', label: 'Platform' },
@@ -14,9 +15,11 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
+  const { dark, toggle } = useTheme()
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-ink/10"
-      style={{ background: 'rgba(250,247,242,0.92)', backdropFilter: 'blur(12px)' }}>
+      style={{ background: 'rgba(var(--bg-rgb,250,247,242), 0.92)', backdropFilter: 'blur(12px)' }}>
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link to="/" className="font-display italic text-2xl text-ink">Ritualware</Link>
         <div className="hidden md:flex gap-6 items-center">
@@ -27,6 +30,7 @@ export default function Nav() {
               {l.label}
             </NavLink>
           ))}
+          <ThemeToggle dark={dark} toggle={toggle} />
         </div>
         <button className="md:hidden" onClick={() => setOpen(!open)}>
           <div className={`w-5 h-px bg-ink mb-1.5 transition-all ${open ? 'rotate-45 translate-y-1.5' : ''}`}/>
@@ -37,13 +41,16 @@ export default function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div initial={{ height: 0 }} animate={{ height: 'auto' }} exit={{ height: 0 }}
-            className="md:hidden overflow-hidden border-t border-ink/10 bg-cream">
+            className="md:hidden overflow-hidden border-t border-ink/10" style={{ background: 'var(--bg)' }}>
             {links.map(l => (
               <NavLink key={l.to} to={l.to} onClick={() => setOpen(false)}
                 className="block px-6 py-4 font-sans text-sm text-ink-muted hover:text-rose border-b border-ink/10">
                 {l.label}
               </NavLink>
             ))}
+            <div className="px-6 py-4">
+              <ThemeToggle dark={dark} toggle={toggle} />
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

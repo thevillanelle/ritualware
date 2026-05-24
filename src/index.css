@@ -3,16 +3,48 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── LIGHT MODE (default — warm cream) ── */
+:root {
+  --bg: #FAF7F2;
+  --bg-alt: #F0EBE3;
+  --bg-dark: #1C1410;
+  --ink: #2C2016;
+  --ink-muted: #7A6B5A;
+  --rose: #D4919A;
+  --amber: #C4956A;
+  --sage: #8FA688;
+  --lavender: #A89BC4;
+  --gold: #C8A86B;
+  color-scheme: light;
+}
+
+/* ── DARK MODE ── */
+:root.dark {
+  --bg: #1C1410;
+  --bg-alt: #241A14;
+  --bg-dark: #FAF7F2;
+  --ink: #E8DDD0;
+  --ink-muted: #9A8B7A;
+  --rose: #D4919A;
+  --amber: #C4956A;
+  --sage: #8FA688;
+  --lavender: #A89BC4;
+  --gold: #C8A86B;
+  color-scheme: dark;
+}
+
 @layer base {
   html { scroll-behavior: smooth; }
-  body { background-color: #FAF7F2; color: #2C2016; font-family: 'DM Sans', sans-serif; }
+  body {
+    background-color: var(--bg);
+    color: var(--ink);
+    font-family: 'DM Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
 }
 
 @layer utilities {
   .warm-shadow { box-shadow: 0 8px 40px rgba(196,149,106,0.15); }
-  .rose-glow:hover { box-shadow: 0 12px 50px rgba(212,145,154,0.25); }
-  .sage-glow:hover { box-shadow: 0 12px 50px rgba(143,166,136,0.25); }
-  .lavender-glow:hover { box-shadow: 0 12px 50px rgba(168,155,196,0.25); }
   .lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
   .lift:hover { transform: translateY(-6px); }
 }

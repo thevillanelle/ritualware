@@ -4,13 +4,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        cream: { DEFAULT: '#FAF7F2', alt: '#F0EBE3', dark: '#1C1410' },
-        ink: { DEFAULT: '#2C2016', muted: '#7A6B5A' },
-        rose: { DEFAULT: '#D4919A', light: '#E8B4B8' },
-        amber: { DEFAULT: '#C4956A', light: '#D4AA85' },
-        sage: { DEFAULT: '#8FA688', light: '#A8BCAB' },
-        lavender: { DEFAULT: '#A89BC4', light: '#C0B5D8' },
-        gold: { DEFAULT: '#C8A86B' },
+        cream: { DEFAULT: 'var(--bg)', alt: 'var(--bg-alt)', dark: 'var(--bg-dark)' },
+        ink: { DEFAULT: 'var(--ink)', muted: 'var(--ink-muted)' },
+        rose: { DEFAULT: 'var(--rose)' },
+        amber: { DEFAULT: 'var(--amber)' },
+        sage: { DEFAULT: 'var(--sage)' },
+        lavender: { DEFAULT: 'var(--lavender)' },
+        gold: { DEFAULT: 'var(--gold)' },
       },
       fontFamily: {
         display: ['"Playfair Display"', 'Georgia', 'serif'],
