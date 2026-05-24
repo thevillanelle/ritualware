@@ -34,12 +34,13 @@
 }
 
 @layer base {
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; font-size: 18px; }
   body {
     background-color: var(--bg);
     color: var(--ink);
     font-family: 'DM Sans', sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
