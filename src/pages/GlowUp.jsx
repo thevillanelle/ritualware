@@ -35,7 +35,7 @@ export default function GlowUp() {
             className="font-serif italic text-2xl max-w-lg mb-8" style={{ color: '#3A5538' }}>
             A complete picture of where you are — and exactly what to do about it.
           </motion.p>
-          <motion.a href="https://glow-jdebrhgz1-thevillanelles-projects.vercel.app" target="_blank" rel="noopener noreferrer"
+          <motion.a href="https://glow-up-ten-teal.vercel.app" target="_blank" rel="noopener noreferrer"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}
             className="inline-block font-mono text-base px-8 py-4 rounded-full transition-all hover:opacity-90"
             style={{ background: '#8FA688', color: '#F4F7F4' }}>
@@ -128,7 +128,7 @@ export default function GlowUp() {
         <p className="font-serif italic text-2xl mb-8" style={{ color: '#3A5538' }}>
           One honest look at where you are.
         </p>
-        <a href="https://glow-jdebrhgz1-thevillanelles-projects.vercel.app" target="_blank" rel="noopener noreferrer"
+        <a href="https://glow-up-ten-teal.vercel.app" target="_blank" rel="noopener noreferrer"
           className="inline-block font-mono text-base px-10 py-4 rounded-full transition-all hover:opacity-90"
           style={{ background: '#8FA688', color: '#F4F7F4' }}>
           Open Glow Up →

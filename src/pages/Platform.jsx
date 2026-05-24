@@ -16,7 +16,7 @@ const apps = [
     name: 'Glow Up',
     desc: '42 questions across 12 categories. A real audit — not a quiz — built on Elle Porcher\'s actual beauty hierarchy. You get a scorecard, a week-one plan, and the non-negotiables that don\'t move.',
     accent: '#8FA688',
-    href: 'https://glow-jdebrhgz1-thevillanelles-projects.vercel.app',
+    href: 'https://glow-up-ten-teal.vercel.app',
   },
   {
     to: '/ritualwhere',
@@ -92,7 +92,7 @@ export default function Platform() {
           <div className="flex flex-wrap justify-center gap-4">
             {[
               { href: 'https://vile-style-oracle.vercel.app', label: 'Open Ritualwear', color: '#D4919A' },
-              { href: 'https://glow-jdebrhgz1-thevillanelles-projects.vercel.app', label: 'Open Glow Up', color: '#8FA688' },
+              { href: 'https://glow-up-ten-teal.vercel.app', label: 'Open Glow Up', color: '#8FA688' },
               { href: 'https://ritualwhere.vercel.app', label: 'Open Ritualwhere?', color: '#A89BC4' },
             ].map(btn => (
               <a key={btn.label} href={btn.href} target="_blank" rel="noopener noreferrer"
