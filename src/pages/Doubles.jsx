@@ -7,7 +7,7 @@ export default function Doubles() {
       {/* Hero */}
       <div className="px-6 md:px-16 max-w-6xl mx-auto mb-24">
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-          className="font-mono text-xs text-amber tracking-[0.25em] mb-4">software experiment no. 01</motion.p>
+          className="font-mono text-xs text-amber tracking-[0.25em] mb-4">eqx doubles finder</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="font-display text-[clamp(48px,7vw,100px)] leading-none text-ink mb-6">
           EQX Doubles<br /><span className="italic text-rose">Finder</span>

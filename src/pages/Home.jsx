@@ -47,9 +47,9 @@ export default function Home() {
 
       <Marquee />
 
-      {/* Experiment grid */}
+      {/* Applications grid */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
-        <p className="font-mono text-xs text-amber tracking-[0.25em] mb-10">the experiments</p>
+        <p className="font-mono text-xs text-amber tracking-[0.25em] mb-10">the applications</p>
         <div className="grid md:grid-cols-3 gap-6 mb-6">
           {/* The Platform — full width top */}
           <Link to="/platform" className="md:col-span-3 block bg-cream-dark rounded-3xl p-10 group lift warm-shadow">
@@ -71,7 +71,7 @@ export default function Home() {
             <p className="font-sans text-sm text-ink-muted leading-relaxed mb-4">
               The same core algorithm running across three complete platform rewrites — browser SPA, Python server, and native iOS. find_doubles() written once. Running everywhere.
             </p>
-            <p className="font-mono text-xs text-rose">View experiment →</p>
+            <p className="font-mono text-xs text-rose">View Doubles →</p>
           </Link>
           <Link to="/matelier"
             className="block bg-cream-alt rounded-3xl p-8 lift warm-shadow border border-ink/8 group">
@@ -80,7 +80,7 @@ export default function Home() {
             <p className="font-sans text-sm text-ink-muted leading-relaxed mb-4">
               Enterprise team intelligence scaled to personal size. The proof of concept that validated the architecture for a 100-person production system.
             </p>
-            <p className="font-mono text-xs text-amber">View experiment →</p>
+            <p className="font-mono text-xs text-amber">View m'atelier →</p>
           </Link>
         </div>
       </section>
