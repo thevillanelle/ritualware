@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion'
 
 const features = [
-  { title: 'Style Bible', desc: '32 deeply granular questions with branching logic and lesson modals. Captures Kibbe type, color season, fabric preferences, era references, designer DNA, lip rule, nail shape, fragrance family, and freeform style laws.' },
-  { title: 'The Oracle', desc: 'AI outfit recommendations structured into 9 labeled sections: silhouette, outfit, shoes, bag, jewelry, lip, nails, fragrance, weather swap. Live weather via Open-Meteo. Pexels mood board alongside every result.' },
+  { title: 'Style Bible', desc: 'deeply granular questions with branching logic and lesson modals. Captures Kibbe type, color season, fabric preferences, era references, designer DNA, lip rule, nail shape, fragrance family, and freeform style laws.' },
+  { title: 'The Oracle', desc: 'AI outfit recommendations structured into structured sections: silhouette, outfit, shoes, bag, jewelry, lip, nails, fragrance, weather swap. Live weather via Open-Meteo. Pexels mood board alongside every result.' },
   { title: 'My Looks', desc: 'Saved Oracle results with favorite/unfavorite, expandable sections, and mood board images. Your personal lookbook, built from your own recommendations.' },
   { title: 'Inspo Upload', desc: "Gemini Vision reads uploaded images and extracts color palette, silhouette, vibe words, and specific pieces. Offers to add extracted data directly to your Style Bible." },
-  { title: 'Style Finder', desc: "15 questions that excavate latent aesthetic identity when you don't know where to start. Outputs a named style archetype, your truth, your blind spots, immediate moves, and style words." },
+  { title: 'Style Finder', desc: "questions that excavate latent aesthetic identity when you don't know where to start. Outputs a named style archetype, your truth, your blind spots, immediate moves, and style words." },
 ]
 
 const exampleLook = [
@@ -124,7 +124,7 @@ export default function Ritualwear() {
             {[
               { heading: 'Built on your rules', body: 'Reads your Style Bible before it says anything. Every recommendation is filtered through your Kibbe type, color season, and fabric preferences.' },
               { heading: 'Weather-aware', body: "Live weather from Open-Meteo. It knows what's actually happening outside. The look accounts for today — not a hypothetical day." },
-              { heading: '9 sections, not suggestions', body: 'Silhouette. Outfit. Shoes. Bag. Jewelry. Lip. Nails. Fragrance. Weather swap. One complete look. A Pexels mood board alongside it.' },
+              { heading: 'structured sections, not suggestions', body: 'Silhouette. Outfit. Shoes. Bag. Jewelry. Lip. Nails. Fragrance. Weather swap. One complete look. A Pexels mood board alongside it.' },
             ].map((item, i) => (
               <div key={i} className="rounded-2xl p-6" style={{ background: 'rgba(255,255,255,0.06)' }}>
                 <h3 className="font-display text-xl mb-3" style={{ color: '#E8B4B8' }}>{item.heading}</h3>

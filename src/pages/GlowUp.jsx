@@ -10,7 +10,7 @@ const sections = [
 ]
 
 const paths = [
-  { name: 'Glow Up Audit', desc: '42 questions across 12 sections. The full picture of where you are.' },
+  { name: 'Glow Up Audit', desc: 'questions across every category of your beauty life. The full picture of where you are.' },
   { name: 'The Rebrand', desc: '15 questions that map what\'s changing and who you\'re becoming.' },
   { name: 'The Makeover', desc: '15 questions using the Glow Up Pyramid as the framework for a complete transformation plan.' },
 ]
@@ -70,7 +70,7 @@ export default function GlowUp() {
             <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color: '#4A6B45' }}>the glow up audit</p>
             <h2 className="font-display text-4xl mb-6" style={{ color: '#1A2D18' }}>A real audit. Your whole picture.</h2>
             <p className="font-sans text-lg leading-relaxed mb-5" style={{ color: '#2C4428' }}>
-              42 questions across 12 sections — scored independently, weighted against the whole. You get section verdicts, quick wins, a week-one plan, a month-one plan, and the non-negotiables that don't move.
+              questions across every category of your beauty life — scored independently, weighted against the whole. You get section verdicts, quick wins, a week-one plan, a month-one plan, and the non-negotiables that don't move.
             </p>
             <p className="font-sans text-base leading-relaxed" style={{ color: '#4A6B45' }}>
               The app should feel like it knows you. That doesn't happen if it goes shallow.
@@ -80,7 +80,7 @@ export default function GlowUp() {
             <p className="font-mono text-sm tracking-[0.2em] mb-4" style={{ color: '#4A6B45' }}>example scorecard</p>
             <div className="rounded-3xl overflow-hidden" style={{ background: '#1A2D18' }}>
               <div className="p-5 border-b" style={{ borderColor: 'rgba(143,166,136,0.2)' }}>
-                <p className="font-mono text-xs text-sage tracking-widest">YOUR SCORECARD — 4 OF 12 SHOWN</p>
+                <p className="font-mono text-xs text-sage tracking-widest">YOUR SCORECARD — SAMPLE</p>
               </div>
               {exampleResult.map((r, i) => (
                 <div key={i} className="p-5 border-b" style={{ borderColor: 'rgba(143,166,136,0.1)' }}>

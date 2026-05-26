@@ -17,11 +17,11 @@ export default function Platform() {
           className="font-mono text-sm text-amber tracking-[0.25em] mb-4">the platform</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="font-display text-[clamp(44px,6vw,80px)] text-ink mb-8 leading-tight">
-          Four questions.<br />One place.
+          Four tools.<br />One place.
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
           className="font-sans text-xl text-ink-muted leading-relaxed max-w-2xl mb-4">
-          Ritualware is four interconnected apps built on the personal frameworks of Elle Porcher — a style philosophy, a beauty hierarchy, a guide to thriving in New York and Los Angeles, and a personal studio for tracking what you're building.
+          Ritualware is a suite of interconnected apps built on the personal frameworks of Elle Porcher — a style philosophy, a beauty hierarchy, a guide to thriving in New York and Los Angeles, and a personal studio for tracking what you're building.
         </motion.p>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
           className="font-serif italic text-xl text-ink-muted leading-relaxed max-w-2xl">
@@ -67,7 +67,7 @@ export default function Platform() {
               Log in once.<br />Every app knows you.
             </h2>
             <p className="font-sans text-lg leading-relaxed mb-4" style={{ color: '#C8BFB0' }}>
-              The Ritual Profile aggregates every answer you've ever given — across all four apps, all nine quizzes, ~181 questions total. The first quiz populates it. Every one after makes it richer.
+              The Ritual Profile aggregates every answer you've ever given — across all four apps, all nine quizzes, every answer you've ever given. The first quiz populates it. Every one after makes it richer.
             </p>
             <p className="font-sans text-base leading-relaxed" style={{ color: '#9A8B7A' }}>
               One AI Narrative button sends your complete profile to Gemini 2.5 Flash and generates a prose study of who you are. Saved — so it doesn't regenerate every time you open it.
@@ -83,7 +83,7 @@ export default function Platform() {
                 <span>Supabase tables</span><span className="text-ink">16</span>
               </div>
               <div className="flex justify-between border-b border-ink/10 pb-3">
-                <span>Total quiz questions</span><span className="text-ink">~181</span>
+                <span>Total quiz questions</span><span className="text-ink">all your</span>
               </div>
               <div className="flex justify-between border-b border-ink/10 pb-3">
                 <span>AI model</span><span className="text-ink">Gemini 2.5 Flash</span>

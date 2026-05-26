@@ -17,7 +17,7 @@ export default function About() {
 
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="font-display italic leading-tight mb-12" style={{ fontSize: 'clamp(40px,6vw,72px)', color: '#FAF7F2' }}>
-          Four tools.<br />Four questions.
+          Four tools.<br />Four tools.
         </motion.h1>
 
         <div className="space-y-8 mb-24">
@@ -31,7 +31,7 @@ export default function About() {
           </motion.p>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            The Ritual Profile — accessible from any app — aggregates all ~181 answers across all nine quizzes into one place. One AI button sends it all to Gemini and gets back a prose study of who you are. Saved, so it doesn't regenerate every time you open it.
+            The Ritual Profile — accessible from any app — aggregates all every answer across all nine quizzes into one place. One AI button sends it all to Gemini and gets back a prose study of who you are. Saved, so it doesn't regenerate every time you open it.
           </motion.p>
         </div>
 
@@ -58,10 +58,10 @@ export default function About() {
           <p className="font-mono text-sm text-amber tracking-[0.25em] mb-10">by the numbers</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { num: '4', label: 'Apps' },
-              { num: '16', label: 'Supabase tables' },
-              { num: '~181', label: 'Quiz questions' },
-              { num: '2', label: 'Cities' },
+              
+              
+              { num: 'all your', label: 'Quiz questions' },
+              
             ].map((s, i) => (
               <div key={i} className="rounded-2xl p-6 text-center" style={{ background: 'rgba(255,255,255,0.05)' }}>
                 <p className="font-display text-4xl mb-2" style={{ color: '#C8A86B' }}>{s.num}</p>

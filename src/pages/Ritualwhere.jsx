@@ -10,7 +10,7 @@ const tools = [
   {
     label: 'third space finder',
     title: 'Third Space Finder',
-    body: '80+ venues across NYC and LA filtered by your goals — focus work, social energy, movement, rest. Matches you to places that actually fit.',
+    body: 'curated venues across NYC and LA filtered by your goals — focus work, social energy, movement, rest. Matches you to places that actually fit.',
     note: 'Every venue is real. Every recommendation is curated.',
   },
   {
@@ -22,13 +22,13 @@ const tools = [
   {
     label: 'burnout audit',
     title: 'Burnout Audit',
-    body: '15 questions diagnosing social, mental, or physical burnout. Rule-based protocol identifies your dominant burnout type.',
+    body: 'questions diagnosing social, mental, or physical burnout. Rule-based protocol identifies your dominant burnout type.',
     note: 'AI personal insight toggle adds a narrative layer when you want it.',
   },
   {
     label: 'quarterly reinvention',
     title: 'Quarterly Reinvention',
-    body: '15 questions across aesthetic, social habits, and skill acquisition. Rule-based moves per section — specific, not generic.',
+    body: 'questions across aesthetic, social habits, and skill acquisition. Rule-based moves per section — specific, not generic.',
     note: 'AI 90-day plan toggle when you\'re ready to go deeper.',
   },
   {
@@ -77,7 +77,7 @@ export default function Ritualwhere() {
 
       {/* Six tools */}
       <section className="py-32 px-6 md:px-16 max-w-5xl mx-auto">
-        <p className="font-mono text-sm tracking-[0.25em] mb-14" style={{ color: '#6B5A8A' }}>six tools inside</p>
+        <p className="font-mono text-sm tracking-[0.25em] mb-14" style={{ color: '#6B5A8A' }}>what's inside</p>
         <div className="grid md:grid-cols-2 gap-6 mb-20">
           {tools.map((tool, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
@@ -140,7 +140,7 @@ export default function Ritualwhere() {
             <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color: '#6B5A8A' }}>los angeles</p>
             <h2 className="font-display text-4xl text-ink mb-6">Tuned to how LA actually works.</h2>
             <p className="font-sans text-lg text-ink-muted leading-relaxed mb-4">
-              A separate 13-question quiz built for the specific logic of LA — the 405 divide, parking as a lifestyle constraint, Eastside vs Westside, the Valley as its own world, WeHo's identity, Venice as rich boho not a beach neighborhood.
+              A separate quiz built for the specific logic of LA — the 405 divide, parking as a lifestyle constraint, Eastside vs Westside, the Valley as its own world, WeHo's identity, Venice as rich boho not a beach neighborhood.
             </p>
             <p className="font-sans text-base text-ink-muted leading-relaxed">
               The city toggle appears on every page header. All six tools respond instantly.
@@ -150,7 +150,7 @@ export default function Ritualwhere() {
             <p className="font-mono text-sm tracking-[0.2em] mb-6" style={{ color: '#6B5A8A' }}>NYC vs LA</p>
             <div className="space-y-3 font-sans text-sm" style={{ color: '#4A3862' }}>
               {[
-                ['Neighborhoods scored', '14 questions', '13 questions'],
+                ['Neighborhoods scored', 'questions', 'questions'],
                 ['Map venues', '80+ NYC', '80+ LA'],
                 ['Specific logic', 'Subway proximity', '405 divide / parking'],
                 ['City toggle', '—', 'Switch instantly'],
