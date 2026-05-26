@@ -79,7 +79,7 @@ export default function Ritualwear() {
                 className="font-serif italic text-xl max-w-md mb-8" style={{ color: '#7A4048' }}>
                 A personal styling oracle powered by your own rules.
               </motion.p>
-              <motion.a href="https://vile-style-oracle.vercel.app" target="_blank" rel="noopener noreferrer"
+              <motion.a href="https://wear.ritualware.app" target="_blank" rel="noopener noreferrer"
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}
                 className="inline-block font-mono text-base px-8 py-4 rounded-full transition-all hover:opacity-90"
                 style={{ background: '#D4919A', color: '#FDF6F7' }}>
@@ -142,7 +142,7 @@ export default function Ritualwear() {
         <p className="font-serif italic text-2xl mb-8" style={{ color: '#7A5055' }}>
           Your rules. Your weather. One outfit.
         </p>
-        <a href="https://vile-style-oracle.vercel.app" target="_blank" rel="noopener noreferrer"
+        <a href="https://wear.ritualware.app" target="_blank" rel="noopener noreferrer"
           className="inline-block font-mono text-base px-10 py-4 rounded-full transition-all hover:opacity-90"
           style={{ background: '#D4919A', color: '#FDF6F7' }}>
           Open Ritualwear →

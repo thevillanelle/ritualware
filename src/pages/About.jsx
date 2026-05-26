@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 
 const allApps = [
-  { question: 'What do I wear?',     name: 'Ritualwear',   href: 'https://vile-style-oracle.vercel.app',      color: '#D4919A', to: '/ritualwear' },
-  { question: 'How do I look?',      name: 'Glow Up',      href: 'https://glow-up-ten-teal.vercel.app',       color: '#8FA688', to: '/glowup' },
-  { question: 'Where do I go?',      name: 'Ritualwhere?', href: 'https://ritualwhere.vercel.app',             color: '#A89BC4', to: '/ritualwhere' },
-  { question: "What am I building?", name: "m'atelier",    href: 'https://thevillanelle.github.io/studio',    color: '#C8A86B', to: '/matelier' },
+  { question: 'What do I wear?',     name: 'Ritualwear',   href: 'https://wear.ritualware.app',      color: '#D4919A', to: '/ritualwear' },
+  { question: 'How do I look?',      name: 'Glow Up',      href: 'https://glowup.ritualware.app',       color: '#8FA688', to: '/glowup' },
+  { question: 'Where do I go?',      name: 'Ritualwhere?', href: 'https://where.ritualware.app',             color: '#A89BC4', to: '/ritualwhere' },
+  { question: "What am I building?", name: "m'atelier",    href: 'https://studio.ritualware.app',    color: '#C8A86B', to: '/matelier' },
 ]
 
 export default function About() {

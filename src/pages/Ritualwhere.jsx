@@ -66,7 +66,7 @@ export default function Ritualwhere() {
           </motion.p>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6 }}
             className="font-mono text-sm mb-8" style={{ color: '#8A78A8' }}>New York · Los Angeles</motion.p>
-          <motion.a href="https://ritualwhere.vercel.app" target="_blank" rel="noopener noreferrer"
+          <motion.a href="https://where.ritualware.app" target="_blank" rel="noopener noreferrer"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}
             className="inline-block font-mono text-base px-8 py-4 rounded-full transition-all hover:opacity-90"
             style={{ background: '#A89BC4', color: '#F5F3FA' }}>
@@ -170,7 +170,7 @@ export default function Ritualwhere() {
         <p className="font-serif italic text-2xl mb-8" style={{ color: '#4A3862' }}>
           Your city, mapped to how you actually live.
         </p>
-        <a href="https://ritualwhere.vercel.app" target="_blank" rel="noopener noreferrer"
+        <a href="https://where.ritualware.app" target="_blank" rel="noopener noreferrer"
           className="inline-block font-mono text-base px-10 py-4 rounded-full transition-all hover:opacity-90"
           style={{ background: '#A89BC4', color: '#F5F3FA' }}>
           Open Ritualwhere? →

@@ -84,7 +84,7 @@ export default function Matelier() {
         <p className="font-serif italic text-2xl text-ink-muted mb-8">
           Your studio. Your work. Your map.
         </p>
-        <a href="https://thevillanelle.github.io/studio" target="_blank" rel="noopener noreferrer"
+        <a href="https://studio.ritualware.app" target="_blank" rel="noopener noreferrer"
           className="inline-block font-mono text-base text-rose border border-rose px-8 py-4 rounded-full hover:bg-rose hover:text-cream-DEFAULT transition-colors">
           Open m'atelier →
         </a>

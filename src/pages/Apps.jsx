@@ -7,7 +7,7 @@ const apps = [
     accentHex: '#D4919A',
     body: 'Answer questions about your Kibbe type, color season, fabric preferences, and personal style philosophy. The Oracle reads your profile — and today\'s weather — then builds you a complete look from silhouette to fragrance.',
     note: 'It isn\'t giving you generic outfit advice. It\'s applying a specific philosophy to your specific profile. That\'s a different product.',
-    href: 'https://vile-style-oracle.vercel.app',
+    href: 'https://wear.ritualware.app',
   },
   {
     question: 'How do I look?',
@@ -15,7 +15,7 @@ const apps = [
     accentHex: '#8FA688',
     body: 'A beauty and lifestyle audit that covers your whole picture — skin, sleep, nutrition, fitness, hair, makeup, body, teeth, fragrance, services, fashion, and mindset. You get a real scorecard: section verdicts, quick wins for this week, a month-one plan, and the non-negotiables that don\'t move.',
     note: 'The app should feel like it knows you. That doesn\'t happen at ten questions.',
-    href: 'https://glow-up-ten-teal.vercel.app',
+    href: 'https://glowup.ritualware.app',
   },
   {
     question: 'Where do I go?',
@@ -23,7 +23,7 @@ const apps = [
     accentHex: '#A89BC4',
     body: 'A short quiz scores New York neighborhoods against your actual criteria — your commute, your routines, your energy, your aesthetic. A third space finder matched to your goals. A curated map of real venue recommendations you can actually use.',
     note: 'The quiz scores mathematically. Toggle on AI and it writes a personal narrative about your life in that neighborhood.',
-    href: 'https://ritualwhere.vercel.app',
+    href: 'https://where.ritualware.app',
   },
 ]
 

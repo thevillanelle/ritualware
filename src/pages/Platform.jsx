@@ -2,10 +2,10 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 const apps = [
-  { to: '/ritualwear', question: 'What do I wear?', name: 'Ritualwear', domain: 'wear.ritualware.app', href: 'https://vile-style-oracle.vercel.app', color: '#D4919A' },
-  { to: '/glowup',    question: 'How do I look?',  name: 'Glow Up',    domain: 'glowup.ritualware.app', href: 'https://glow-up-ten-teal.vercel.app', color: '#8FA688' },
-  { to: '/ritualwhere',question: 'Where do I go?', name: 'Ritualwhere?',domain: 'where.ritualware.app', href: 'https://ritualwhere.vercel.app', color: '#A89BC4' },
-  { to: '/matelier',  question: 'What am I building?', name: "m'atelier", domain: 'studio.ritualware.app', href: 'https://thevillanelle.github.io/studio', color: '#C8A86B' },
+  { to: '/ritualwear', question: 'What do I wear?', name: 'Ritualwear', domain: 'wear.ritualware.app', href: 'https://wear.ritualware.app', color: '#D4919A' },
+  { to: '/glowup',    question: 'How do I look?',  name: 'Glow Up',    domain: 'glowup.ritualware.app', href: 'https://glowup.ritualware.app', color: '#8FA688' },
+  { to: '/ritualwhere',question: 'Where do I go?', name: 'Ritualwhere?',domain: 'where.ritualware.app', href: 'https://where.ritualware.app', color: '#A89BC4' },
+  { to: '/matelier',  question: 'What am I building?', name: "m'atelier", domain: 'studio.ritualware.app', href: 'https://studio.ritualware.app', color: '#C8A86B' },
 ]
 
 export default function Platform() {
