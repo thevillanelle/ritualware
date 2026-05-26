@@ -2,11 +2,11 @@ import { motion } from 'framer-motion'
 
 export default function Matelier() {
   return (
-    <main className="pt-36 pb-28">
+    <main className="pt-32 pb-24">
 
       <div className="px-6 md:px-16 max-w-5xl mx-auto mb-28">
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-          className="font-mono text-sm text-amber tracking-[0.25em] mb-5">m'atelier</motion.p>
+          className="font-mono text-sm text-amber tracking-[0.25em] mb-5">m'atelier · studio.ritualware.app</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="font-display italic leading-none text-ink mb-6"
           style={{ fontSize: 'clamp(52px,8vw,100px)' }}>
@@ -14,75 +14,73 @@ export default function Matelier() {
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
           className="font-serif italic text-2xl text-ink-muted max-w-xl">
-          Your projects, your skills, your knowledge — mapped out, connected, and growing.
+          What am I building?
         </motion.p>
       </div>
 
-      {/* Lead with the star feature */}
-      <div className="py-36 px-6 md:px-16" style={{ background: 'var(--bg-dark)' }}>
+      {/* What it is */}
+      <div className="bg-cream-alt py-32 px-6">
         <div className="max-w-4xl mx-auto">
-          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-            className="font-mono text-sm text-amber tracking-[0.25em] mb-5">the knowledge map</motion.p>
-          <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="font-display text-4xl mb-8" style={{ color: '#FAF7F2' }}>
-            You can see what you know.
-          </motion.h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="font-sans text-xl leading-relaxed mb-6" style={{ color: '#C8BFB0' }}>
-                Your knowledge areas live as connected nodes on a visual map. Design links to Strategy. Strategy links to Finance. Finance links to whatever else you know. Zoom in to read detail. Zoom out to see the shape of your expertise.
-              </p>
-              <p className="font-sans text-lg leading-relaxed" style={{ color: '#9A8B7A' }}>
-                As you add more, the connections appear — not based on keywords you enter, but based on how those areas actually relate to each other. The map builds itself from what you know.
-              </p>
-            </div>
-            <div className="rounded-3xl p-8" style={{ background: 'rgba(200,168,107,0.08)', border: '1px solid rgba(200,168,107,0.2)' }}>
-              <p className="font-mono text-sm text-amber mb-5 tracking-widest">what it covers</p>
-              <div className="flex flex-wrap gap-2">
-                {['Web Dev', 'Data Viz', 'Design', 'Strategy', 'Finance', 'AI Tools', 'Infrastructure', 'Blockchain', 'Security', '+ everything you add'].map(tag => (
-                  <span key={tag} className="font-mono text-xs px-3 py-1.5 rounded-full"
-                    style={{ background: 'rgba(200,168,107,0.12)', color: '#C8A86B', border: '1px solid rgba(200,168,107,0.2)' }}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
+          <p className="font-mono text-sm text-amber tracking-[0.25em] mb-5">your studio</p>
+          <h2 className="font-display text-4xl text-ink mb-8">Your projects. Your people. Your skills. Your goals.</h2>
+          <p className="font-sans text-xl text-ink leading-relaxed mb-6">
+            m'atelier is the fourth app in the Ritualware suite — built for the part of your life that's about creation, not consumption. Track what you're making, who you're making it with, what you're learning, and where you're going.
+          </p>
+          <p className="font-sans text-lg text-ink-muted leading-relaxed">
+            Everything in m'atelier connects to your Ritual Profile. Your skills and goals appear alongside your style, beauty, and city data — because who you are isn't siloed by category.
+          </p>
         </div>
       </div>
 
-      {/* What else is in it */}
-      <div className="py-36 px-6 md:px-16 max-w-4xl mx-auto">
-        <p className="font-mono text-sm text-amber tracking-[0.25em] mb-16">what's inside</p>
+      {/* Four modules */}
+      <div className="py-32 px-6 md:px-16 max-w-5xl mx-auto">
+        <p className="font-mono text-sm text-amber tracking-[0.25em] mb-14">what's inside</p>
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-cream-alt rounded-3xl p-8">
-            <h3 className="font-display text-2xl text-ink mb-4">Project Tracking</h3>
-            <p className="font-sans text-lg text-ink-muted leading-relaxed">
-              Every project you're working on — tasks broken down, collaborators linked, status visible at a glance. Your work, organized how you think.
-            </p>
-          </div>
-          <div className="bg-cream-alt rounded-3xl p-8">
-            <h3 className="font-display text-2xl text-ink mb-4">Skills Inventory</h3>
-            <p className="font-sans text-lg text-ink-muted leading-relaxed">
-              Rate each skill by how foundational it is to you — from things you're just picking up to things you can teach. See where your strengths cluster.
-            </p>
-          </div>
-          <div className="bg-cream-alt rounded-3xl p-8">
-            <h3 className="font-display text-2xl text-ink mb-4">Real Persistence</h3>
-            <p className="font-sans text-lg text-ink-muted leading-relaxed">
-              Your data syncs across devices and updates in real time. Add something on your phone, see it on your laptop.
-            </p>
-          </div>
-          <div className="bg-cream-alt rounded-3xl p-8">
-            <h3 className="font-display text-2xl text-ink mb-4">The Longer You Use It</h3>
-            <p className="font-sans text-lg text-ink-muted leading-relaxed">
-              The map gets richer. The connections get clearer. It becomes a record of how your knowledge has grown, not just a snapshot of where it is.
-            </p>
-          </div>
+          {[
+            {
+              title: 'Projects',
+              body: 'Create and track everything you\'re working on. Status badges (active, planning, wrap, complete, cancelled). Expandable task lists. Link field, end date, notes. Your active projects at a glance.',
+            },
+            {
+              title: 'My Circle',
+              body: 'The people in your life, tracked the way you actually think about them. Free-text role field — not a dropdown, type anything. Skills tags, notes, color-coded initials avatar.',
+            },
+            {
+              title: 'Skills',
+              body: 'Tracked by category and level: Learning, Familiar, Proficient, Expert. Update your level inline as you grow. See your skill landscape clearly.',
+            },
+            {
+              title: 'Goals',
+              body: 'Goals with category, timeframe, description, and a completion toggle. Stat summary so you can see how you\'re actually moving.',
+            },
+          ].map((mod, i) => (
+            <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} transition={{ delay: i * 0.1 }}
+              className="bg-cream-alt rounded-3xl p-8">
+              <h3 className="font-display text-2xl text-ink mb-4">{mod.title}</h3>
+              <p className="font-sans text-lg text-ink-muted leading-relaxed">{mod.body}</p>
+            </motion.div>
+          ))}
         </div>
       </div>
 
-      <div className="py-28 px-6 text-center bg-cream-alt">
+      {/* Ritual Profile connection */}
+      <div className="py-28 px-6" style={{ background: 'var(--bg-dark)' }}>
+        <div className="max-w-4xl mx-auto">
+          <p className="font-mono text-sm text-amber tracking-[0.25em] mb-5">connected to everything</p>
+          <h2 className="font-display text-4xl mb-8" style={{ color: '#FAF7F2' }}>
+            Your studio lives inside your Ritual Profile.
+          </h2>
+          <p className="font-sans text-xl leading-relaxed mb-6" style={{ color: '#C8BFB0' }}>
+            Everything you add to m'atelier — your projects, your circle, your skills, your goals — shows up in your Ritual Profile alongside your style answers, your beauty audit, and your city data. One place where all of it connects.
+          </p>
+          <p className="font-sans text-lg leading-relaxed" style={{ color: '#9A8B7A' }}>
+            The Ritual Profile is the fourth app's payoff. Every answer you've ever given, every goal you've set, every skill you've tracked — readable in one place, exportable as markdown, or sent to AI for a prose synthesis of who you are right now.
+          </p>
+        </div>
+      </div>
+
+      <div className="py-24 px-6 text-center bg-cream-alt">
         <p className="font-serif italic text-2xl text-ink-muted mb-8">
           Your studio. Your work. Your map.
         </p>

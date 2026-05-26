@@ -2,71 +2,50 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 
 const apps = [
-  {
-    to: '/ritualwear',
-    question: 'What do I wear?',
-    name: 'Ritualwear',
-    desc: 'Answer 32 questions about your style once. The Oracle uses your profile — your Kibbe type, your color season, your preferences — alongside today\'s weather to generate a complete look. From silhouette to fragrance.',
-    accent: '#D4919A',
-    href: 'https://vile-style-oracle.vercel.app',
-  },
-  {
-    to: '/glowup',
-    question: 'How do I look?',
-    name: 'Glow Up',
-    desc: '42 questions across 12 categories. A real audit — not a quiz — built on Elle Porcher\'s actual beauty hierarchy. You get a scorecard, a week-one plan, and the non-negotiables that don\'t move.',
-    accent: '#8FA688',
-    href: 'https://glow-up-ten-teal.vercel.app',
-  },
-  {
-    to: '/ritualwhere',
-    question: 'Where do I go?',
-    name: 'Ritualwhere?',
-    desc: '14 questions. Your neighborhood, scored against Elle\'s actual criteria. A third space finder matched to your goals. A map of 26 venues she actually recommends in New York.',
-    accent: '#A89BC4',
-    href: 'https://ritualwhere.vercel.app',
-  },
+  { to: '/ritualwear', question: 'What do I wear?', name: 'Ritualwear', domain: 'wear.ritualware.app', href: 'https://vile-style-oracle.vercel.app', color: '#D4919A' },
+  { to: '/glowup',    question: 'How do I look?',  name: 'Glow Up',    domain: 'glowup.ritualware.app', href: 'https://glow-up-ten-teal.vercel.app', color: '#8FA688' },
+  { to: '/ritualwhere',question: 'Where do I go?', name: 'Ritualwhere?',domain: 'where.ritualware.app', href: 'https://ritualwhere.vercel.app', color: '#A89BC4' },
+  { to: '/matelier',  question: 'What am I building?', name: "m'atelier", domain: 'studio.ritualware.app', href: 'https://thevillanelle.github.io/studio', color: '#C8A86B' },
 ]
 
 export default function Platform() {
   return (
-    <main className="pt-36 pb-28">
+    <main className="pt-32 pb-24">
 
-      {/* Hero */}
-      <div className="px-6 md:px-16 max-w-5xl mx-auto mb-24">
+      <div className="px-6 md:px-16 max-w-5xl mx-auto mb-28">
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-          className="font-mono text-xs text-amber tracking-[0.25em] mb-4">the platform</motion.p>
+          className="font-mono text-sm text-amber tracking-[0.25em] mb-4">the platform</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="font-display text-[clamp(44px,6vw,80px)] text-ink mb-8 leading-tight">
-          Three questions.<br />One place.
+          Four questions.<br />One place.
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
           className="font-sans text-xl text-ink-muted leading-relaxed max-w-2xl mb-4">
-          Ritualware is three tools built on the personal frameworks of Elle Porcher — a style philosophy, a beauty hierarchy, and a guide to thriving in New York City.
+          Ritualware is four interconnected apps built on the personal frameworks of Elle Porcher — a style philosophy, a beauty hierarchy, a guide to thriving in New York and Los Angeles, and a personal studio for tracking what you're building.
         </motion.p>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
           className="font-serif italic text-xl text-ink-muted leading-relaxed max-w-2xl">
-          Your answers live in one profile. Every tool knows you. The more you use, the more they understand each other.
+          One login. One profile. Every answer you give in one app enriches your picture in all the others.
         </motion.p>
       </div>
 
-      {/* Three apps */}
-      <div className="px-6 md:px-16 max-w-5xl mx-auto space-y-6 mb-24">
+      {/* Four apps */}
+      <div className="px-6 md:px-16 max-w-5xl mx-auto space-y-5 mb-28">
         {apps.map((app, i) => (
-          <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }} transition={{ delay: i * 0.12 }}
+          <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} transition={{ delay: i * 0.1 }}
             className="bg-cream-alt rounded-3xl p-8 md:p-10 border-l-4"
-            style={{ borderLeftColor: app.accent }}>
+            style={{ borderLeftColor: app.color }}>
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
               <div className="flex-1">
                 <p className="font-serif italic text-ink-muted text-lg mb-1">{app.question}</p>
-                <h2 className="font-display text-3xl text-ink mb-4">{app.name}</h2>
-                <p className="font-sans text-lg text-ink leading-relaxed">{app.desc}</p>
+                <h2 className="font-display text-3xl text-ink mb-2">{app.name}</h2>
+                <p className="font-mono text-xs mb-4" style={{ color: app.color }}>{app.domain}</p>
               </div>
               <div className="flex flex-col gap-3 shrink-0">
                 <a href={app.href} target="_blank" rel="noopener noreferrer"
                   className="font-mono text-sm px-6 py-3 rounded-full text-cream-DEFAULT text-center transition-all hover:opacity-90"
-                  style={{ backgroundColor: app.accent }}>
+                  style={{ backgroundColor: app.color }}>
                   Open →
                 </a>
                 <Link to={app.to}
@@ -79,31 +58,66 @@ export default function Platform() {
         ))}
       </div>
 
-      {/* One profile */}
-      <div className="px-6 md:px-16 max-w-5xl mx-auto">
-        <div className="bg-cream-dark rounded-3xl p-10 md:p-16 text-center">
-          <p className="font-mono text-xs text-amber tracking-[0.25em] mb-6">one profile</p>
-          <h2 className="font-display italic text-[clamp(32px,4vw,56px)] leading-tight mb-6" style={{ color: '#FAF7F2' }}>
-            Log in once.<br />Every tool knows you.
-          </h2>
-          <p className="font-sans text-lg leading-relaxed max-w-xl mx-auto mb-14" style={{ color: '#C8BFB0' }}>
-            Your style rules, your beauty audit, your neighborhood profile — in one place. What you tell Ritualwear informs what Glow Up sees. What Ritualwhere learns about how you move through the city connects back to everything else.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            {[
-              { href: 'https://vile-style-oracle.vercel.app', label: 'Open Ritualwear', color: '#D4919A' },
-              { href: 'https://glow-up-ten-teal.vercel.app', label: 'Open Glow Up', color: '#8FA688' },
-              { href: 'https://ritualwhere.vercel.app', label: 'Open Ritualwhere?', color: '#A89BC4' },
-            ].map(btn => (
-              <a key={btn.label} href={btn.href} target="_blank" rel="noopener noreferrer"
-                className="font-mono text-sm px-6 py-3 rounded-full transition-all hover:opacity-90"
-                style={{ backgroundColor: btn.color, color: '#FAF7F2' }}>
-                {btn.label} →
-              </a>
-            ))}
+      {/* Architecture */}
+      <div className="px-6 md:px-16 max-w-5xl mx-auto mb-28">
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-cream-dark rounded-3xl p-10">
+            <p className="font-mono text-xs text-amber tracking-[0.25em] mb-6">one profile</p>
+            <h2 className="font-display italic text-3xl mb-6" style={{ color: '#FAF7F2' }}>
+              Log in once.<br />Every app knows you.
+            </h2>
+            <p className="font-sans text-lg leading-relaxed mb-4" style={{ color: '#C8BFB0' }}>
+              The Ritual Profile aggregates every answer you've ever given — across all four apps, all nine quizzes, ~181 questions total. The first quiz populates it. Every one after makes it richer.
+            </p>
+            <p className="font-sans text-base leading-relaxed" style={{ color: '#9A8B7A' }}>
+              One AI Narrative button sends your complete profile to Gemini 2.5 Flash and generates a prose study of who you are. Saved — so it doesn't regenerate every time you open it.
+            </p>
+          </div>
+          <div className="bg-cream-alt rounded-3xl p-10">
+            <p className="font-mono text-xs text-amber tracking-[0.25em] mb-6">under the hood</p>
+            <div className="space-y-4 font-mono text-sm text-ink-muted">
+              <div className="flex justify-between border-b border-ink/10 pb-3">
+                <span>Apps</span><span className="text-ink">4</span>
+              </div>
+              <div className="flex justify-between border-b border-ink/10 pb-3">
+                <span>Supabase tables</span><span className="text-ink">16</span>
+              </div>
+              <div className="flex justify-between border-b border-ink/10 pb-3">
+                <span>Total quiz questions</span><span className="text-ink">~181</span>
+              </div>
+              <div className="flex justify-between border-b border-ink/10 pb-3">
+                <span>AI model</span><span className="text-ink">Gemini 2.5 Flash</span>
+              </div>
+              <div className="flex justify-between border-b border-ink/10 pb-3">
+                <span>Auth</span><span className="text-ink">Google OAuth + email</span>
+              </div>
+              <div className="flex justify-between border-b border-ink/10 pb-3">
+                <span>Maps</span><span className="text-ink">Leaflet + CartoDB</span>
+              </div>
+              <div className="flex justify-between pb-3">
+                <span>Cities</span><span className="text-ink">New York · Los Angeles</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* AI philosophy */}
+      <div className="px-6 md:px-16 max-w-5xl mx-auto">
+        <div className="bg-cream-alt rounded-3xl p-10 md:p-16 text-center">
+          <p className="font-mono text-xs text-amber tracking-[0.25em] mb-6">the philosophy</p>
+          <h2 className="font-display italic text-[clamp(28px,4vw,48px)] text-ink leading-tight mb-8">
+            AI-optional. Not AI-mandatory.
+          </h2>
+          <p className="font-sans text-xl text-ink-muted leading-relaxed max-w-2xl mx-auto mb-6">
+            Every feature has a rule-based default. AI adds a narrative layer when you want it. The apps work without hitting the AI API, load instantly, and don't fail silently.
+          </p>
+          <p className="font-serif italic text-lg text-ink-muted">
+            The question for each feature was: does AI make this better, or does it just make it more expensive to run?
+          </p>
+        </div>
+      </div>
+
     </main>
   )
 }
