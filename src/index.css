@@ -3,34 +3,80 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── LIGHT (default) ── */
 :root {
-  --bg: #FAF7F2; --bg-alt: #F0EBE3; --bg-dark: #1C1410;
-  --ink: #2C2016; --ink-muted: #7A6B5A;
-  --rose: #D4919A; --amber: #C4956A; --sage: #8FA688; --lavender: #A89BC4; --gold: #C8A86B;
+  --bg: #FAF7F2;
+  --bg-alt: #F0EBE3;
+  --bg-dark: #2C1A12;
+  --ink: #2C2016;
+  --ink-muted: #6B5A48;
+  --rose: #C4717A;
+  --amber: #B07840;
+  --sage: #5A7A54;
+  --lavender: #6B5C8A;
+  --gold: #A07840;
+  --accent: #C4717A;
   color-scheme: light;
 }
+
+/* ── DARK ── */
 :root.dark {
-  --bg: #1C1410; --bg-alt: #241A14; --bg-dark: #FAF7F2;
-  --ink: #E8DDD0; --ink-muted: #9A8B7A;
-  --rose: #D4919A; --amber: #C4956A; --sage: #8FA688; --lavender: #A89BC4; --gold: #C8A86B;
+  --bg: #1A1208;
+  --bg-alt: #241A10;
+  --bg-dark: #FAF7F2;
+  --ink: #F0E8DC;
+  --ink-muted: #B09878;
+  --rose: #E8A0A8;
+  --amber: #D4A060;
+  --sage: #90C088;
+  --lavender: #B0A0D4;
+  --gold: #D4A860;
+  --accent: #E8A0A8;
   color-scheme: dark;
+}
+
+/* ── ELLE MODE ── */
+:root.elle {
+  --bg: #FFF0F5;
+  --bg-alt: #FFD6E8;
+  --bg-dark: #8B0038;
+  --ink: #5C0028;
+  --ink-muted: #A0305A;
+  --rose: #E8006A;
+  --amber: #E84090;
+  --sage: #D4006A;
+  --lavender: #C000AA;
+  --gold: #FF2090;
+  --accent: #FF006A;
+  color-scheme: light;
+}
+:root.elle body {
+  background: linear-gradient(135deg, #FFF0F5 0%, #FFD6E8 50%, #FFBCD8 100%);
+  background-attachment: fixed;
+}
+:root.elle nav {
+  background: color-mix(in srgb, #FFD6E8 92%, transparent) !important;
+  border-bottom-color: rgba(232,0,106,0.2) !important;
 }
 
 @layer base {
   html { scroll-behavior: smooth; font-size: 20px; }
   body {
-    background-color: var(--bg); color: var(--ink);
+    background-color: var(--bg);
+    color: var(--ink);
     font-family: 'DM Sans', sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
     -webkit-font-smoothing: antialiased;
   }
-  .bg-cream, .bg-cream-alt, .bg-cream-dark { transition: background-color 0.3s ease; }
+  * { transition: background-color 0.3s ease, color 0.2s ease, border-color 0.2s ease; }
 }
+
 @layer utilities {
-  .warm-shadow { box-shadow: 0 8px 40px rgba(196,149,106,0.15); }
+  .warm-shadow { box-shadow: 0 8px 40px rgba(var(--accent, 196,113,122), 0.15); }
   .lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
   .lift:hover { transform: translateY(-4px); }
   .section-pad { padding-top: 8rem; padding-bottom: 8rem; }
 }
+
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee-track { animation: marquee 20s linear infinite; }
