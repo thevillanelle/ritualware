@@ -9,6 +9,7 @@ import Ritualwear from './pages/Ritualwear'
 import GlowUp from './pages/GlowUp'
 import Ritualwhere from './pages/Ritualwhere'
 import About from './pages/About'
+import Status from './pages/Status'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         <Route path="/glowup" element={<GlowUp />} />
         <Route path="/ritualwhere" element={<Ritualwhere />} />
         <Route path="/about" element={<About />} />
+        <Route path="/status" element={<Status />} />
       </Routes>
       <Footer />
     </div>
