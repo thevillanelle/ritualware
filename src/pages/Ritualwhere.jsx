@@ -4,19 +4,19 @@ const tools = [
   {
     label: 'neighborhood quiz',
     title: 'Neighborhood Quiz',
-    body: 'Questions about your commute tolerance, non-negotiable services, aesthetic preference, and how you actually live. Rule-based scoring produces ranked matches with reasons — not just a score.',
+    body: 'Questions about your commute tolerance, non-negotiable services, aesthetic preference, and how you actually live. Rule-based scoring produces ranked matches with reasons, not just a score.',
     note: 'Toggle on AI and it writes a personal narrative about your life in that neighborhood.',
   },
   {
     label: 'third space finder',
     title: 'Third Space Finder',
-    body: 'curated venues across NYC and LA filtered by your goals — focus work, social energy, movement, rest. Matches you to places that actually fit.',
+    body: 'curated venues across NYC and LA filtered by your goals, focus work, social energy, movement, rest. Matches you to places that actually fit.',
     note: 'Every venue is real. Every recommendation is curated.',
   },
   {
     label: 'the map',
     title: 'The Map',
-    body: 'Leaflet.js dark map of all venues — colored by category (networking, nightlife, fitness, wellness, beauty, creative, dining, coffee). Filterable. City toggle switches between NYC and LA instantly. Pin your own spots.',
+    body: 'Leaflet.js dark map of all venues, colored by category (networking, nightlife, fitness, wellness, beauty, creative, dining, coffee). Filterable. City toggle switches between NYC and LA instantly. Pin your own spots.',
     note: 'Every venue has an "Open in Maps" link.',
   },
   {
@@ -28,7 +28,7 @@ const tools = [
   {
     label: 'quarterly reinvention',
     title: 'Quarterly Reinvention',
-    body: 'questions across aesthetic, social habits, and skill acquisition. Rule-based moves per section — specific, not generic.',
+    body: 'questions across aesthetic, social habits, and skill acquisition. Rule-based moves per section, specific, not generic.',
     note: 'AI 90-day plan toggle when you\'re ready to go deeper.',
   },
   {
@@ -98,7 +98,7 @@ export default function Ritualwhere() {
           <p className="font-mono text-sm tracking-[0.25em] mb-4" style={{ color: '#A89BC4' }}>example quiz result</p>
           <h2 className="font-display text-4xl mb-4" style={{ color: '#F5F3FA' }}>Your top neighborhoods, ranked.</h2>
           <p className="font-sans text-xl leading-relaxed mb-14 max-w-2xl" style={{ color: '#C0B5D8' }}>
-            A score AND a reason — not just "you'd like it here" but why it fits your specific answers.
+            A score AND a reason, not just "you'd like it here" but why it fits your specific answers.
           </p>
           <div className="space-y-5 mb-12">
             {exampleNeighborhoods.map((n, i) => (
@@ -127,7 +127,7 @@ export default function Ritualwhere() {
           <div className="rounded-2xl p-6" style={{ background: 'rgba(168,155,196,0.08)', border: '1px solid rgba(168,155,196,0.15)' }}>
             <p className="font-mono text-xs tracking-widest mb-3" style={{ color: '#A89BC4' }}>WITH AI NARRATIVE ON</p>
             <p className="font-serif italic text-lg leading-relaxed" style={{ color: '#E0D8F0' }}>
-              "West Village would fit the way you live. Your mornings start with somewhere to walk to — coffee that isn't rushed, a street worth being on. You'd have that here."
+              "West Village would fit the way you live. Your mornings start with somewhere to walk to, coffee that isn't rushed, a street worth being on. You'd have that here."
             </p>
           </div>
         </div>
@@ -140,7 +140,7 @@ export default function Ritualwhere() {
             <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color: '#6B5A8A' }}>los angeles</p>
             <h2 className="font-display text-4xl text-ink mb-6">Tuned to how LA actually works.</h2>
             <p className="font-sans text-lg text-ink-muted leading-relaxed mb-4">
-              A separate quiz built for the specific logic of LA — the 405 divide, parking as a lifestyle constraint, Eastside vs Westside, the Valley as its own world, WeHo's identity, Venice as rich boho not a beach neighborhood.
+              A separate quiz built for the specific logic of LA, the 405 divide, parking as a lifestyle constraint, Eastside vs Westside, the Valley as its own world, WeHo's identity, Venice as rich boho not a beach neighborhood.
             </p>
             <p className="font-sans text-base text-ink-muted leading-relaxed">
               The city toggle appears on every page header. All six tools respond instantly.
@@ -153,7 +153,7 @@ export default function Ritualwhere() {
                 ['Neighborhoods scored', 'questions', 'questions'],
                 ['Map venues', '80+ NYC', '80+ LA'],
                 ['Specific logic', 'Subway proximity', '405 divide / parking'],
-                ['City toggle', '—', 'Switch instantly'],
+                ['City toggle', ', ', 'Switch instantly'],
               ].map(([label, nyc, la], i) => (
                 <div key={i} className="grid grid-cols-3 gap-3 border-b pb-3" style={{ borderColor: 'rgba(168,155,196,0.3)' }}>
                   <span style={{ color: '#8A78A8' }}>{label}</span>
