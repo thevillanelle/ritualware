@@ -34,7 +34,7 @@ const suite = [
     to: '/matelier',
     label: "m'atelier",
     name: "m'atelier",
-    desc: 'Your personal studio. Projects, goals, skills, circle. The part of your life that is about building — tracked in one place.',
+    desc: 'Your personal studio. Projects, goals, skills, circle. The part of your life that is about building, tracked in one place.',
     color: '#C8A86B',
     bg: 'rgba(200,168,107,0.08)',
     border: 'rgba(200,168,107,0.2)',
