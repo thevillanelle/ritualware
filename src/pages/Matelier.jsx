@@ -24,10 +24,10 @@ export default function Matelier() {
           <p className="font-mono text-sm text-amber tracking-[0.25em] mb-5">your studio</p>
           <h2 className="font-display text-4xl text-ink mb-8">Your projects. Your people. Your skills. Your goals.</h2>
           <p className="font-sans text-xl text-ink leading-relaxed mb-6">
-            m'atelier is the fourth app in the Ritualware suite — built for the part of your life that's about creation, not consumption. Track what you're making, who you're making it with, what you're learning, and where you're going.
+            m'atelier is the fourth app in the Ritualware suite, built for the part of your life that's about creation, not consumption. Track what you're making, who you're making it with, what you're learning, and where you're going.
           </p>
           <p className="font-sans text-lg text-ink-muted leading-relaxed">
-            Everything in m'atelier connects to your Ritual Profile. Your skills and goals appear alongside your style, beauty, and city data — because who you are isn't siloed by category.
+            Everything in m'atelier connects to your Ritual Profile. Your skills and goals appear alongside your style, beauty, and city data, because who you are isn't siloed by category.
           </p>
         </div>
       </div>
@@ -43,7 +43,7 @@ export default function Matelier() {
             },
             {
               title: 'My Circle',
-              body: 'The people in your life, tracked the way you actually think about them. Free-text role field — not a dropdown, type anything. Skills tags, notes, color-coded initials avatar.',
+              body: 'The people in your life, tracked the way you actually think about them. Free-text role field, not a dropdown, type anything. Skills tags, notes, color-coded initials avatar.',
             },
             {
               title: 'Skills',
@@ -72,10 +72,10 @@ export default function Matelier() {
             Your studio lives inside your Ritual Profile.
           </h2>
           <p className="font-sans text-xl leading-relaxed mb-6" style={{ color: '#C8BFB0' }}>
-            Everything you add to m'atelier — your projects, your circle, your skills, your goals — shows up in your Ritual Profile alongside your style answers, your beauty audit, and your city data. One place where all of it connects.
+            Everything you add to m'atelier, your projects, your circle, your skills, your goals, shows up in your Ritual Profile alongside your style answers, your beauty audit, and your city data. One place where all of it connects.
           </p>
           <p className="font-sans text-lg leading-relaxed" style={{ color: '#9A8B7A' }}>
-            The Ritual Profile is the fourth app's payoff. Every answer you've ever given, every goal you've set, every skill you've tracked — readable in one place, exportable as markdown, or sent to AI for a prose synthesis of who you are right now.
+            The Ritual Profile is the fourth app's payoff. Every answer you've ever given, every goal you've set, every skill you've tracked, readable in one place, exportable as markdown, or sent to AI for a prose synthesis of who you are right now.
           </p>
         </div>
       </div>
