@@ -24,12 +24,12 @@
     transition: background-color 0.3s ease, color 0.3s ease;
     -webkit-font-smoothing: antialiased;
   }
+  .bg-cream, .bg-cream-alt, .bg-cream-dark { transition: background-color 0.3s ease; }
 }
 @layer utilities {
   .warm-shadow { box-shadow: 0 8px 40px rgba(196,149,106,0.15); }
   .lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
   .lift:hover { transform: translateY(-4px); }
-  /* Global section breathing room */
   .section-pad { padding-top: 8rem; padding-bottom: 8rem; }
 }
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
