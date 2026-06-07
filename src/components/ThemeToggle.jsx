@@ -1,24 +1,43 @@
 import { useEffect, useState } from 'react'
 
 export function useTheme() {
-  const [dark, setDark] = useState(() => localStorage.getItem('ritual-theme') === 'dark')
+  const [theme, setTheme] = useState(() => localStorage.getItem('ritual-theme') || 'light')
+
   useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add('dark')
-      localStorage.setItem('ritual-theme', 'dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-      localStorage.setItem('ritual-theme', 'light')
-    }
-  }, [dark])
-  return { dark, toggle: () => setDark(d => !d) }
+    const root = document.documentElement
+    root.classList.remove('dark', 'elle')
+    if (theme === 'dark') root.classList.add('dark')
+    if (theme === 'elle') root.classList.add('elle')
+    localStorage.setItem('ritual-theme', theme)
+  }, [theme])
+
+  return { theme, dark: theme === 'dark', setTheme }
 }
 
-export default function ThemeToggle({ dark, toggle }) {
+export default function ThemeToggle({ theme, setTheme }) {
   return (
-    <button onClick={toggle} aria-label="Toggle theme"
-      className="font-mono text-xs text-ink-muted hover:text-ink transition-colors tracking-widest">
-      {dark ? '◑ LIGHT' : '◐ DARK'}
-    </button>
+    <select
+      value={theme}
+      onChange={e => setTheme(e.target.value)}
+      aria-label="Select theme"
+      style={{
+        background: 'transparent',
+        border: '1px solid var(--ink-muted)',
+        borderRadius: '20px',
+        color: 'var(--ink)',
+        fontFamily: 'Courier Prime, Courier, monospace',
+        fontSize: '11px',
+        letterSpacing: '0.1em',
+        padding: '4px 10px',
+        cursor: 'pointer',
+        outline: 'none',
+        appearance: 'none',
+        WebkitAppearance: 'none',
+      }}
+    >
+      <option value="light">☀️ Light</option>
+      <option value="dark">🌙 Dark</option>
+      <option value="elle">💗 Elle</option>
+    </select>
   )
 }
