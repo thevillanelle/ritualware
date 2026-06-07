@@ -19,7 +19,7 @@ export default function Nav() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-ink/10"
-      style={{ background: 'rgba(var(--bg-rgb,250,247,242), 0.92)', backdropFilter: 'blur(12px)' }}>
+      style={{ background: 'color-mix(in srgb, var(--bg) 92%, transparent)', backdropFilter: 'blur(12px)' }}>
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link to="/" className="font-display italic text-2xl text-ink">Ritualware</Link>
         <div className="hidden md:flex gap-6 items-center">
