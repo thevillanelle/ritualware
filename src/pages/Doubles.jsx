@@ -49,8 +49,8 @@ export default function Doubles() {
             <ul className="space-y-4">
               {[
                 'Compatible class pairings across all 36 NYC locations',
-                'Real travel time between clubs — walking, subway, or transfer',
-                'Club amenities at a glance — pool, steam room, towel service',
+                'Real travel time between clubs, walking, subway, or transfer',
+                'Club amenities at a glance, pool, steam room, towel service',
                 'Nearest subway lines to each location with MTA color badges',
                 "Tomorrow's best pairings waiting when you open it",
               ].map((item, i) => (
@@ -77,8 +77,8 @@ export default function Doubles() {
         <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6">
           {[
             { num: '01', title: 'Web', desc: 'Open it in any browser. Search by class type, location, and time window. Results and transit info load instantly.' },
-            { num: '02', title: 'Web — Server', desc: 'A faster, optimized version running on a dedicated server. Same results, smarter rendering.' },
-            { num: '03', title: 'iOS', desc: 'Native iPhone app. Search, browse pairings, and get subway directions — all from your phone.' },
+            { num: '02', title: 'Web, Server', desc: 'A faster, optimized version running on a dedicated server. Same results, smarter rendering.' },
+            { num: '03', title: 'iOS', desc: 'Native iPhone app. Search, browse pairings, and get subway directions, all from your phone.' },
           ].map((p, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.1 }}
