@@ -39,7 +39,7 @@ export default function GlowUp() {
           </motion.h1>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
             className="font-serif italic text-2xl max-w-lg mb-8" style={{ color: '#3A5538' }}>
-            A complete picture of where you are — and exactly what to do about it.
+            A complete picture of where you are, and exactly what to do about it.
           </motion.p>
           <motion.a href="https://glowup.ritualware.app" target="_blank" rel="noopener noreferrer"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}
@@ -70,7 +70,7 @@ export default function GlowUp() {
             <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color: '#4A6B45' }}>the glow up audit</p>
             <h2 className="font-display text-4xl mb-6" style={{ color: '#1A2D18' }}>A real audit. Your whole picture.</h2>
             <p className="font-sans text-lg leading-relaxed mb-5" style={{ color: '#2C4428' }}>
-              questions across every category of your beauty life — scored independently, weighted against the whole. You get section verdicts, quick wins, a week-one plan, a month-one plan, and the non-negotiables that don't move.
+              questions across every category of your beauty life, scored independently, weighted against the whole. You get section verdicts, quick wins, a week-one plan, a month-one plan, and the non-negotiables that don't move.
             </p>
             <p className="font-sans text-base leading-relaxed" style={{ color: '#4A6B45' }}>
               The app should feel like it knows you. That doesn't happen if it goes shallow.
@@ -80,7 +80,7 @@ export default function GlowUp() {
             <p className="font-mono text-sm tracking-[0.2em] mb-4" style={{ color: '#4A6B45' }}>example scorecard</p>
             <div className="rounded-3xl overflow-hidden" style={{ background: '#1A2D18' }}>
               <div className="p-5 border-b" style={{ borderColor: 'rgba(143,166,136,0.2)' }}>
-                <p className="font-mono text-xs text-sage tracking-widest">YOUR SCORECARD — SAMPLE</p>
+                <p className="font-mono text-xs text-sage tracking-widest">YOUR SCORECARD, SAMPLE</p>
               </div>
               {exampleResult.map((r, i) => (
                 <div key={i} className="p-5 border-b" style={{ borderColor: 'rgba(143,166,136,0.1)' }}>
