@@ -15,7 +15,7 @@ const links = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
-  const { dark, toggle } = useTheme()
+  const { theme, setTheme } = useTheme()
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-ink/10"
@@ -30,7 +30,7 @@ export default function Nav() {
               {l.label}
             </NavLink>
           ))}
-          <ThemeToggle dark={dark} toggle={toggle} />
+          <ThemeToggle theme={theme} setTheme={setTheme} />
         </div>
         <button className="md:hidden" onClick={() => setOpen(!open)}>
           <div className={`w-5 h-px bg-ink mb-1.5 transition-all ${open ? 'rotate-45 translate-y-1.5' : ''}`}/>
@@ -49,7 +49,7 @@ export default function Nav() {
               </NavLink>
             ))}
             <div className="px-6 py-4">
-              <ThemeToggle dark={dark} toggle={toggle} />
+              <ThemeToggle theme={theme} setTheme={setTheme} />
             </div>
           </motion.div>
         )}
