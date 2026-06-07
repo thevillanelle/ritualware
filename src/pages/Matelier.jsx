@@ -1,4 +1,30 @@
+import React from 'react'
 import { motion } from 'framer-motion'
+
+
+function TechSpec({ items }) {
+  const [open, setOpen] = React.useState(false)
+  return (
+    <div style={{ marginTop: '5rem', paddingTop: '3rem', borderTop: '1px solid rgba(0,0,0,0.08)' }}>
+      <button onClick={() => setOpen(o => !o)}
+        style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0, display: 'flex', alignItems: 'center', gap: '8px' }}
+        className="font-mono text-xs tracking-[0.2em] text-ink-muted hover:text-ink transition-colors">
+        <span style={{ display: 'inline-block', transform: open ? 'rotate(90deg)' : 'none', transition: 'transform 0.2s' }}>›</span>
+        TECH SPECS
+      </button>
+      {open && (
+        <div style={{ marginTop: '1.5rem', paddingLeft: '1rem', borderLeft: '2px solid rgba(0,0,0,0.08)' }}>
+          {items.map(([label, val], i) => (
+            <div key={i} style={{ display: 'flex', gap: '1rem', justifyContent: 'space-between', paddingBottom: '0.75rem', marginBottom: '0.75rem', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+              <span className="font-mono text-xs text-ink-muted">{label}</span>
+              <span className="font-mono text-xs text-ink" style={{ textAlign: 'right', maxWidth: '60%' }}>{val}</span>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
 
 export default function Matelier() {
   return (
@@ -90,6 +116,16 @@ export default function Matelier() {
         </a>
       </div>
 
-    </main>
+
+      <div className="px-6 md:px-16 max-w-5xl mx-auto">
+        <TechSpec items={[
+    ['Stack', 'React · Vite · Tailwind CSS · Framer Motion'],
+    ['Backend', 'Supabase (auth, projects, goals, skills, circle)'],
+    ['AI', 'Gemini 2.5 Flash — Ritual Profile prose synthesis'],
+    ['Export', 'Markdown'],
+    ['Deploy', 'Vercel']
+  ]} />
+      </div>
+      </main>
   )
 }
