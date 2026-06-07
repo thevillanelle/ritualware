@@ -6,7 +6,9 @@ const apps = [
   { to: '/glowup',    question: 'How do I look?',  name: 'Glow Up',    domain: 'glowup.ritualware.app', href: 'https://glowup.ritualware.app', color: '#8FA688' },
   { to: '/ritualwhere',question: 'Where do I go?', name: 'Ritualwhere?',domain: 'where.ritualware.app', href: 'https://where.ritualware.app', color: '#A89BC4' },
   { to: '/matelier',  question: 'What am I building?', name: "m'atelier", domain: 'studio.ritualware.app', href: 'https://studio.ritualware.app', color: '#C8A86B' },
-]
+,
+  { to: '/doubles', question: 'Where do I work out?', name: 'EQX Doubles', domain: 'thevillanelle.github.io/eqx-doubles', href: 'https://thevillanelle.github.io/eqx-doubles/index.html', color: '#c8f23a',
+    note: 'For Equinox members in NYC.' },]
 
 export default function Platform() {
   return (
