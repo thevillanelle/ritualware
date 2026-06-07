@@ -10,14 +10,14 @@ const features = [
 ]
 
 const exampleLook = [
-  { label: 'Silhouette', val: 'A-line, midi length — structured at the shoulder, fluid below' },
+  { label: 'Silhouette', val: 'A-line, midi length, structured at the shoulder, fluid below' },
   { label: 'Outfit', val: 'Silk slip dress in deep burgundy, worn under an ivory structured blazer' },
-  { label: 'Shoes', val: 'Square-toe mule in cognac leather — low heel, clean line' },
+  { label: 'Shoes', val: 'Square-toe mule in cognac leather, low heel, clean line' },
   { label: 'Bag', val: 'Top-handle structured tote, dark chocolate' },
   { label: 'Jewelry', val: 'Gold hoops, one chain layer, nothing stacked' },
-  { label: 'Lip', val: 'Brick red, semi-matte — no gloss' },
+  { label: 'Lip', val: 'Brick red, semi-matte, no gloss' },
   { label: 'Nails', val: 'Soft terracotta, oval shape' },
-  { label: 'Fragrance', val: 'Warm amber and sandalwood — evening-appropriate' },
+  { label: 'Fragrance', val: 'Warm amber and sandalwood, evening-appropriate' },
   { label: 'Weather swap', val: 'Add camel wrap coat, swap mule for block heel boot' },
 ]
 
@@ -149,7 +149,7 @@ export default function Ritualwear() {
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {[
               { heading: 'Built on your rules', body: 'Reads your Style Bible before it says anything. Every recommendation is filtered through your Kibbe type, color season, and fabric preferences.' },
-              { heading: 'Weather-aware', body: "Live weather from Open-Meteo. It knows what's actually happening outside. The look accounts for today — not a hypothetical day." },
+              { heading: 'Weather-aware', body: "Live weather from Open-Meteo. It knows what's actually happening outside. The look accounts for today, not a hypothetical day." },
               { heading: 'structured sections, not suggestions', body: 'Silhouette. Outfit. Shoes. Bag. Jewelry. Lip. Nails. Fragrance. Weather swap. One complete look. A Pexels mood board alongside it.' },
             ].map((item, i) => (
               <div key={i} className="rounded-2xl p-6" style={{ background: 'rgba(255,255,255,0.06)' }}>
@@ -179,7 +179,7 @@ export default function Ritualwear() {
         <TechSpec items={[
     ['Stack', 'React · Vite · Tailwind CSS · Framer Motion'],
     ['Backend', 'Supabase (auth, profile, saved looks)'],
-    ['AI', 'Gemini 2.5 Flash — Oracle + Inspo Upload'],
+    ['AI', 'Gemini 2.5 Flash, Oracle + Inspo Upload'],
     ['Weather', 'Open-Meteo API'],
     ['Mood board', 'Pexels API'],
     ['State', 'Zustand'],
