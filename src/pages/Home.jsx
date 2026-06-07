@@ -55,10 +55,10 @@ export default function Home() {
               <p className="font-mono text-xs text-amber tracking-[0.2em]" style={{ marginBottom: '1.25rem' }}>the platform</p>
               <h2 className="font-display group-hover:text-rose transition-colors"
                 style={{ fontSize: 'clamp(28px,4vw,48px)', color: '#FAF7F2', marginBottom: '1rem' }}>
-                Ritualwear · Glow Up · Ritualwhere?
+                Ritualwear · Glow Up · Ritualwhere? · m'atelier · Doubles
               </h2>
               <p className="font-serif italic text-lg" style={{ color: '#C8BFB0', marginBottom: '0.5rem' }}>
-                Three tools. One login. Everything you learn in one updates everything else.
+                Five tools. One suite. Everything you learn in one makes the others sharper.
               </p>
               <p className="font-mono text-xs text-amber" style={{ marginTop: '1.5rem' }}>Explore the platform →</p>
             </Link>
@@ -66,12 +66,12 @@ export default function Home() {
 
           {/* Doubles + m'atelier */}
           <div className="grid md:grid-cols-2" style={{ gap: '1.5rem' }}>
-            <Link to="/doubles" className="block bg-cream-alt rounded-3xl lift warm-shadow border border-ink/8 group"
-              style={{ padding: '2.5rem' }}>
-              <p className="font-mono text-xs text-rose tracking-[0.2em]" style={{ marginBottom: '1rem' }}>doubles</p>
-              <h3 className="font-display text-3xl text-ink group-hover:text-rose transition-colors" style={{ marginBottom: '1rem' }}>EQX Doubles Finder</h3>
-              <p className="font-sans text-base text-ink-muted leading-relaxed" style={{ marginBottom: '1.5rem' }}>
-                Find two classes that actually work together — matched by type, timed for real travel, across all 36 NYC Equinox locations.
+            <Link to="/doubles" className="block rounded-3xl lift group"
+              style={{ padding: '2.5rem', background: '#050505', border: '1px solid rgba(200,242,58,0.2)' }}>
+              <p className="font-mono text-xs tracking-[0.2em]" style={{ marginBottom: '1rem', color: '#c8f23a' }}>doubles</p>
+              <h3 className="font-display text-3xl" style={{ marginBottom: '1rem', color: '#FAF7F2' }}>EQX Doubles Finder</h3>
+              <p className="font-sans text-base leading-relaxed" style={{ marginBottom: '1.5rem', color: '#888' }}>
+                Find two classes that actually work together — matched by type, timed for real travel, across all 36 NYC Equinox locations. For Equinox members.
               </p>
               <p className="font-mono text-xs text-rose">View Doubles →</p>
             </Link>
