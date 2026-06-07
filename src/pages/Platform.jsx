@@ -23,7 +23,7 @@ export default function Platform() {
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
           className="font-sans text-xl text-ink-muted leading-relaxed max-w-2xl mb-4">
-          Ritualware is a suite of interconnected apps built on the personal frameworks of Elle Porcher — a style philosophy, a beauty hierarchy, a guide to thriving in New York and Los Angeles, and a personal studio for tracking what you're building.
+          Ritualware is a suite of interconnected apps built on the personal frameworks of Elle Porcher, a style philosophy, a beauty hierarchy, a guide to thriving in New York and Los Angeles, and a personal studio for tracking what you're building.
         </motion.p>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
           className="font-serif italic text-xl text-ink-muted leading-relaxed max-w-2xl">
@@ -69,10 +69,10 @@ export default function Platform() {
               Log in once.<br />Every app knows you.
             </h2>
             <p className="font-sans text-lg leading-relaxed mb-4" style={{ color: '#C8BFB0' }}>
-              The Ritual Profile aggregates every answer you've ever given — across all four apps, all nine quizzes, every answer you've ever given. The first quiz populates it. Every one after makes it richer.
+              The Ritual Profile aggregates every answer you've ever given, across all four apps, all nine quizzes, every answer you've ever given. The first quiz populates it. Every one after makes it richer.
             </p>
             <p className="font-sans text-base leading-relaxed" style={{ color: '#9A8B7A' }}>
-              One AI Narrative button sends your complete profile to Gemini 2.5 Flash and generates a prose study of who you are. Saved — so it doesn't regenerate every time you open it.
+              One AI Narrative button sends your complete profile to Gemini 2.5 Flash and generates a prose study of who you are. Saved, so it doesn't regenerate every time you open it.
             </p>
           </div>
           <div className="bg-cream-alt rounded-3xl p-10">
