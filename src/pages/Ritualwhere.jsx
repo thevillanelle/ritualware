@@ -140,7 +140,7 @@ export default function Ritualwhere() {
             <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color: '#6B5A8A' }}>los angeles</p>
             <h2 className="font-display text-4xl text-ink mb-6">Tuned to how LA actually works.</h2>
             <p className="font-sans text-lg text-ink-muted leading-relaxed mb-4">
-              A separate quiz built for the specific logic of LA, the 405 divide, parking as a lifestyle constraint, Eastside vs Westside, the Valley as its own world, WeHo's identity, Venice as rich boho not a beach neighborhood.
+              LA doesn't work like New York. You need a car. The freeway you live near shapes your entire life. Neighborhoods that look close on a map are worlds apart. The quiz knows the difference.
             </p>
             <p className="font-sans text-base text-ink-muted leading-relaxed">
               The city toggle appears on every page header. All six tools respond instantly.
