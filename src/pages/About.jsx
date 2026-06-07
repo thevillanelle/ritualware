@@ -23,15 +23,15 @@ export default function About() {
         <div className="space-y-8 mb-24">
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            Ritualware is built around a simple premise: how you show up in the world — what you wear, how you look, where you go, what you're building — isn't random. It's a system. And systems can be designed intentionally.
+            Ritualware is built around a simple premise: how you show up in the world, what you wear, how you look, where you go, what you're building, isn't random. It's a system. And systems can be designed intentionally.
           </motion.p>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            Each tool answers a different question. One login means one profile — and that profile travels. Every answer you give in Ritualwear informs your aesthetic lens across everything else. Every Glow Up section adds to the picture. Every m'atelier goal connects back. The more you use, the richer it gets.
+            Each tool answers a different question. One login means one profile, and that profile travels. Every answer you give in Ritualwear informs your aesthetic lens across everything else. Every Glow Up section adds to the picture. Every m'atelier goal connects back. The more you use, the richer it gets.
           </motion.p>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            The Ritual Profile — accessible from any app — aggregates all every answer across all nine quizzes into one place. One AI button sends it all to Gemini and gets back a prose study of who you are. Saved, so it doesn't regenerate every time you open it.
+            The Ritual Profile, accessible from any app, aggregates all every answer across all nine quizzes into one place. One AI button sends it all to Gemini and gets back a prose study of who you are. Saved, so it doesn't regenerate every time you open it.
           </motion.p>
         </div>
 
@@ -76,8 +76,8 @@ export default function About() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               { label: 'Intentional', body: 'Nothing here is accidental. Every question, every category, every recommendation is there for a reason.' },
-              { label: 'Sensory', body: 'Beauty, style, place, creation — these are physical experiences. The tools honor that rather than reducing it to a checklist.' },
-              { label: 'Yours', body: 'The tools learn your preferences and apply them. They work for you — not against a generic standard.' },
+              { label: 'Sensory', body: 'Beauty, style, place, creation, these are physical experiences. The tools honor that rather than reducing it to a checklist.' },
+              { label: 'Yours', body: 'The tools learn your preferences and apply them. They work for you, not against a generic standard.' },
             ].map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ delay: i * 0.1 }}
