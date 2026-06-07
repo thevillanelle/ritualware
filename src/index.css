@@ -80,3 +80,27 @@
 
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee-track { animation: marquee 20s linear infinite; }
+
+/* ── DOUBLES PAGE — black/green always ── */
+body.doubles-page {
+  background: #050505 !important;
+}
+body.doubles-page nav {
+  background: rgba(5,5,5,0.96) !important;
+  border-bottom-color: rgba(200,242,58,0.15) !important;
+}
+body.doubles-page nav a,
+body.doubles-page nav button,
+body.doubles-page nav span {
+  color: #c8c0b8 !important;
+}
+body.doubles-page nav a:hover {
+  color: #c8f23a !important;
+}
+body.doubles-page footer {
+  background: #0a0a0a !important;
+  border-top-color: rgba(200,242,58,0.1) !important;
+}
+body.doubles-page footer p {
+  color: #555 !important;
+}
