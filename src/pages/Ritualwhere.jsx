@@ -2,39 +2,39 @@ import { motion } from 'framer-motion'
 
 const tools = [
   {
-    label: 'neighborhood quiz',
-    title: 'Neighborhood Quiz',
-    body: 'Questions about your commute tolerance, non-negotiable services, aesthetic preference, and how you actually live. Rule-based scoring produces ranked matches with reasons, not just a score.',
-    note: 'Toggle on AI and it writes a personal narrative about your life in that neighborhood.',
+    label: "neighborhood quiz",
+    title: "Neighborhood Quiz",
+    body: "Answer questions about how you actually live. Commute tolerance, morning routine, aesthetic, what you need within walking distance. Your results are ranked and explained. Not just a score, but why each neighborhood fits.",
+    note: "Turn on AI and it writes a personal narrative about your life in that neighborhood.",
   },
   {
-    label: 'third space finder',
-    title: 'Third Space Finder',
-    body: 'curated venues across NYC and LA filtered by your goals, focus work, social energy, movement, rest. Matches you to places that actually fit.',
-    note: 'Every venue is real. Every recommendation is curated.',
+    label: "third space finder",
+    title: "Third Space Finder",
+    body: "Curated venues across NYC and LA filtered by what you are looking for. Focus work, social energy, movement, rest. Places that actually match how you want to feel.",
+    note: "Every venue is real. Every recommendation is curated.",
   },
   {
-    label: 'the map',
-    title: 'The Map',
-    body: 'Leaflet.js dark map of all venues, colored by category (networking, nightlife, fitness, wellness, beauty, creative, dining, coffee). Filterable. City toggle switches between NYC and LA instantly. Pin your own spots.',
-    note: 'Every venue has an "Open in Maps" link.',
+    label: "the map",
+    title: "The Map",
+    body: "An interactive dark map of all venues, color-coded by category. Networking, nightlife, fitness, wellness, beauty, creative, dining, coffee. Filter by what you want. Switch between NYC and LA instantly. Pin your own spots.",
+    note: null,
   },
   {
-    label: 'burnout audit',
-    title: 'Burnout Audit',
-    body: 'questions diagnosing social, mental, or physical burnout. Rule-based protocol identifies your dominant burnout type.',
-    note: 'AI personal insight toggle adds a narrative layer when you want it.',
+    label: "burnout audit",
+    title: "Burnout Audit",
+    body: "Questions that identify whether your burnout is social, mental, or physical. The result is a specific protocol, not a generic rest suggestion.",
+    note: "Add an AI insight when you want more than the diagnosis.",
   },
   {
-    label: 'quarterly reinvention',
-    title: 'Quarterly Reinvention',
-    body: 'questions across aesthetic, social habits, and skill acquisition. Rule-based moves per section, specific, not generic.',
-    note: 'AI 90-day plan toggle when you\'re ready to go deeper.',
+    label: "quarterly reinvention",
+    title: "Quarterly Reinvention",
+    body: "Questions about what is shifting. Your aesthetic, your habits, your skills, your social life. Specific moves per area, built around what you said, not what sounds good.",
+    note: "Turn on AI for a full 90-day plan when you are ready to go deeper.",
   },
   {
-    label: "elle's guide",
-    title: 'The Guide',
-    body: "Elle Porcher's full Guide to Thriving in NYC, encoded chapter by chapter as an interactive document. Each chapter links directly to its corresponding tool.",
+    label: "the guide",
+    title: "The Guide",
+    body: "A full guide to thriving in NYC, structured chapter by chapter as an interactive document. Each chapter connects directly to the tool that helps you act on it.",
     note: null,
   },
 ]
@@ -135,33 +135,32 @@ export default function Ritualwhere() {
 
       {/* LA note */}
       <section className="py-32 px-6 md:px-16 max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
           <div>
             <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color: '#6B5A8A' }}>los angeles</p>
-            <h2 className="font-display text-4xl text-ink mb-6">Tuned to how LA actually works.</h2>
-            <p className="font-sans text-lg text-ink-muted leading-relaxed mb-4">
-              LA doesn't work like New York. You need a car. The freeway you live near shapes your entire life. Neighborhoods that look close on a map are worlds apart. The quiz knows the difference.
+            <h2 className="font-display text-4xl text-ink mb-6">Built for how LA actually works.</h2>
+            <p className="font-sans text-lg text-ink-muted leading-relaxed mb-6">
+              LA is not New York. The freeway you live near shapes your entire social life. Eastside and Westside are not interchangeable. The Valley is its own world. WeHo has a specific energy. Venice is not a beach neighborhood.
+            </p>
+            <p className="font-sans text-lg text-ink-muted leading-relaxed mb-6">
+              The LA quiz is built around those distinctions. Your relationship to your car, your preferred pocket of the city, your commute tolerance. The neighborhoods it returns are scored against how you actually live.
             </p>
             <p className="font-sans text-base text-ink-muted leading-relaxed">
-              The city toggle appears on every page header. All six tools respond instantly.
+              Switch between cities from the header. Everything updates instantly.
             </p>
           </div>
-          <div className="rounded-3xl p-8" style={{ background: '#EAE5F5' }}>
-            <p className="font-mono text-sm tracking-[0.2em] mb-6" style={{ color: '#6B5A8A' }}>NYC vs LA</p>
-            <div className="space-y-3 font-sans text-sm" style={{ color: '#4A3862' }}>
-              {[
-                ['Neighborhoods scored', 'questions', 'questions'],
-                ['Map venues', '80+ NYC', '80+ LA'],
-                ['Specific logic', 'Subway proximity', '405 divide / parking'],
-                ['City toggle', ', ', 'Switch instantly'],
-              ].map(([label, nyc, la], i) => (
-                <div key={i} className="grid grid-cols-3 gap-3 border-b pb-3" style={{ borderColor: 'rgba(168,155,196,0.3)' }}>
-                  <span style={{ color: '#8A78A8' }}>{label}</span>
-                  <span style={{ color: '#2A1F3D' }}>{nyc}</span>
-                  <span style={{ color: '#2A1F3D' }}>{la}</span>
-                </div>
-              ))}
-            </div>
+          <div className="space-y-6">
+            {[
+              ['Freeway logic', 'Which side of the 405 you belong on, and why it matters more than you think.'],
+              ['Neighborhood identity', 'The difference between Silver Lake and Los Feliz. Culver City vs Mar Vista. Scored, not assumed.'],
+              ['Car dependency', 'How much your life revolves around driving shapes where you live, where you go, and what is worth the commute.'],
+              ['80+ venues', 'Wellness, dining, networking, fitness, beauty, nightlife. Curated for LA specifically.'],
+            ].map(([label, desc], i) => (
+              <div key={i} className="border-b pb-6" style={{ borderColor: 'rgba(168,155,196,0.25)' }}>
+                <p className="font-display text-xl mb-2" style={{ color: '#2A1F3D' }}>{label}</p>
+                <p className="font-sans text-base leading-relaxed" style={{ color: '#6B5A8A' }}>{desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
