@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { SUITE, MARKETING_SITE } from '../data/apps'
+import { checkApp } from '../lib/healthCheck'
 
 const APPS = [
   ...SUITE.map(a => ({ name: a.name, url: a.href, health: a.health, color: a.color, desc: a.statusDesc })),
@@ -23,22 +24,7 @@ export default function Status() {
     setResults(prev => prev.map(r => ({ ...r, status: 'checking', ms: null })))
 
     const updated = await Promise.all(
-      APPS.map(async (app) => {
-        const start = performance.now()
-        try {
-          const checkUrl = app.health ?? app.url
-          const res = await fetch(checkUrl, { cache: 'no-store' })
-          const ms  = Math.round(performance.now() - start)
-          if (!res.ok) return { ...app, status: 'down', ms, error: `HTTP ${res.status}` }
-          if (app.health) {
-            const data = await res.json()
-            if (data.status !== 'ok') return { ...app, status: 'down', ms, error: 'Bad response' }
-          }
-          return { ...app, status: 'up', ms }
-        } catch (err) {
-          return { ...app, status: 'down', ms: null, error: err.message }
-        }
-      })
+      APPS.map(checkApp)
     )
 
     setResults(updated)
