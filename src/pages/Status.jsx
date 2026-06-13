@@ -1,12 +1,10 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
+import { SUITE, MARKETING_SITE } from '../data/apps'
 
 const APPS = [
-  { name: 'Ritualwear',   url: 'https://wear.ritualware.app',   health: 'https://wear.ritualware.app/health.json',   color: '#D4919A', desc: 'Style Oracle' },
-  { name: 'Glow Up',      url: 'https://glowup.ritualware.app', health: 'https://glowup.ritualware.app/health.json', color: '#8FA688', desc: 'Beauty Audit' },
-  { name: 'Ritualwhere?', url: 'https://where.ritualware.app',  health: 'https://where.ritualware.app/health.json',  color: '#A89BC4', desc: 'City Guide' },
-  { name: "m'atelier",    url: 'https://studio.ritualware.app', health: 'https://studio.ritualware.app/health.json', color: '#C8A86B', desc: 'Studio' },
-  { name: 'Ritualware',   url: 'https://ritualware.app',        health: 'https://ritualware.app/health.json',        color: '#C4717A', desc: 'Marketing site' },
+  ...SUITE.map(a => ({ name: a.name, url: a.href, health: a.health, color: a.color, desc: a.statusDesc })),
+  { name: MARKETING_SITE.name, url: MARKETING_SITE.url, health: MARKETING_SITE.health, color: MARKETING_SITE.color, desc: MARKETING_SITE.statusDesc },
 ]
 
 function StatusDot({ status }) {
@@ -28,11 +26,14 @@ export default function Status() {
       APPS.map(async (app) => {
         const start = performance.now()
         try {
-          const res = await fetch(app.health, { cache: 'no-store' })
+          const checkUrl = app.health ?? app.url
+          const res = await fetch(checkUrl, { cache: 'no-store' })
           const ms  = Math.round(performance.now() - start)
           if (!res.ok) return { ...app, status: 'down', ms, error: `HTTP ${res.status}` }
-          const data = await res.json()
-          if (data.status !== 'ok') return { ...app, status: 'down', ms, error: 'Bad response' }
+          if (app.health) {
+            const data = await res.json()
+            if (data.status !== 'ok') return { ...app, status: 'down', ms, error: 'Bad response' }
+          }
           return { ...app, status: 'up', ms }
         } catch (err) {
           return { ...app, status: 'down', ms: null, error: err.message }

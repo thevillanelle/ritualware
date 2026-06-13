@@ -1,13 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-
-const allApps = [
-  { question: 'What do I wear?',      name: 'Ritualwear',   href: 'https://wear.ritualware.app',                              color: '#D4919A', to: '/ritualwear' },
-  { question: 'How do I look?',       name: 'Glow Up',      href: 'https://glowup.ritualware.app',                            color: '#8FA688', to: '/glowup' },
-  { question: 'Where do I go?',       name: 'Ritualwhere?', href: 'https://where.ritualware.app',                             color: '#A89BC4', to: '/ritualwhere' },
-  { question: 'What am I building?',  name: "m'atelier",    href: 'https://studio.ritualware.app',                            color: '#C8A86B', to: '/matelier' },
-  { question: 'Where do I work out?', name: 'EQX Doubles',  href: 'https://thevillanelle.github.io/eqx-doubles/index.html',  color: '#c8f23a', to: '/doubles' },
-]
+import { SUITE as allApps } from '../data/apps'
 
 export default function About() {
   return (

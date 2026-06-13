@@ -1,55 +1,7 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import Marquee from '../components/Marquee'
-
-const suite = [
-  {
-    to: '/ritualwear',
-    label: 'ritualwear',
-    name: 'Ritualwear',
-    desc: 'Your style system. A Style Bible built once, applied every day. The Oracle reads your rules and tells you exactly what to wear today.',
-    color: '#D4919A',
-    bg: 'rgba(212,145,154,0.08)',
-    border: 'rgba(212,145,154,0.2)',
-  },
-  {
-    to: '/glowup',
-    label: 'glow up',
-    name: 'Glow Up',
-    desc: 'A complete audit across twelve categories of your beauty life. Not a checklist. A scorecard with a plan you can use tomorrow morning.',
-    color: '#8FA688',
-    bg: 'rgba(143,166,136,0.08)',
-    border: 'rgba(143,166,136,0.2)',
-  },
-  {
-    to: '/ritualwhere',
-    label: 'ritualwhere?',
-    name: 'Ritualwhere?',
-    desc: 'A city guide built for how you actually live. Neighborhood matching with scored reasons. Curated venues by how you want to feel. NYC and LA.',
-    color: '#A89BC4',
-    bg: 'rgba(168,155,196,0.08)',
-    border: 'rgba(168,155,196,0.2)',
-  },
-  {
-    to: '/matelier',
-    label: "m'atelier",
-    name: "m'atelier",
-    desc: 'Your personal studio. Projects, goals, skills, circle. The part of your life that is about building, tracked in one place.',
-    color: '#C8A86B',
-    bg: 'rgba(200,168,107,0.08)',
-    border: 'rgba(200,168,107,0.2)',
-  },
-  {
-    to: '/doubles',
-    label: 'doubles',
-    name: 'EQX Doubles',
-    desc: 'Two classes that actually work together. Matched by type, timed for real travel, across all 36 NYC Equinox locations. For Equinox members.',
-    color: '#c8f23a',
-    bg: 'rgba(200,242,58,0.05)',
-    border: 'rgba(200,242,58,0.2)',
-    dark: true,
-  },
-]
+import { SUITE as suite } from '../data/apps'
 
 export default function Home() {
   return (
