@@ -52,9 +52,10 @@ beforeEach(() => {
 })
 
 describe('AuthProvider', () => {
-  it('renders children', () => {
+  it('renders children', async () => {
     setup()
     render(<AuthProvider><div>hello</div></AuthProvider>)
+    await act(async () => {})
     expect(screen.getByText('hello')).toBeDefined()
   })
 
