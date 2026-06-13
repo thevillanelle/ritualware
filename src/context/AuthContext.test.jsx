@@ -1,15 +1,24 @@
+import React from 'react'
 import { render, screen, act } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { AuthProvider, useAuth } from './AuthContext'
 
-const mockUnsubscribe = vi.fn()
-const mockSignInWithOAuth = vi.fn()
-const mockSignOut = vi.fn()
-const mockGetSession = vi.fn()
-const mockOnAuthStateChange = vi.fn(() => ({
-  data: { subscription: { unsubscribe: mockUnsubscribe } },
-}))
+// vi.mock is hoisted to the top of the file by vitest, so mock refs must be
+// declared with vi.hoisted() to be available inside the factory.
+const { mockGetSession, mockUnsubscribe, mockSignInWithOAuth, mockSignOut, mockOnAuthStateChange } =
+  vi.hoisted(() => {
+    const mockUnsubscribe = vi.fn()
+    return {
+      mockUnsubscribe,
+      mockGetSession: vi.fn(),
+      mockSignInWithOAuth: vi.fn(),
+      mockSignOut: vi.fn(),
+      mockOnAuthStateChange: vi.fn(() => ({
+        data: { subscription: { unsubscribe: mockUnsubscribe } },
+      })),
+    }
+  })
 
 vi.mock('../lib/supabase', () => ({
   supabase: {
