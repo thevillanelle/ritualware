@@ -13,6 +13,7 @@ import Ritualwhere from './pages/Ritualwhere'
 import About from './pages/About'
 import Status from './pages/Status'
 import AuthCallback from './pages/AuthCallback'
+import RitualProfile from './pages/RitualProfile'
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/status" element={<Status />} />
           <Route path="/auth/callback" element={<AuthCallback />} />
+          <Route path="/profile" element={<RitualProfile />} />
         </Routes>
         <Footer />
       </div>

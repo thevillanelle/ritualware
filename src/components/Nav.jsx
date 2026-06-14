@@ -19,12 +19,14 @@ function AuthControls({ onAction }) {
   if (loading) return null
   if (user) return (
     <div className="flex items-center gap-3">
+      <NavLink to="/profile" onClick={onAction}
+        className={({ isActive }) =>
+          `font-sans text-sm transition-colors pb-0.5 border-b ${isActive ? 'text-rose border-rose' : 'text-ink-muted border-transparent hover:text-ink'}`}>
+        Profile
+      </NavLink>
       {user.user_metadata?.avatar_url && (
         <img src={user.user_metadata.avatar_url} alt="" className="w-7 h-7 rounded-full" />
       )}
-      <span className="font-mono text-xs text-ink-muted hidden lg:block">
-        {user.user_metadata?.full_name?.split(' ')[0] ?? user.email}
-      </span>
       <button onClick={() => { signOut(); onAction?.() }}
         className="font-mono text-xs text-ink-muted hover:text-rose transition-colors">
         sign out
