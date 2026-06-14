@@ -468,7 +468,7 @@ export default function RitualProfile() {
           <Grid>
             {data?.neighborhood && (
               <Card>
-                <Field label="Neighborhood" value={data.neighborhood.top_neighborhood} />
+                <Field label="Neighborhood" value={data.neighborhood.top_match} />
                 {data.neighborhood.vibe_words?.length > 0 && (
                   <div>{data.neighborhood.vibe_words.map(v => <Chip key={v}>{v}</Chip>)}</div>
                 )}
