@@ -1,0 +1,65 @@
+name: Uptime Monitor
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'  # every 15 minutes
+  workflow_dispatch:          # allow manual trigger from GitHub UI
+
+jobs:
+  check:
+    name: Check all Ritualware services
+    runs-on: ubuntu-latest
+    steps:
+      - name: Health checks
+        run: |
+          FAILED=()
+
+          check_json() {
+            local name="$1"
+            local url="$2"
+            echo -n "Checking $name … "
+            BODY=$(curl -sf -w "\n%{http_code}" "$url" 2>/dev/null)
+            HTTP=$(echo "$BODY" | tail -1)
+            CONTENT=$(echo "$BODY" | head -1)
+            if [ "$HTTP" != "200" ]; then
+              echo "❌ HTTP $HTTP"
+              FAILED+=("$name (HTTP $HTTP)")
+              return
+            fi
+            STATUS=$(echo "$CONTENT" | python3 -c "import sys,json; print(json.load(sys.stdin).get('status',''))" 2>/dev/null)
+            if [ "$STATUS" != "ok" ]; then
+              echo "❌ bad status: \"$STATUS\""
+              FAILED+=("$name (bad status: $STATUS)")
+              return
+            fi
+            echo "✅ up"
+          }
+
+          check_url() {
+            local name="$1"
+            local url="$2"
+            echo -n "Checking $name … "
+            HTTP=$(curl -sf -o /dev/null -w "%{http_code}" "$url" 2>/dev/null)
+            if [ "$HTTP" != "200" ]; then
+              echo "❌ HTTP $HTTP"
+              FAILED+=("$name (HTTP $HTTP)")
+              return
+            fi
+            echo "✅ up"
+          }
+
+          check_json "Ritualware (marketing)"  "https://ritualware.app/health.json"
+          check_json "Ritualwear"              "https://wear.ritualware.app/health.json"
+          check_json "Glow Up"                 "https://glowup.ritualware.app/health.json"
+          check_json "Ritualwhere?"            "https://where.ritualware.app/health.json"
+          check_json "m'atelier"               "https://studio.ritualware.app/health.json"
+          check_url  "EQX Doubles"             "https://thevillanelle.github.io/eqx-doubles/index.html"
+
+          echo ""
+          if [ ${#FAILED[@]} -gt 0 ]; then
+            echo "DEGRADED — ${#FAILED[@]} service(s) down:"
+            for svc in "${FAILED[@]}"; do echo "  • $svc"; done
+            exit 1
+          fi
+
+          echo "All systems operational."

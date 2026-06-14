@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import ThemeToggle, { useTheme } from './ThemeToggle'
+import { useAuth } from '../context/AuthContext'
 
 const links = [
   { to: '/platform', label: 'Platform' },
@@ -12,6 +13,33 @@ const links = [
   { to: '/matelier', label: "m'atelier" },
   { to: '/about', label: 'About' },
 ]
+
+function AuthControls({ onAction }) {
+  const { user, loading, signInWithGoogle, signOut } = useAuth()
+  if (loading) return null
+  if (user) return (
+    <div className="flex items-center gap-3">
+      <NavLink to="/profile" onClick={onAction}
+        className={({ isActive }) =>
+          `font-sans text-sm transition-colors pb-0.5 border-b ${isActive ? 'text-rose border-rose' : 'text-ink-muted border-transparent hover:text-ink'}`}>
+        Profile
+      </NavLink>
+      {user.user_metadata?.avatar_url && (
+        <img src={user.user_metadata.avatar_url} alt="" className="w-7 h-7 rounded-full" />
+      )}
+      <button onClick={() => { signOut(); onAction?.() }}
+        className="font-mono text-xs text-ink-muted hover:text-rose transition-colors">
+        sign out
+      </button>
+    </div>
+  )
+  return (
+    <button onClick={() => { signInWithGoogle(); onAction?.() }}
+      className="font-mono text-xs px-4 py-1.5 rounded-full border border-amber/40 text-amber hover:bg-amber/10 transition-colors">
+      sign in
+    </button>
+  )
+}
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
@@ -31,6 +59,7 @@ export default function Nav() {
             </NavLink>
           ))}
           <ThemeToggle theme={theme} setTheme={setTheme} />
+          <AuthControls />
         </div>
         <button className="md:hidden" onClick={() => setOpen(!open)}>
           <div className={`w-5 h-px bg-ink mb-1.5 transition-all ${open ? 'rotate-45 translate-y-1.5' : ''}`}/>
@@ -48,8 +77,9 @@ export default function Nav() {
                 {l.label}
               </NavLink>
             ))}
-            <div className="px-6 py-4">
+            <div className="px-6 py-4 flex items-center justify-between">
               <ThemeToggle theme={theme} setTheme={setTheme} />
+              <AuthControls onAction={() => setOpen(false)} />
             </div>
           </motion.div>
         )}
