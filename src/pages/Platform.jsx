@@ -11,11 +11,11 @@ export default function Platform() {
           className="font-mono text-sm text-amber tracking-[0.25em] mb-4">the platform</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="font-display text-[clamp(44px,6vw,80px)] text-ink mb-8 leading-tight">
-          Five tools.<br />One suite.
+          Six tools.<br />One suite.
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
           className="font-sans text-xl text-ink-muted leading-relaxed max-w-2xl mb-4">
-          Five tools built around the questions most people answer by outsourcing. What to wear. How to look. Where to live and spend time. What to build. Where to train. Ritualware answers them from the inside out.
+          Six tools built around the questions most people answer by outsourcing. What to wear. How to look. Where to live. What to build. Where to train. When to retire. Ritualware answers them from the inside out.
         </motion.p>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
           className="font-serif italic text-xl text-ink-muted leading-relaxed max-w-2xl">
@@ -58,7 +58,7 @@ export default function Platform() {
             Log in once.<br />Every app knows you.
           </h2>
           <p className="font-sans text-xl leading-relaxed mb-4" style={{ color: '#C8BFB0' }}>
-            The Ritual Profile is a single picture of you that all five apps contribute to. Your style rules. Your beauty audit. Your city preferences. Your projects and goals. The first quiz starts it. Every one after makes it richer.
+            The Ritual Profile is a single picture of you that all six apps contribute to. Your style rules. Your beauty audit. Your city preferences. Your projects and goals. Your FIRE plan. The first quiz starts it. Every one after makes it richer.
           </p>
           <p className="font-sans text-lg leading-relaxed" style={{ color: '#9A8B7A' }}>
             One button generates a prose portrait of who you are right now, based on everything you have ever answered. It saves. It updates when you do.
