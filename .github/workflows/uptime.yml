@@ -53,6 +53,7 @@ jobs:
           check_json "Glow Up"                 "https://glowup.ritualware.app/health.json"
           check_json "Ritualwhere?"            "https://where.ritualware.app/health.json"
           check_json "m'atelier"               "https://studio.ritualware.app/health.json"
+          check_json "Ritualwealth"            "https://wealth.ritualware.app/health.json"
           check_url  "EQX Doubles"             "https://thevillanelle.github.io/eqx-doubles/index.html"
 
           echo ""
