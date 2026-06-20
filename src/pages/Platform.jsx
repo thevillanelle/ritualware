@@ -11,11 +11,11 @@ export default function Platform() {
           className="font-mono text-sm text-amber tracking-[0.25em] mb-4">the platform</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="font-display text-[clamp(44px,6vw,80px)] text-ink mb-8 leading-tight">
-          Six tools.<br />One suite.
+          Seven tools.<br />One suite.
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
           className="font-sans text-xl text-ink-muted leading-relaxed max-w-2xl mb-4">
-          Six tools built around the questions most people answer by outsourcing. What to wear. How to look. Where to live. What to build. Where to train. When to retire. Ritualware answers them from the inside out.
+          Seven tools built around the questions most people answer by outsourcing. What to wear. How to look. Where to live. What to build. Where to train. When to retire. Is everything running. Ritualware answers them from the inside out.
         </motion.p>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
           className="font-serif italic text-xl text-ink-muted leading-relaxed max-w-2xl">
