@@ -12,7 +12,7 @@ export default function About() {
 
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="font-display italic leading-tight mb-12" style={{ fontSize: 'clamp(40px,6vw,72px)', color: '#FAF7F2' }}>
-          Six tools.<br />One suite.
+          Seven tools.<br />One suite.
         </motion.h1>
 
         <div className="space-y-8 mb-24">
