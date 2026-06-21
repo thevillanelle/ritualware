@@ -12,6 +12,7 @@ import Ritualwhere from './pages/Ritualwhere'
 import About from './pages/About'
 import Status from './pages/Status'
 import Ritualwealth from './pages/Ritualwealth'
+import Robin from './pages/Robin'
 
 export default function App() {
   return (
@@ -29,6 +30,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/status" element={<Status />} />
         <Route path="/ritualwealth" element={<Ritualwealth />} />
+        <Route path="/robin" element={<Robin />} />
       </Routes>
       <Footer />
     </div>
