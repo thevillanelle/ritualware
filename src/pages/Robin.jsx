@@ -8,7 +8,7 @@ const MODULES = [
   { name: "m'atelier", sub: 'studio', color: '#8B7E72', desc: 'Your active projects, open goals, and creative focus.' },
 ]
 
-const color = '#A0896E'
+const color = '#7EB8C4'
 
 export default function Robin() {
   return (
@@ -17,7 +17,7 @@ export default function Robin() {
       <div className="px-6 md:px-16 max-w-5xl mx-auto mb-28">
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
           className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color }}>
-          robin · robin.ritualware.app
+          ritual profile · robin.ritualware.app
         </motion.p>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="font-display italic leading-none text-ink mb-6"
@@ -26,7 +26,7 @@ export default function Robin() {
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
           className="font-serif italic text-2xl text-ink-muted max-w-xl">
-          Where do I stand?
+          Who am I becoming?
         </motion.p>
       </div>
 
