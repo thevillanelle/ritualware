@@ -48,7 +48,7 @@ jobs:
             echo "✅ up"
           }
 
-          check_json "Ritualware (marketing)"  "https://ritualware.app/health.json"
+          check_json "Ritualware (marketing)"  "https://www.ritualware.app/health.json"
           check_json "Ritualwear"              "https://wear.ritualware.app/health.json"
           check_json "Glow Up"                 "https://glowup.ritualware.app/health.json"
           check_json "Ritualwhere?"            "https://where.ritualware.app/health.json"
