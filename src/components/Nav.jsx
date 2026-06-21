@@ -10,6 +10,7 @@ const links = [
   { to: '/ritualwhere', label: 'Ritualwhere?' },
   { to: '/doubles', label: 'Doubles' },
   { to: '/matelier', label: "m'atelier" },
+  { to: '/robin', label: 'Robin' },
   { to: '/about', label: 'About' },
 ]
 
