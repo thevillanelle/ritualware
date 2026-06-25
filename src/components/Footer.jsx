@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { SUITE } from '../data/apps'
+import { SUITE, STANDALONE } from '../data/apps'
 
 export default function Footer() {
   return (

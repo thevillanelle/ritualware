@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { SUITE as apps } from '../data/apps'
+import { ALL_APPS as apps } from '../data/apps'
 
 export default function Platform() {
   return (

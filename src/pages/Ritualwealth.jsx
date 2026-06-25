@@ -36,7 +36,7 @@ export default function Ritualwealth() {
             Financial Independence, Retire Early. Five quizzes. Ten minutes. A complete picture of your FIRE number, your type, your career path, your housing plan, your creative income streams, and your risk tolerance.
           </p>
           <p className="font-sans text-lg text-ink-muted leading-relaxed">
-            Not a spreadsheet. Not a generic calculator. A plan that knows you — because you told it who you are.
+            Not a spreadsheet. Not a generic calculator. A plan that knows you, because you told it who you are.
           </p>
         </div>
       </div>
@@ -45,7 +45,7 @@ export default function Ritualwealth() {
         <p className="font-mono text-sm tracking-[0.25em] mb-14" style={{ color: '#6AAD8A' }}>five quizzes</p>
         <div className="grid md:grid-cols-2 gap-8">
           {[
-            { title: 'FIRE Type', body: 'Lean, Regular, Fat, Barista, or Coast — find your number and understand what kind of freedom you are actually building toward.' },
+            { title: 'FIRE Type', body: 'Lean, Regular, Fat, Barista, or Coast. Find your number and understand what kind of freedom you are actually building toward.' },
             { title: 'Career Path', body: 'Which track gets you to FIRE fastest. Corporate ladder, freelance, entrepreneurship, or hybrid. Your career is your biggest wealth lever.' },
             { title: 'Home Plan', body: 'Own, rent, or enclave. Your housing decision changes your FIRE number by hundreds of thousands. This quiz maps yours.' },
             { title: 'Creative Income', body: 'The stream that funds the life. Identify which creative avenue fits your skills and how to build it into a real income source.' },

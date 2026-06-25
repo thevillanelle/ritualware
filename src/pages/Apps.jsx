@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { SUITE } from '../data/apps'
+import { ALL_APPS as SUITE } from '../data/apps'
 
 export default function Apps() {
   return (

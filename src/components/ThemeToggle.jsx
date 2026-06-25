@@ -22,22 +22,21 @@ export default function ThemeToggle({ theme, setTheme }) {
       aria-label="Select theme"
       style={{
         background: 'transparent',
-        border: '1px solid var(--ink-muted)',
-        borderRadius: '20px',
-        color: 'var(--ink)',
+        border: 'none',
+        color: 'var(--ink-muted)',
         fontFamily: 'Courier Prime, Courier, monospace',
         fontSize: '11px',
         letterSpacing: '0.1em',
-        padding: '4px 10px',
         cursor: 'pointer',
         outline: 'none',
         appearance: 'none',
         WebkitAppearance: 'none',
+        padding: 0,
       }}
     >
-      <option value="light">☀️ Light</option>
-      <option value="dark">🌙 Dark</option>
-      <option value="elle">💗 Elle</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="elle">Elle</option>
     </select>
   )
 }

@@ -35,10 +35,10 @@ export default function Robin() {
           <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color }}>your ritual life, at a glance</p>
           <h2 className="font-display text-4xl text-ink mb-8">One dashboard. Every tool. Your data.</h2>
           <p className="font-sans text-xl text-ink leading-relaxed mb-6">
-            Robin pulls your results from every Ritualware app into a single, personal dashboard. Your style profile, your glow tier, your neighborhood match, your FIRE plan, your studio projects — all in one place.
+            Robin pulls your results from every Ritualware app into a single, personal dashboard. Your style profile, your glow tier, your neighborhood match, your FIRE plan, your studio projects. All in one place.
           </p>
           <p className="font-sans text-lg text-ink-muted leading-relaxed">
-            Configure it once with Do the Dash — a five-question quiz that sets your lens. Then reorder, hide, and customize your modules to match how you actually want to see your life.
+            Configure it once with Do the Dash, a five-question quiz that sets your lens. Then reorder, hide, and customize your modules to match how you actually want to see your life.
           </p>
         </div>
       </div>

@@ -1,3 +1,4 @@
+// Shared backend: one login, one Ritual Profile
 export const SUITE = [
   {
     to: '/ritualwear',
@@ -83,12 +84,16 @@ export const SUITE = [
     bg: 'rgba(126,184,196,0.08)',
     border: 'rgba(126,184,196,0.2)',
   },
+]
+
+// Standalone apps: independent backends, no shared profile
+export const STANDALONE = [
   {
     to: '/atlas',
     name: 'ATLAS',
     label: 'atlas',
     question: "What's happening in the world?",
-    desc: 'A live global intelligence feed on a 3D globe. Breaking news, conflicts, disasters, markets, launches, and the night sky — all in one place.',
+    desc: 'A live global intelligence feed on a 3D globe. Breaking news, conflicts, disasters, markets, launches, and the night sky, all in one place.',
     domain: 'atlas.ritualware.app',
     href: 'https://atlas.ritualware.app',
     health: 'https://atlas.ritualware.app/health.json',
@@ -119,7 +124,7 @@ export const SUITE = [
     desc: 'Two classes that actually work together. Matched by type, timed for real travel, across all 36 NYC Equinox locations. For Equinox members.',
     domain: 'thevillanelle.github.io/eqx-doubles',
     href: 'https://thevillanelle.github.io/eqx-doubles/index.html',
-    health: null, // GitHub Pages — no health.json; status checks root URL directly
+    health: null,
     statusDesc: 'EQX Class Finder',
     color: '#c8f23a',
     bg: 'rgba(200,242,58,0.05)',
@@ -127,6 +132,9 @@ export const SUITE = [
     dark: true,
   },
 ]
+
+// All apps combined, for pages that list everything
+export const ALL_APPS = [...SUITE, ...STANDALONE]
 
 export const MARKETING_SITE = {
   name: 'Ritualware',
