@@ -11,15 +11,15 @@ export default function Platform() {
           className="font-mono text-sm text-amber tracking-[0.25em] mb-4">the platform</motion.p>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="font-display text-[clamp(44px,6vw,80px)] text-ink mb-8 leading-tight">
-          Seven tools.<br />One suite.
+          The Ritualware Suite.<br />And beyond.
         </motion.h1>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}
           className="font-sans text-xl text-ink-muted leading-relaxed max-w-2xl mb-4">
-          Seven tools built around the questions most people answer by outsourcing. What to wear. How to look. Where to live. What to build. Where to train. When to retire. Is everything running. Ritualware answers them from the inside out.
+          The Ritualware Suite is a shared-backend system — one login, one Ritual Profile, apps that get sharper the more you use them together. Style, beauty, city, studio, wealth, identity.
         </motion.p>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
           className="font-serif italic text-xl text-ink-muted leading-relaxed max-w-2xl">
-          One login. One profile. Every answer you give in one app makes the others sharper.
+          Alongside the suite, VILE LLC ships standalone tools — independent apps with their own purpose, their own data, their own world. Same standard of craft. Different universe.
         </motion.p>
       </div>
 
