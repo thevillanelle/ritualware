@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from 'react'
 import { motion } from 'framer-motion'
-import { SUITE, MARKETING_SITE } from '../data/apps'
+import { ALL_APPS, MARKETING_SITE } from '../data/apps'
 import { checkApp } from '../lib/healthCheck'
 
 const APPS = [
-  ...SUITE.map(a => ({ name: a.name, url: a.href, health: a.health, color: a.color, desc: a.statusDesc })),
+  ...ALL_APPS.map(a => ({ name: a.name, url: a.href, health: a.health, color: a.color, desc: a.statusDesc })),
   { name: MARKETING_SITE.name, url: MARKETING_SITE.url, health: MARKETING_SITE.health, color: MARKETING_SITE.color, desc: MARKETING_SITE.statusDesc },
 ]
 

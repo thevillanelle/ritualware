@@ -33,7 +33,7 @@ export default function Atlas() {
           <div>
             <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color: BLUE }}>what it is</p>
             <p className="font-sans text-lg leading-relaxed mb-5" style={{ color: '#94a3b8' }}>
-              ATLAS is a live global intelligence feed rendered on a 3D globe. Breaking news, armed conflicts, natural disasters, financial markets, rocket launches, and the night sky — all pulled from live APIs and pinned to where they're actually happening.
+              ATLAS is a live global intelligence feed rendered on a 3D globe. Breaking news, armed conflicts, natural disasters, financial markets, rocket launches, and the night sky. All pulled from live APIs and pinned to where they're actually happening.
             </p>
             <p className="font-sans text-lg leading-relaxed" style={{ color: MUTED }}>
               It's the overview effect as a dashboard. The world at a glance, every time you open it.
@@ -43,7 +43,7 @@ export default function Atlas() {
             <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color: BLUE }}>what you get</p>
             <ul className="space-y-4">
               {[
-                '14 live feeds — news, conflicts, disasters, markets, launches, fashion, astronomy',
+                '14 live feeds: news, conflicts, disasters, markets, launches, fashion, astronomy',
                 'Planets and stars rendered in real-time orbital positions',
                 'The Sun and terminator line showing day and night live',
                 'Connect any two events to find what links them',

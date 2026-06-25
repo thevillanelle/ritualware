@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { SUITE as allApps } from '../data/apps'
+import { ALL_APPS as allApps } from '../data/apps'
 
 export default function About() {
   return (
@@ -18,15 +18,15 @@ export default function About() {
         <div className="space-y-8 mb-24">
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            Ritualware is built around a simple premise: how you show up in the world — what you wear, how you look, where you go, what you're building — isn't random. It's a system. And systems can be designed intentionally.
+            Ritualware is built around a simple premise: how you show up in the world (what you wear, how you look, where you go, what you're building) isn't random. It's a system. And systems can be designed intentionally.
           </motion.p>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            The core suite — Ritualwear, Glow Up, Ritualwhere?, m'atelier, Ritualwealth, and Robin — shares one login and one Ritual Profile. Every answer you give in one app makes the others sharper. The more you use, the richer it gets.
+            The core suite (Ritualwear, Glow Up, Ritualwhere?, m'atelier, Ritualwealth, and Robin) shares one login and one Ritual Profile. Every answer you give in one app makes the others sharper. The more you use, the richer it gets.
           </motion.p>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            Alongside the suite, VILE LLC ships standalone tools — ATLAS, Sal's Library, EQX Doubles — independent apps with their own data and their own world. Same standard of craft. No shared backend.
+            Alongside the suite, VILE LLC ships standalone tools: ATLAS, Sal's Library, and EQX Doubles. Independent apps with their own data and their own world. Same standard of craft. No shared backend.
           </motion.p>
         </div>
 

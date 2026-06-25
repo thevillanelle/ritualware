@@ -31,7 +31,7 @@ export default function Home() {
           <motion.div {...fade(0.55)} style={{ width: '48px', height: '1px', background: 'var(--amber)', marginBottom: '3rem' }} />
 
           <motion.p {...fade(0.65)} style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: 'clamp(20px, 2vw, 26px)', color: 'var(--ink-muted)', maxWidth: '560px', lineHeight: 1.7, marginBottom: '4rem' }}>
-            Software for the life you're deliberately building. Not optimization — ritual.
+            Software for the life you're deliberately building. Not optimization. Ritual.
           </motion.p>
 
           <motion.div {...fade(0.8)} style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
@@ -56,7 +56,7 @@ export default function Home() {
               Most apps assume you want to be<br /><span style={{ fontStyle: 'italic', color: 'var(--rose)' }}>managed down.</span>
             </h2>
             <p style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: '22px', color: 'var(--ink-muted)', lineHeight: 1.7 }}>
-              Ritualware is different. These tools don't track your habits to guilt you. They learn who you are — your style, your city, your ambitions, your taste — and hand that back to you as infrastructure.
+              Ritualware is different. These tools don't track your habits to guilt you. They learn who you are: your style, your city, your ambitions, your taste. And hand that back to you as infrastructure.
             </p>
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>

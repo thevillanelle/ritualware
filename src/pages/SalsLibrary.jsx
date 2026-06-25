@@ -32,7 +32,7 @@ export default function SalsLibrary() {
           <div>
             <p className="font-mono text-sm tracking-[0.25em] mb-5" style={{ color: AMBER }}>what it is</p>
             <p className="font-sans text-lg leading-relaxed mb-5" style={{ color: '#a8a29e' }}>
-              Sal's Library is a full-featured personal book tracker — not a social reading app, not a bestseller list. A private system for logging what you've read, rating it honestly, and figuring out what to read next.
+              Sal's Library is a full-featured personal book tracker. Not a social reading app, not a bestseller list. A private system for logging what you've read, rating it honestly, and figuring out what to read next.
             </p>
             <p className="font-sans text-lg leading-relaxed" style={{ color: MUTED }}>
               Built for a specific reader with a specific taste. The next-read engine knows the difference between a book you finished and a book you loved.
@@ -43,11 +43,11 @@ export default function SalsLibrary() {
             <ul className="space-y-4">
               {[
                 'Full library with ratings, reviews, and read dates',
-                'Want list — track everything you intend to read',
-                'Series tracking — know where you are in any sequence',
+                'Want list: track everything you intend to read',
+                'Series tracking: know where you are in any sequence',
                 'Head-to-head matchups to settle rankings',
                 'Smart next-read engine based on your actual taste',
-                'Stats — pages read, authors, genres, reading pace',
+                'Stats: pages read, authors, genres, reading pace',
               ].map((item, i) => (
                 <li key={i} className="flex gap-3 font-sans text-base" style={{ color: '#78716c' }}>
                   <span className="mt-0.5 shrink-0" style={{ color: AMBER }}>✦</span>

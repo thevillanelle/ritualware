@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import ThemeToggle, { useTheme } from './ThemeToggle'
-import { SUITE } from '../data/apps'
+import { SUITE, STANDALONE } from '../data/apps'
 
 export default function Nav() {
   const [suiteOpen, setSuiteOpen] = useState(false)
@@ -54,22 +54,45 @@ export default function Nav() {
               {suiteOpen && (
                 <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.18 }}
-                  style={{ position: 'absolute', top: 'calc(100% + 16px)', left: '50%', transform: 'translateX(-50%)', background: 'var(--bg)', border: '1px solid color-mix(in srgb, var(--ink) 10%, transparent)', borderRadius: '16px', padding: '1rem', width: '640px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px', boxShadow: '0 24px 64px rgba(0,0,0,0.12)' }}>
-                  {SUITE.map((app) => (
-                    <Link key={app.to} to={app.to} onClick={() => setSuiteOpen(false)}
-                      style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '14px 16px', borderRadius: '10px', textDecoration: 'none', transition: 'background 0.15s' }}
-                      onMouseEnter={e => e.currentTarget.style.background = 'var(--bg-alt)'}
-                      onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
-                      <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: app.color, flexShrink: 0, marginTop: '5px' }} />
-                      <div>
-                        <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', fontWeight: 500, color: 'var(--ink)', marginBottom: '2px' }}>{app.name}</p>
-                        <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: 'var(--ink-muted)', lineHeight: 1.4 }}>{app.question}</p>
-                      </div>
-                    </Link>
-                  ))}
-                  <div style={{ gridColumn: '1 / -1', borderTop: '1px solid color-mix(in srgb, var(--ink) 8%, transparent)', marginTop: '6px', paddingTop: '10px' }}>
+                  style={{ position: 'absolute', top: 'calc(100% + 16px)', left: '50%', transform: 'translateX(-50%)', background: 'var(--bg)', border: '1px solid color-mix(in srgb, var(--ink) 10%, transparent)', borderRadius: '16px', padding: '1.25rem', width: '660px', boxShadow: '0 24px 64px rgba(0,0,0,0.12)' }}>
+
+                  <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--ink-muted)', opacity: 0.5, marginBottom: '0.75rem', paddingLeft: '4px' }}>The Suite</p>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px', marginBottom: '1rem' }}>
+                    {SUITE.map((app) => (
+                      <Link key={app.to} to={app.to} onClick={() => setSuiteOpen(false)}
+                        style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '12px 14px', borderRadius: '10px', textDecoration: 'none', transition: 'background 0.15s' }}
+                        onMouseEnter={e => e.currentTarget.style.background = 'var(--bg-alt)'}
+                        onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
+                        <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: app.color, flexShrink: 0, marginTop: '5px' }} />
+                        <div>
+                          <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', fontWeight: 500, color: 'var(--ink)', marginBottom: '2px' }}>{app.name}</p>
+                          <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: 'var(--ink-muted)', lineHeight: 1.4 }}>{app.question}</p>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+
+                  <div style={{ borderTop: '1px solid color-mix(in srgb, var(--ink) 8%, transparent)', paddingTop: '1rem', marginBottom: '0.75rem' }}>
+                    <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--ink-muted)', opacity: 0.5, marginBottom: '0.75rem', paddingLeft: '4px' }}>Also from VILE LLC</p>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '2px' }}>
+                      {STANDALONE.map((app) => (
+                        <Link key={app.to} to={app.to} onClick={() => setSuiteOpen(false)}
+                          style={{ display: 'flex', alignItems: 'flex-start', gap: '10px', padding: '10px 12px', borderRadius: '10px', textDecoration: 'none', transition: 'background 0.15s' }}
+                          onMouseEnter={e => e.currentTarget.style.background = 'var(--bg-alt)'}
+                          onMouseLeave={e => e.currentTarget.style.background = 'transparent'}>
+                          <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: app.color, flexShrink: 0, marginTop: '5px' }} />
+                          <div>
+                            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '13px', fontWeight: 500, color: 'var(--ink)', marginBottom: '2px' }}>{app.name}</p>
+                            <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '12px', color: 'var(--ink-muted)', lineHeight: 1.4 }}>{app.question}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div style={{ borderTop: '1px solid color-mix(in srgb, var(--ink) 8%, transparent)', paddingTop: '10px' }}>
                     <Link to="/apps" onClick={() => setSuiteOpen(false)}
-                      style={{ display: 'block', textAlign: 'center', fontFamily: 'Courier Prime, monospace', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--rose)', textDecoration: 'none', padding: '8px' }}>
+                      style={{ display: 'block', textAlign: 'center', fontFamily: 'Courier Prime, monospace', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--rose)', textDecoration: 'none', padding: '6px' }}>
                       View all apps →
                     </Link>
                   </div>
@@ -119,9 +142,18 @@ export default function Nav() {
             <AnimatePresence>
               {mobileSuiteOpen && (
                 <motion.div initial={{ height: 0 }} animate={{ height: 'auto' }} exit={{ height: 0 }} style={{ overflow: 'hidden' }}>
+                  <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--ink-muted)', opacity: 0.5, padding: '0.75rem 2rem 0.25rem' }}>The Suite</p>
                   {SUITE.map(app => (
                     <Link key={app.to} to={app.to} onClick={() => { setMobileOpen(false); setMobileSuiteOpen(false) }}
-                      style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '0.875rem 2rem', borderBottom: '1px solid color-mix(in srgb, var(--ink) 5%, transparent)', textDecoration: 'none' }}>
+                      style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '0.75rem 2rem', borderBottom: '1px solid color-mix(in srgb, var(--ink) 5%, transparent)', textDecoration: 'none' }}>
+                      <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: app.color, flexShrink: 0 }} />
+                      <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '14px', color: 'var(--ink-muted)' }}>{app.name}</span>
+                    </Link>
+                  ))}
+                  <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--ink-muted)', opacity: 0.5, padding: '0.75rem 2rem 0.25rem' }}>Also from VILE LLC</p>
+                  {STANDALONE.map(app => (
+                    <Link key={app.to} to={app.to} onClick={() => { setMobileOpen(false); setMobileSuiteOpen(false) }}
+                      style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '0.75rem 2rem', borderBottom: '1px solid color-mix(in srgb, var(--ink) 5%, transparent)', textDecoration: 'none' }}>
                       <div style={{ width: '7px', height: '7px', borderRadius: '50%', background: app.color, flexShrink: 0 }} />
                       <span style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '14px', color: 'var(--ink-muted)' }}>{app.name}</span>
                     </Link>

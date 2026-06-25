@@ -213,7 +213,7 @@ export default function RitualProfile() {
             Your Ritual Profile<br /><span style={{ fontStyle: 'italic', color: 'var(--rose)' }}>lives here.</span>
           </p>
           <p style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', fontStyle: 'italic', fontSize: '1.15rem', color: 'var(--ink-muted)', marginBottom: '2.5rem', lineHeight: 1.6 }}>
-            Sign in to see your case study — everything the suite knows about you, assembled in one place.
+            Sign in to see your case study: everything the suite knows about you, assembled in one place.
           </p>
           <button onClick={signInWithGoogle}
             style={{ fontFamily: '"DM Sans", sans-serif', fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', background: 'var(--ink)', color: 'var(--bg)', padding: '0.85rem 2.5rem', borderRadius: '999px', border: 'none', cursor: 'pointer' }}>
@@ -536,7 +536,7 @@ export default function RitualProfile() {
         </p>
         <p style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', fontStyle: 'italic', fontSize: '1.05rem', color: '#C8BFB0', marginBottom: '2rem', lineHeight: 1.7, maxWidth: '400px', margin: '0 auto 2rem' }}>
           {data?.narrative
-            ? 'Regenerate any time — it updates as your data does.'
+            ? 'Regenerate any time; it updates as your data does.'
             : 'Send everything to the Oracle. Get a prose case study back.'}
         </p>
 
