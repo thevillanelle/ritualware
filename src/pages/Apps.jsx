@@ -7,7 +7,7 @@ export default function Apps() {
       <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
         className="font-mono text-xs text-amber tracking-[0.25em] mb-4">the apps</motion.p>
       <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-        className="font-display text-[clamp(40px,6vw,80px)] text-ink mb-16">Seven Questions.</motion.h1>
+        className="font-display text-[clamp(40px,6vw,80px)] text-ink mb-16">Every app.</motion.h1>
 
       <div className="space-y-8">
         {SUITE.map((app, i) => (
