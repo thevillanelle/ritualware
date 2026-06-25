@@ -12,26 +12,26 @@ export default function About() {
 
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="font-display italic leading-tight mb-12" style={{ fontSize: 'clamp(40px,6vw,72px)', color: '#FAF7F2' }}>
-          Seven tools.<br />One suite.
+          The Ritualware Suite.<br />And beyond.
         </motion.h1>
 
         <div className="space-y-8 mb-24">
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            Ritualware is built around a simple premise: how you show up in the world, what you wear, how you look, where you go, what you're building, isn't random. It's a system. And systems can be designed intentionally.
+            Ritualware is built around a simple premise: how you show up in the world — what you wear, how you look, where you go, what you're building — isn't random. It's a system. And systems can be designed intentionally.
           </motion.p>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            Each tool answers a different question. One login means one profile, and that profile travels. Every answer you give in Ritualwear informs your aesthetic lens across everything else. Every Glow Up section adds to the picture. Every goal in m'atelier connects back. The more you use, the richer it gets.
+            The core suite — Ritualwear, Glow Up, Ritualwhere?, m'atelier, Ritualwealth, and Robin — shares one login and one Ritual Profile. Every answer you give in one app makes the others sharper. The more you use, the richer it gets.
           </motion.p>
           <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
             className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            The Ritual Profile pulls every answer you have ever given into one place. One button generates a prose portrait of who you are right now. It saves. It updates when you do.
+            Alongside the suite, VILE LLC ships standalone tools — ATLAS, Sal's Library, EQX Doubles — independent apps with their own data and their own world. Same standard of craft. No shared backend.
           </motion.p>
         </div>
 
         <div className="border-t border-amber/20 pt-16 mb-24">
-          <p className="font-mono text-sm text-amber tracking-[0.25em] mb-10">the full suite</p>
+          <p className="font-mono text-sm text-amber tracking-[0.25em] mb-10">all apps</p>
           <div className="space-y-5">
             {allApps.map((app, i) => (
               <motion.a key={i} href={app.href} target="_blank" rel="noopener noreferrer"
