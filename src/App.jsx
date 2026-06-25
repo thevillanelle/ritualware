@@ -14,6 +14,7 @@ import Status from './pages/Status'
 import Ritualwealth from './pages/Ritualwealth'
 import Robin from './pages/Robin'
 import Atlas from './pages/Atlas'
+import SalsLibrary from './pages/SalsLibrary'
 
 export default function App() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
         <Route path="/ritualwealth" element={<Ritualwealth />} />
         <Route path="/robin" element={<Robin />} />
         <Route path="/atlas" element={<Atlas />} />
+        <Route path="/library" element={<SalsLibrary />} />
       </Routes>
       <Footer />
     </div>
