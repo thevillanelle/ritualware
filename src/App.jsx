@@ -13,6 +13,7 @@ import About from './pages/About'
 import Status from './pages/Status'
 import Ritualwealth from './pages/Ritualwealth'
 import Robin from './pages/Robin'
+import Atlas from './pages/Atlas'
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
         <Route path="/status" element={<Status />} />
         <Route path="/ritualwealth" element={<Ritualwealth />} />
         <Route path="/robin" element={<Robin />} />
+        <Route path="/atlas" element={<Atlas />} />
       </Routes>
       <Footer />
     </div>
