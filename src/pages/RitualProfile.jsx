@@ -217,7 +217,7 @@ export default function RitualProfile() {
           </p>
           <button onClick={signInWithGoogle}
             style={{ fontFamily: '"DM Sans", sans-serif', fontSize: '0.8rem', letterSpacing: '0.15em', textTransform: 'uppercase', background: 'var(--ink)', color: 'var(--bg)', padding: '0.85rem 2.5rem', borderRadius: '999px', border: 'none', cursor: 'pointer' }}>
-            Sign in with Google
+            Sign in
           </button>
         </div>
       </main>

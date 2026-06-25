@@ -44,7 +44,7 @@ export default function Robin() {
       </div>
 
       <div className="py-32 px-6 md:px-16 max-w-5xl mx-auto">
-        <p className="font-mono text-sm tracking-[0.25em] mb-14" style={{ color }}>five modules</p>
+        <p className="font-mono text-sm tracking-[0.25em] mb-14" style={{ color }}>what's inside</p>
         <div className="grid md:grid-cols-2 gap-8">
           {MODULES.map((m, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
