@@ -44,7 +44,7 @@ export default function Nav() {
           <div ref={suiteRef} style={{ position: 'relative' }}>
             <button onClick={() => setSuiteOpen(o => !o)}
               style={{ ...linkStyle(suiteOpen), background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '5px', padding: 0 }}>
-              The Suite
+              Apps
               <svg width="10" height="6" viewBox="0 0 10 6" style={{ transition: 'transform 0.2s', transform: suiteOpen ? 'rotate(180deg)' : 'none', opacity: 0.5 }}>
                 <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
               </svg>
@@ -54,7 +54,7 @@ export default function Nav() {
               {suiteOpen && (
                 <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 8 }}
                   transition={{ duration: 0.18 }}
-                  style={{ position: 'absolute', top: 'calc(100% + 16px)', left: '50%', transform: 'translateX(-50%)', background: 'var(--bg)', border: '1px solid color-mix(in srgb, var(--ink) 10%, transparent)', borderRadius: '16px', padding: '1.25rem', width: '660px', boxShadow: '0 24px 64px rgba(0,0,0,0.12)' }}>
+                  style={{ position: 'absolute', top: 'calc(100% + 16px)', right: 0, background: 'var(--bg)', border: '1px solid color-mix(in srgb, var(--ink) 10%, transparent)', borderRadius: '16px', padding: '1.25rem', width: '560px', boxShadow: '0 24px 64px rgba(0,0,0,0.12)' }}>
 
                   <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--ink-muted)', opacity: 0.5, marginBottom: '0.75rem', paddingLeft: '4px' }}>The Suite</p>
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2px', marginBottom: '1rem' }}>
@@ -133,7 +133,7 @@ export default function Nav() {
             {/* Suite toggle */}
             <button onClick={() => setMobileSuiteOpen(o => !o)}
               style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 1.5rem', background: 'none', border: 'none', borderBottom: '1px solid color-mix(in srgb, var(--ink) 6%, transparent)', cursor: 'pointer', fontFamily: 'DM Sans, sans-serif', fontSize: '15px', color: 'var(--ink-muted)' }}>
-              The Suite
+              Apps
               <svg width="10" height="6" viewBox="0 0 10 6" style={{ transition: 'transform 0.2s', transform: mobileSuiteOpen ? 'rotate(180deg)' : 'none', opacity: 0.4 }}>
                 <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round"/>
               </svg>
