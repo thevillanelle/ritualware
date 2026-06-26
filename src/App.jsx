@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 import Nav from './components/Nav'
+import ScrollToTop from './components/ScrollToTop'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Platform from './pages/Platform'
@@ -19,6 +20,7 @@ import SalsLibrary from './pages/SalsLibrary'
 export default function App() {
   return (
     <div className="min-h-screen bg-cream text-ink">
+      <ScrollToTop />
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
