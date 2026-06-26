@@ -81,6 +81,15 @@
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee-track { animation: marquee 20s linear infinite; }
 
+/* ── SUITE PANELS — responsive ── */
+@media (max-width: 768px) {
+  .suite-panel {
+    grid-template-columns: 1fr !important;
+  }
+  .suite-panel > div:first-child { order: 1 !important; }
+  .suite-panel > div:last-child  { order: 2 !important; min-height: 180px !important; }
+}
+
 /* ── DOUBLES PAGE — black/green always ── */
 body.doubles-page {
   background: #050505 !important;

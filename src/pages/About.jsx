@@ -4,78 +4,122 @@ import { ALL_APPS as allApps } from '../data/apps'
 
 export default function About() {
   return (
-    <main className="bg-cream-dark min-h-screen" style={{ color: '#FAF7F2' }}>
-      <div className="max-w-4xl mx-auto px-6 md:px-16 py-32">
+    <main style={{ background: 'var(--bg-dark)', minHeight: '100vh', color: '#FAF7F2' }}>
 
+      {/* Hero */}
+      <div style={{ padding: '10rem clamp(2rem, 6vw, 6rem) 6rem', maxWidth: '900px' }}>
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-          className="font-mono text-sm text-amber tracking-[0.25em] mb-8">ritualware</motion.p>
-
-        <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-          className="font-display italic leading-tight mb-12" style={{ fontSize: 'clamp(40px,6vw,72px)', color: '#FAF7F2' }}>
-          The Ritualware Suite.<br />And beyond.
+          style={{ fontFamily: 'Courier Prime, monospace', fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.28)', marginBottom: '2.5rem' }}>
+          VILE LLC · Ritualware
+        </motion.p>
+        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: 'clamp(44px, 7vw, 96px)', lineHeight: 1.0, color: '#FAF7F2', marginBottom: '3rem' }}>
+          Software for the life<br />
+          <span style={{ color: 'var(--rose)' }}>you're building on purpose.</span>
         </motion.h1>
+      </div>
 
-        <div className="space-y-8 mb-24">
-          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-            className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            Ritualware is built around a simple premise: how you show up in the world (what you wear, how you look, where you go, what you're building) isn't random. It's a system. And systems can be designed intentionally.
-          </motion.p>
-          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-            className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            The core suite (Ritualwear, Glow Up, Ritualwhere?, m'atelier, Ritualwealth, and Robin) shares one login and one Ritual Profile. Every answer you give in one app makes the others sharper. The more you use, the richer it gets.
-          </motion.p>
-          <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-            className="font-sans text-xl leading-relaxed" style={{ color: '#C8BFB0' }}>
-            Alongside the suite, VILE LLC ships standalone tools: ATLAS, Sal's Library, and EQX Doubles. Independent apps with their own data and their own world. Same standard of craft. No shared backend.
-          </motion.p>
-        </div>
-
-        <div className="border-t border-amber/20 pt-16 mb-24">
-          <p className="font-mono text-sm text-amber tracking-[0.25em] mb-10">all apps</p>
-          <div className="space-y-5">
-            {allApps.map((app, i) => (
-              <motion.a key={i} href={app.href} target="_blank" rel="noopener noreferrer"
-                initial={{ opacity: 0, x: -16 }} whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-                className="flex items-center justify-between p-6 rounded-2xl group transition-all"
-                style={{ background: 'rgba(255,255,255,0.04)', border: `1px solid ${app.color}30` }}>
-                <div>
-                  <p className="font-serif italic text-base mb-1" style={{ color: app.color }}>{app.question}</p>
-                  <p className="font-display text-2xl" style={{ color: '#FAF7F2' }}>{app.name}</p>
-                </div>
-                <span className="font-mono text-sm group-hover:translate-x-2 transition-transform" style={{ color: app.color }}>→</span>
-              </motion.a>
+      {/* The premise */}
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.07)', padding: '6rem clamp(2rem, 6vw, 6rem)', background: 'rgba(255,255,255,0.02)' }}>
+        <div style={{ maxWidth: '760px' }}>
+          <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', marginBottom: '2.5rem' }}>
+            The premise
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+            {[
+              'Most apps assume you want to be managed down. Reminded, guilted, nudged toward someone else\'s version of a good life.',
+              'Ritualware is built on a different assumption: you already know who you are and what you want. You just need the tools to act on it.',
+              'What do I wear today? Where should I actually live? How do I look, really? When do I get to stop working? These are questions worth answering seriously.',
+            ].map((text, i) => (
+              <motion.p key={i}
+                initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ delay: i * 0.1, duration: 0.7 }}
+                style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: 'clamp(20px, 2.5vw, 28px)', color: i === 0 ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.55)', lineHeight: 1.65 }}>
+                {text}
+              </motion.p>
             ))}
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-amber/20 pt-16 mb-24">
-          <p className="font-mono text-sm text-amber tracking-[0.25em] mb-10">the vibe</p>
-          <div className="grid md:grid-cols-3 gap-6">
+      {/* The suite */}
+      <div style={{ padding: '6rem clamp(2rem, 6vw, 6rem)' }}>
+        <div style={{ maxWidth: '760px', marginBottom: '4rem' }}>
+          <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', marginBottom: '1.5rem' }}>
+            The Ritualware Suite
+          </p>
+          <p style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: 'clamp(18px, 2vw, 24px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.7 }}>
+            Six apps sharing one login and one Ritual Profile. Style, beauty, city, studio, wealth, identity. Every answer you give in one sharpens the others.
+          </p>
+        </div>
+
+        <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', marginBottom: '4rem' }}>
+          <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.18)', padding: '2rem 0 0', marginBottom: '2rem' }}>
+            Also from VILE LLC — standalone
+          </p>
+          <p style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: 'clamp(18px, 2vw, 24px)', color: 'rgba(255,255,255,0.35)', lineHeight: 1.7, maxWidth: '640px' }}>
+            ATLAS, Sal's Library, and EQX Doubles run independently. No shared backend. Same standard of craft.
+          </p>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
+          {allApps.map((app, i) => (
+            <motion.a key={i} href={app.href} target="_blank" rel="noopener noreferrer"
+              initial={{ opacity: 0, x: -12 }} whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+              style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.5rem 1.75rem', textDecoration: 'none', background: 'rgba(255,255,255,0.03)', border: `1px solid ${app.color}18`, borderRadius: '12px', transition: 'background 0.2s' }}
+              onMouseEnter={e => { e.currentTarget.style.background = `${app.color}12` }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.03)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
+                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: app.color, flexShrink: 0 }} />
+                <div>
+                  <p style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: '14px', color: app.color, marginBottom: '2px', opacity: 0.8 }}>{app.question}</p>
+                  <p style={{ fontFamily: 'Playfair Display, serif', fontSize: '20px', color: '#FAF7F2' }}>{app.name}</p>
+                </div>
+              </div>
+              <span style={{ fontFamily: 'Courier Prime, monospace', fontSize: '14px', color: app.color, opacity: 0.6, transition: 'opacity 0.2s' }}>→</span>
+            </motion.a>
+          ))}
+        </div>
+      </div>
+
+      {/* What we believe */}
+      <div style={{ borderTop: '1px solid rgba(255,255,255,0.07)', padding: '6rem clamp(2rem, 6vw, 6rem)', background: 'rgba(255,255,255,0.02)' }}>
+        <div style={{ maxWidth: '760px' }}>
+          <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '10px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', marginBottom: '3rem' }}>
+            What we believe
+          </p>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
             {[
-              { label: 'Intentional', body: 'Nothing here is accidental. Every question, every category, every recommendation is there for a reason.' },
-              { label: 'Sensory', body: 'Beauty, style, place, creation. These are physical experiences. The tools honor that rather than reducing them to a checklist.' },
-              { label: 'Yours', body: 'The tools learn your preferences and apply them. They work for you, not against a generic standard.' },
+              { label: 'Intentional', body: 'Nothing in Ritualware is there by default. Every question, every category, every recommendation was put there on purpose.' },
+              { label: 'Sensory', body: 'Style, beauty, place, creation. These are physical, felt experiences. The tools treat them that way instead of reducing them to a score.' },
+              { label: 'Yours', body: 'The apps learn your preferences and return them to you as infrastructure. They work for you, not toward a generic standard of self-improvement.' },
             ].map((item, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+              <motion.div key={i}
+                initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-                className="p-6 rounded-2xl" style={{ background: 'rgba(255,255,255,0.05)' }}>
-                <h3 className="font-display text-xl mb-3" style={{ color: '#C8A86B' }}>{item.label}</h3>
-                <p className="font-sans text-base leading-relaxed" style={{ color: '#9A8B7A' }}>{item.body}</p>
+                style={{ display: 'grid', gridTemplateColumns: '120px 1fr', gap: '2rem', alignItems: 'start' }}>
+                <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '10px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'var(--rose)', paddingTop: '4px' }}>
+                  {item.label}
+                </p>
+                <p style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '16px', color: 'rgba(255,255,255,0.45)', lineHeight: 1.75 }}>
+                  {item.body}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
-
-        <motion.blockquote initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
-          className="mt-24 border-l-2 border-rose pl-8">
-          <p className="font-display italic leading-tight" style={{ fontSize: 'clamp(24px,3.5vw,42px)', color: '#FAF7F2' }}>
-            A ritual is a routine with meaning.<br />
-            That is what these tools are for.
-          </p>
-        </motion.blockquote>
-
       </div>
+
+      {/* Close */}
+      <div style={{ padding: '7rem clamp(2rem, 6vw, 6rem)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+        <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}
+          style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: 'clamp(28px, 4vw, 52px)', color: '#FAF7F2', lineHeight: 1.25, maxWidth: '680px' }}>
+          Pleasure is a system.<br />
+          <span style={{ color: 'var(--rose)' }}>We built the software.</span>
+        </motion.p>
+      </div>
+
     </main>
   )
 }
