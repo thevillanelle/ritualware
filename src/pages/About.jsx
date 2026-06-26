@@ -8,10 +8,6 @@ export default function About() {
 
       {/* Hero */}
       <div style={{ padding: '10rem clamp(2rem, 6vw, 6rem) 6rem', maxWidth: '900px' }}>
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-          style={{ fontFamily: 'Courier Prime, monospace', fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.28)', marginBottom: '2.5rem' }}>
-          VILE LLC · Ritualware
-        </motion.p>
         <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: 'clamp(44px, 7vw, 96px)', lineHeight: 1.0, color: '#FAF7F2', marginBottom: '3rem' }}>
           Software for the life<br />
@@ -49,7 +45,7 @@ export default function About() {
             The Ritualware Suite
           </p>
           <p style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: 'clamp(18px, 2vw, 24px)', color: 'rgba(255,255,255,0.5)', lineHeight: 1.7 }}>
-            Six apps sharing one login and one Ritual Profile. Style, beauty, city, studio, wealth, identity. Every answer you give in one sharpens the others.
+            One login, one Ritual Profile. Style, beauty, city, studio, wealth, identity. Every answer you give in one sharpens the others.
           </p>
         </div>
 

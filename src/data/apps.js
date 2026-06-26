@@ -139,7 +139,7 @@ export const ALL_APPS = [...SUITE, ...STANDALONE]
 export const MARKETING_SITE = {
   name: 'Ritualware',
   url: 'https://ritualware.app',
-  health: 'https://ritualware.app/health.json',
+  health: 'https://www.ritualware.app/health.json',
   color: '#C4717A',
   statusDesc: 'Marketing site',
 }
