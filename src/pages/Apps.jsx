@@ -65,10 +65,6 @@ export default function Apps() {
 
       {/* Header */}
       <div style={{ padding: '10rem clamp(2rem, 5vw, 5rem) 5rem' }}>
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-          style={{ fontFamily: 'Courier Prime, monospace', fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: '2rem' }}>
-          VILE LLC · All apps
-        </motion.p>
         <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: 'clamp(52px, 8vw, 110px)', lineHeight: 1.0, color: '#FAF7F2', maxWidth: '800px' }}>
           Every answer.<br /><span style={{ color: 'var(--rose)' }}>One place.</span>

@@ -46,7 +46,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={{ borderTop: '1px solid color-mix(in srgb, var(--ink) 8%, transparent)', paddingTop: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '11px', color: 'var(--ink-muted)', opacity: 0.5, letterSpacing: '0.05em' }}>
-            © 2025 VILE LLC · New York
+            © 2026 VILE LLC
           </p>
           <p style={{ fontFamily: 'Courier Prime, monospace', fontSize: '11px', color: 'var(--ink-muted)', opacity: 0.4, letterSpacing: '0.05em', fontStyle: 'italic' }}>
             Pleasure is a system you architect.
