@@ -23,22 +23,11 @@ export default function Home() {
         <div style={{ position: 'absolute', bottom: '-60px', left: '50%', transform: 'translateX(-50%)', width: '1000px', height: '500px', background: 'radial-gradient(ellipse, rgba(196,113,122,0.25) 0%, transparent 65%)', pointerEvents: 'none' }} />
         <div style={{ position: 'absolute', top: '15%', right: '5%', width: '400px', height: '400px', background: 'radial-gradient(ellipse, rgba(176,120,64,0.12) 0%, transparent 70%)', pointerEvents: 'none' }} />
 
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }}
-          style={{ fontFamily: 'Courier Prime, monospace', fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: '3.5rem' }}>
-          VILE LLC · New York
-        </motion.p>
-
         <motion.h1 initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35, duration: 1, ease: [0.16, 1, 0.3, 1] }}
           style={{ fontFamily: 'Cormorant Garamond, serif', fontStyle: 'italic', fontSize: 'clamp(56px, 9vw, 130px)', lineHeight: 1.0, color: '#FAF7F2', marginBottom: '2.5rem', maxWidth: '960px' }}>
-          Every question<br />
-          you've been carrying<br />
-          <span style={{ color: 'var(--rose)' }}>has an answer now.</span>
+          Apps built for the life<br />
+          <span style={{ color: 'var(--rose)' }}>you're designing on purpose.</span>
         </motion.h1>
-
-        <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.75 }}
-          style={{ fontFamily: 'DM Sans, sans-serif', fontSize: '15px', color: 'rgba(255,255,255,0.4)', maxWidth: '400px', lineHeight: 1.75, marginBottom: '3.5rem', letterSpacing: '0.02em' }}>
-          Nine apps from VILE LLC. Built for the life you're designing on purpose.
-        </motion.p>
 
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}
           style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
